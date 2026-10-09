@@ -444,11 +444,10 @@ const SOURCES = [
   { id:'eperon',    name:'L’Éperon',   full:'Magazine des sports équestres', domain:'leperon.fr',     url:'https://www.leperon.fr' },
   { id:'grandprix', name:'Grand Prix', full:'Média des sports équestres',     domain:'grandprix.info', url:'https://www.grandprix.info' }
 ];
-const PROXIES = [
-  u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
-  u => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
-  u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u)
-];
+/* Source principale : le fichier news.json, mis à jour automatiquement par GitHub (fichier actus.yml).
+   Solution de secours si ce fichier n'existe pas encore : un service de lecture de flux RSS. */
+const NEWS_FILE = 'news.json';
+const RSS2JSON = u => 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(u);
 
 /* ================= Utilitaires ================= */
 const $ = s => document.querySelector(s);
@@ -962,50 +961,59 @@ function openViewer(id){
 }
 
 /* ================= ACTUS ================= */
-let news = [], newsFetchedAt = 0, newsFilter = 'all', newsLoading = false;
+let news = [], newsFetchedAt = 0, newsCheckedAt = 0, newsFilter = 'all', newsLoading = false;
 
 async function fetchWithTimeout(url, ms = 9000){
   const c = new AbortController(); const t = setTimeout(() => c.abort(), ms);
-  try { const r = await fetch(url, { signal: c.signal }); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.text(); }
+  try { const r = await fetch(url, { signal: c.signal, cache: 'no-store' }); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.text(); }
   finally { clearTimeout(t); }
 }
 
-function parseRSS(xml, src){
-  const doc = new DOMParser().parseFromString(xml, 'text/xml');
-  if (doc.querySelector('parsererror')) throw new Error('flux illisible');
-  const items = [...doc.querySelectorAll('item')];
-  if (!items.length) throw new Error('flux vide');
-  return items.slice(0, 15).map(it => {
-    let title = it.querySelector('title')?.textContent?.trim() || '';
-    const sName = it.querySelector('source')?.textContent?.trim();
-    if (sName && title.endsWith(' - ' + sName)) title = title.slice(0, -(sName.length + 3));
-    return { title, link: it.querySelector('link')?.textContent?.trim() || src.url, date: Date.parse(it.querySelector('pubDate')?.textContent || '') || 0, source: src.id };
-  }).filter(n => n.title);
+/* 1) Fichier news.json du dépôt GitHub (même site, aucun blocage possible) */
+async function loadFromRepo(){
+  const data = JSON.parse(await fetchWithTimeout(NEWS_FILE + '?t=' + Date.now(), 8000));
+  if (!data || !Array.isArray(data.items) || !data.items.length) throw new Error('fichier vide');
+  return {
+    items: data.items.filter(n => n && n.title && n.link),
+    at: Date.parse(data.updated) || Date.now(),
+    failed: (data.failed || []).map(id => (SOURCES.find(s => s.id === id) || {}).name).filter(Boolean)
+  };
 }
 
-async function fetchSource(src){
+/* 2) Secours : lecture directe des flux via rss2json */
+async function fetchSourceFallback(src){
   const feed = `https://news.google.com/rss/search?q=${encodeURIComponent('site:' + src.domain)}&hl=fr&gl=FR&ceid=FR:fr`;
-  let lastErr;
-  for (const p of PROXIES){
-    try { return parseRSS(await fetchWithTimeout(p(feed)), src); } catch (e){ lastErr = e; }
-  }
-  throw lastErr;
+  const data = JSON.parse(await fetchWithTimeout(RSS2JSON(feed), 10000));
+  if (data.status !== 'ok' || !Array.isArray(data.items) || !data.items.length) throw new Error(data.message || 'flux vide');
+  return data.items.map(it => {
+    let title = (it.title || '').trim();
+    title = title.replace(/\s+-\s+[^-]{2,60}$/, '');
+    const d = Date.parse(String(it.pubDate || '').replace(' ', 'T') + 'Z') || Date.parse(it.pubDate) || 0;
+    return { title, link: it.link || src.url, date: d, source: src.id };
+  }).filter(n => n.title);
 }
 
 async function loadNews(force){
   if (newsLoading) return;
-  if (!force && news.length && Date.now() - newsFetchedAt < 3*3600*1000){ renderNews(); return; }
+  if (!force && news.length && Date.now() - newsCheckedAt < 30*60*1000){ renderNews(); return; }
   newsLoading = true;
-  $('#newsStatus').innerHTML = '';
   if (!news.length) $('#newsList').innerHTML = '<div class="loading"><span class="spinner"></span>Chargement des actualités…</div>';
   else $('#newsStatus').innerHTML = '<span class="loading" style="padding:0"><span class="spinner"></span>Mise à jour…</span>';
-  const results = await Promise.allSettled(SOURCES.map(fetchSource));
-  const fresh = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
-  const failed = SOURCES.filter((s, i) => results[i].status === 'rejected').map(s => s.name);
+
+  let fresh = [], failed = [], at = 0;
+  try {
+    const r = await loadFromRepo(); fresh = r.items; failed = r.failed; at = r.at;
+  } catch {
+    const results = await Promise.allSettled(SOURCES.map(fetchSourceFallback));
+    fresh = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+    failed = SOURCES.filter((s, i) => results[i].status === 'rejected').map(s => s.name);
+    at = Date.now();
+  }
+  newsCheckedAt = Date.now();
   if (fresh.length){
     const seen = new Set();
     news = fresh.filter(n => { const k = n.title.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; }).sort((a,b) => b.date - a.date);
-    newsFetchedAt = Date.now();
+    newsFetchedAt = at;
     try { await setMeta('news', { items: news, at: newsFetchedAt }); } catch {}
   }
   newsLoading = false;
@@ -1014,8 +1022,10 @@ async function loadNews(force){
 
 function relTime(ts){
   if (!ts) return '';
-  const d = Math.floor((Date.now() - ts) / 86400000);
-  if (d <= 0){ const h = Math.max(1, Math.floor((Date.now() - ts) / 3600000)); return `il y a ${h} h`; }
+  const ms = Date.now() - ts;
+  if (ms < 3600000){ const m = Math.max(1, Math.floor(ms / 60000)); return m < 5 ? 'à l’instant' : `il y a ${m} min`; }
+  const d = Math.floor(ms / 86400000);
+  if (d <= 0) return `il y a ${Math.floor(ms / 3600000)} h`;
   if (d === 1) return 'hier';
   if (d < 30) return `il y a ${d} j`;
   return new Date(ts).toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' });
@@ -1025,9 +1035,9 @@ function renderNews(failed = [], allFailed = false){
   $('#srcChips').innerHTML = [{ id:'all', name:'Toutes' }, ...SOURCES].map(s =>
     `<button class="${newsFilter === s.id ? 'on' : ''}" data-action="news-filter" data-src="${s.id}">${esc(s.name)}</button>`).join('');
   const list = news.filter(n => newsFilter === 'all' || n.source === newsFilter);
-  let status = newsFetchedAt ? `Mis à jour ${relTime(newsFetchedAt) === 'il y a 1 h' && Date.now() - newsFetchedAt < 3600000 ? 'à l’instant' : relTime(newsFetchedAt)}.` : '';
-  if (allFailed) status = news.length ? 'Pas de connexion aux sources : affichage des dernières actualités enregistrées.' : '';
-  else if (failed.length) status += ` Indisponible pour le moment : ${failed.join(', ')}.`;
+  let status = newsFetchedAt ? `Actualités mises à jour ${relTime(newsFetchedAt)}.` : '';
+  if (allFailed) status = news.length ? 'Sources injoignables pour le moment : affichage des dernières actualités enregistrées.' : '';
+  else if (failed.length) status += ` Sans nouvel article récupéré : ${failed.join(', ')}.`;
   $('#newsStatus').textContent = status;
   if (!list.length){
     $('#newsList').innerHTML = allFailed && !news.length
