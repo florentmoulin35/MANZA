@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F1F3EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10141C" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Manza">
+<meta name="description" content="Carnet de suivi de Manza : séances, poids, ration et actualités équestres.">
+<title>Manza – carnet de suivi</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐴</text></svg>">
+<link rel="apple-touch-icon" id="touchIcon" href="">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F1F3EF; --surface:#FFFFFF; --ink:#1A2230; --muted:#5D6676; --line:#DCE0D8;
+  --blue:#24479A; --on-blue:#FFFFFF; --blue-soft:#E4EAF6;
+  --ochre:#B07D22; --ochre-soft:#F6ECD6; --danger:#B3261E;
+  --h0:#E4E7E0; --h1:#C3D0EC; --h2:#8EA7DC; --h3:#5174C2; --h4:#24479A;
+  --font-d:'Barlow Condensed','Arial Narrow','Roboto Condensed',sans-serif;
+  --font-b:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#10141C; --surface:#1A202B; --ink:#E7EAF0; --muted:#9AA3B2; --line:#2B3342;
+    --blue:#8AA8EE; --on-blue:#10141C; --blue-soft:#22304D;
+    --ochre:#E2B45E; --ochre-soft:#3A3020; --danger:#F2867E;
+    --h0:#232B38; --h1:#2B3F6A; --h2:#3D5DA2; --h3:#6286D4; --h4:#9BB6F4;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-b);
+  padding-top:env(safe-area-inset-top,0px);-webkit-tap-highlight-color:transparent}
+body.locked{overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ochre);outline-offset:2px}
+img{max-width:100%;display:block}
+.app{max-width:560px;margin:0 auto;padding:12px 16px calc(100px + env(safe-area-inset-bottom,0px))}
+
+/* En-tête */
+.top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:10px 0 20px}
+.name{font:700 clamp(60px,19vw,92px)/.8 var(--font-d);letter-spacing:-.01em;margin:0}
+.sub{margin:10px 0 0;color:var(--muted);font-size:15px}
+.save-btn{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border-radius:10px;
+  border:1px solid var(--line);background:var(--surface);font-size:14px;font-weight:600;margin-top:4px}
+.save-btn svg{width:20px;height:20px}
+.save-btn.alert{border-color:var(--ochre);color:var(--ochre)}
+
+/* Vues */
+.view{display:none}
+.view.active{display:block}
+h2{font:600 30px/1.1 var(--font-d);margin:0 0 14px}
+h3{font:600 21px/1.2 var(--font-d);margin:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 14px}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.muted{color:var(--muted)}
+.small{font-size:14px}
+.empty-msg{color:var(--muted);font-size:15px;margin:4px 0}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 18px;
+  border-radius:12px;border:0;font-weight:600;font-size:16px;text-decoration:none}
+.btn.primary{background:var(--blue);color:var(--on-blue)}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.block{width:100%}
+.btn.danger{background:transparent;border:1px solid var(--line);color:var(--danger)}
+.btn.sm{min-height:36px;padding:0 12px;font-size:14px;border-radius:9px}
+.icon-btn{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);
+  display:inline-flex;align-items:center;justify-content:center}
+.icon-btn svg{width:20px;height:20px}
+.cta{margin:0 0 14px}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 14px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.stat b{display:block;font:600 30px/1 var(--font-d)}
+.stat span{font-size:13px;color:var(--muted)}
+
+/* Bandeau sauvegarde */
+.banner{display:none;background:var(--ochre-soft);border-radius:14px;padding:12px 14px;margin:0 0 14px;font-size:15px}
+.banner.show{display:flex;align-items:center;justify-content:space-between;gap:10px}
+
+/* Calendrier */
+.cal-wd,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-wd{font-size:12px;color:var(--muted);text-align:center;margin-bottom:4px}
+.cal-grid{touch-action:pan-y}
+.cal-cell{aspect-ratio:1/1.08;border:0;background:transparent;border-radius:10px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:3px;font-weight:500;font-size:15px;padding:0}
+.cal-cell.empty{pointer-events:none}
+.cal-cell.has{background:var(--blue-soft)}
+.cal-cell.today .num{box-shadow:0 0 0 2px var(--ochre);border-radius:50%;width:28px;height:28px;display:flex;align-items:center;justify-content:center}
+.cal-cell.future{color:var(--muted)}
+.dots{display:flex;gap:2px;height:6px}
+.dots i{width:6px;height:6px;border-radius:50%}
+.legend{display:flex;flex-wrap:wrap;gap:6px 12px;margin-top:12px;font-size:13px;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend i{width:9px;height:9px;border-radius:50%}
+.month-nav{display:flex;gap:6px}
+
+/* Heatmap */
+.heat-wrap{display:grid;grid-template-columns:16px 1fr;gap:4px}
+.heat-months{display:grid;gap:3px;font-size:11px;color:var(--muted);height:16px;grid-column:2}
+.heat-months span{white-space:nowrap;overflow:visible}
+.heat-days{display:grid;grid-template-rows:repeat(7,1fr);gap:3px;font-size:10px;color:var(--muted);line-height:1}
+.heat-days span{display:flex;align-items:center}
+.heat{display:grid;grid-template-rows:repeat(7,auto);grid-auto-flow:column;gap:3px}
+.hc{aspect-ratio:1;border-radius:3px;background:var(--h0);border:0;padding:0}
+.hc.l1{background:var(--h1)}.hc.l2{background:var(--h2)}.hc.l3{background:var(--h3)}.hc.l4{background:var(--h4)}
+.hc.out{visibility:hidden}
+.heat-legend{display:flex;align-items:center;justify-content:flex-end;gap:4px;font-size:12px;color:var(--muted);margin-top:8px}
+.heat-legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
+
+/* Barres */
+.bars{display:grid;gap:8px;margin-top:6px}
+.bar-row{display:grid;grid-template-columns:96px 1fr 30px;align-items:center;gap:8px;font-size:14px}
+.bar{height:10px;border-radius:5px;background:var(--h0);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:5px;background:var(--h3)}
+.bar-row.top .bar i{background:var(--ochre)}
+.bar-row b{text-align:right;font-weight:600}
+.insight{font-size:15px;margin:2px 0 10px}
+.sub-title{font-weight:600;font-size:15px;margin:18px 0 6px}
+
+/* Séances */
+.sess{display:grid;grid-template-columns:5px 1fr;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.sess:first-child{border-top:0;padding-top:2px}
+.sess .stripe{border-radius:3px}
+.sess-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.sess-title{font-weight:600}
+.sess-meta{font-size:14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tag{font-size:13px;padding:2px 9px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.sess-notes{margin:8px 0 0;font-size:15px;white-space:pre-wrap;word-break:break-word}
+.sess-actions{display:flex;gap:8px;margin-top:10px}
+.linkish{background:none;border:0;padding:0;text-align:left;width:100%}
+
+/* Feuille modale */
+.overlay{position:fixed;inset:0;background:rgba(10,14,22,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.overlay.open{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;max-width:560px;margin:0 auto;background:var(--surface);
+  border-radius:22px 22px 0 0;max-height:92vh;max-height:92dvh;display:flex;flex-direction:column;
+  transform:translateY(105%);transition:transform .28s cubic-bezier(.2,.8,.2,1);z-index:41;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+.sheet.open{transform:none}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 16px 10px;border-bottom:1px solid var(--line)}
+.sheet-head h3{font-size:24px}
+.sheet-body{overflow:auto;padding:16px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+
+/* Formulaires */
+.field{display:block;margin:0 0 18px;border:0;padding:0;min-width:0}
+.field>span,.field>legend{display:block;font-weight:600;font-size:15px;margin-bottom:7px;padding:0}
+input[type=text],input[type=number],input[type=date],select,textarea{width:100%;font:16px var(--font-b);padding:12px;
+  border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:48px;-webkit-appearance:none;appearance:none}
+input[type=date]{display:block}
+select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
+  background-position:calc(100% - 18px) 21px,calc(100% - 13px) 21px;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
+textarea{resize:vertical;min-height:80px;line-height:1.45}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.opt input:focus-visible + span{outline:2px solid var(--ochre);outline-offset:2px}
+.scale{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.scale .opt span{display:flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:4px 3px;
+  border-radius:10px;border:1px solid var(--line);font-size:12.5px;line-height:1.15;background:var(--bg)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips .opt span{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;
+  border:1px solid var(--line);font-size:14px;background:var(--bg)}
+.opt input:checked + span{background:var(--blue);border-color:var(--blue);color:var(--on-blue)}
+.inline{display:flex;align-items:center;gap:8px;margin-top:10px}
+.inline input{max-width:150px}
+.field textarea + textarea,.scale + textarea{margin-top:10px}
+.actions{display:flex;gap:10px;position:sticky;bottom:-16px;background:var(--surface);padding:12px 0 16px;margin-top:4px}
+.actions .btn{flex:1}
+details.calc{border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin:-6px 0 18px}
+details.calc summary{font-weight:600;font-size:15px;cursor:pointer}
+.calc-out{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:8px}
+.calc-out b{font:600 26px var(--font-d)}
+
+/* Poids */
+.big-weight{display:flex;align-items:baseline;gap:8px}
+.big-weight b{font:700 64px/1 var(--font-d)}
+.big-weight span{font:600 24px var(--font-d);color:var(--muted)}
+.delta{font-size:15px;margin-top:4px}
+.seg{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;border-radius:7px;padding:6px 10px;font-size:13px;font-weight:600;color:var(--muted);min-height:32px}
+.seg button.on{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.chart-tools{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .axis{fill:var(--muted);font:11px var(--font-b)}
+.chart .line{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.chart .area{fill:var(--blue);opacity:.1}
+.chart .pt{fill:var(--surface);stroke:var(--blue);stroke-width:2}
+.chart .pt.last{fill:var(--ochre);stroke:var(--ochre)}
+.chart .val{fill:var(--ink);font:600 13px var(--font-b)}
+.regime h4{margin:0 0 4px;font-size:15px}
+.regime p{margin:0 0 12px;white-space:pre-wrap;word-break:break-word}
+.regime p:last-child{margin-bottom:0}
+.photos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.photos button{border:0;padding:0;background:var(--h0);border-radius:10px;overflow:hidden;aspect-ratio:1;position:relative}
+.photos img{width:100%;height:100%;object-fit:cover}
+.photos .cap{position:absolute;left:0;right:0;bottom:0;font-size:11px;color:#fff;padding:12px 6px 4px;
+  background:linear-gradient(transparent,rgba(0,0,0,.6));text-align:left}
+.pending{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px}
+.pending div{position:relative;aspect-ratio:1;border-radius:8px;overflow:hidden}
+.pending img{width:100%;height:100%;object-fit:cover}
+.pending button{position:absolute;top:3px;right:3px;width:26px;height:26px;border-radius:50%;border:0;
+  background:rgba(0,0,0,.65);color:#fff;font-size:16px;line-height:1}
+.file-btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;border:1px dashed var(--line);
+  border-radius:12px;font-weight:600;cursor:pointer;background:var(--bg)}
+.file-btn input{position:absolute;opacity:0;width:1px;height:1px}
+.w-item{padding:12px 0;border-top:1px solid var(--line)}
+.w-item:first-child{border-top:0;padding-top:2px}
+.w-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.w-row b{font:600 22px var(--font-d)}
+.w-text{font-size:14px;margin:4px 0 0;white-space:pre-wrap;word-break:break-word}
+.thumbs{display:flex;gap:6px;margin-top:8px;overflow-x:auto}
+.thumbs button{border:0;padding:0;width:56px;height:56px;border-radius:8px;overflow:hidden;flex:0 0 auto}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+
+/* Visionneuse */
+.viewer{position:fixed;inset:0;background:#000;z-index:60;display:none;flex-direction:column;align-items:center;justify-content:center;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.viewer.open{display:flex}
+.viewer img{max-height:82vh;max-width:100%;object-fit:contain}
+.viewer p{color:#ddd;font-size:14px;margin:12px 16px 0;text-align:center}
+.viewer .close{position:absolute;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;background:rgba(255,255,255,.15);
+  color:#fff;border:0;width:44px;height:44px;border-radius:50%;font-size:22px}
+
+/* Actus */
+.src-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:12px;scrollbar-width:none}
+.src-chips::-webkit-scrollbar{display:none}
+.src-chips button{flex:0 0 auto;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:0 14px;min-height:38px;font-size:14px;font-weight:600}
+.src-chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.news-item{display:block;text-decoration:none;color:inherit;padding:14px 0;border-top:1px solid var(--line)}
+.news-item:first-child{border-top:0;padding-top:2px}
+.news-meta{display:flex;gap:8px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:4px}
+.src-badge{font-weight:600;color:var(--blue)}
+.news-title{font-weight:600;font-size:16px;line-height:1.35}
+.sites{display:grid;gap:8px}
+.sites a{display:flex;justify-content:space-between;align-items:center;gap:10px;text-decoration:none;color:inherit;
+  padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.sites small{color:var(--muted)}
+.loading{display:flex;align-items:center;gap:10px;color:var(--muted);padding:8px 0}
+.spinner{width:18px;height:18px;border:2px solid var(--line);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Réglages */
+.kv{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.kv:first-of-type{border-top:0}
+.stack{display:grid;gap:10px}
+.note{font-size:14px;color:var(--muted);margin:10px 0 0}
+
+/* Navigation basse */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabs-in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+.tab{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  min-height:64px;font-size:13px;font-weight:600;color:var(--muted);position:relative}
+.tab svg{width:24px;height:24px}
+.tab.active{color:var(--blue)}
+.tab.active::before{content:"";position:absolute;top:0;left:30%;right:30%;height:3px;border-radius:0 0 3px 3px;background:var(--blue)}
+
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) translateY(20px);
+  background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:10px;font-size:15px;opacity:0;pointer-events:none;
+  transition:opacity .2s,transform .2s;z-index:70;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;animation:none !important}
+}
+</style>
+</head>
+<body>
+<noscript><p style="padding:20px">Active JavaScript pour utiliser le carnet de Manza.</p></noscript>
+
+<div class="app">
+  <header class="top">
+    <div>
+      <h1 class="name">MANZA</h1>
+      <p class="sub">Pura Raza Española, 5 ans</p>
+    </div>
+    <button class="save-btn" id="btnSave" data-action="settings" aria-label="Sauvegarde des données">
+      <svg class="i" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.7-7.9A6 6 0 0 1 17.7 9 4.5 4.5 0 0 1 17.5 18H7z"/><path d="M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>
+      Sauvegarde
+    </button>
+  </header>
+
+  <div class="banner" id="backupBanner">
+    <span id="backupBannerText">Pense à exporter une sauvegarde de tes données.</span>
+    <button class="btn sm primary" data-action="export">Exporter</button>
+  </div>
+
+  <!-- ============ SÉANCES ============ -->
+  <section class="view active" id="view-seances">
+    <div class="stats" id="sessStats"></div>
+    <button class="btn primary block cta" data-action="new-session">Noter la séance du jour</button>
+
+    <div class="card">
+      <div class="card-head">
+        <h3 id="calTitle">Calendrier</h3>
+        <div class="month-nav">
+          <button class="icon-btn" data-action="prev-month" aria-label="Mois précédent"><svg class="i" viewBox="0 0 24 24"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button class="icon-btn" data-action="next-month" aria-label="Mois suivant"><svg class="i" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+      <div class="cal-wd"><span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="cal-grid" id="calGrid"></div>
+      <div class="legend" id="calLegend"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>Assiduité sur 6 mois</h3></div>
+      <div id="heatmap"></div>
+      <div id="weekdayStats"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>Dernières séances</h3></div>
+      <div id="recentList"></div>
+    </div>
+  </section>
+
+  <!-- ============ POIDS ============ -->
+  <section class="view" id="view-poids">
+    <div class="card" id="weightSummary"></div>
+    <button class="btn primary block cta" data-action="new-weight">Ajouter une pesée</button>
+
+    <div class="card">
+      <div class="card-head"><h3>Évolution du poids</h3></div>
+      <div class="chart-tools">
+        <div class="seg" id="segMode">
+          <button data-action="weight-mode" data-mode="week" class="on">Par semaine</button>
+          <button data-action="weight-mode" data-mode="all">Chaque pesée</button>
+        </div>
+        <div class="seg" id="segPeriod">
+          <button data-action="weight-period" data-p="90">3 m</button>
+          <button data-action="weight-period" data-p="182" class="on">6 m</button>
+          <button data-action="weight-period" data-p="365">1 an</button>
+          <button data-action="weight-period" data-p="0">Tout</button>
+        </div>
+      </div>
+      <div class="chart" id="weightChart"></div>
+    </div>
+
+    <div class="card regime" id="regimeCard"></div>
+
+    <div class="card">
+      <div class="card-head"><h3>Photos</h3><span class="small muted" id="photoCount"></span></div>
+      <div id="photoGallery"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h3>Historique</h3></div>
+      <div id="weightList"></div>
+    </div>
+  </section>
+
+  <!-- ============ ACTUS ============ -->
+  <section class="view" id="view-actus">
+    <div class="card-head" style="margin-bottom:10px">
+      <h2 style="margin:0">Actualités équestres</h2>
+      <button class="icon-btn" data-action="news-refresh" aria-label="Actualiser"><svg class="i" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4v7h-7"/></svg></button>
+    </div>
+    <div class="src-chips" id="srcChips"></div>
+    <div class="card">
+      <p class="small muted" id="newsStatus" style="margin:0 0 10px"></p>
+      <div id="newsList"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h3>Sites de référence</h3></div>
+      <div class="sites" id="siteLinks"></div>
+    </div>
+  </section>
+</div>
+
+<nav class="tabs" aria-label="Navigation principale">
+  <div class="tabs-in">
+    <button class="tab active" data-action="tab" data-tab="seances">
+      <svg class="i" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Séances
+    </button>
+    <button class="tab" data-action="tab" data-tab="poids">
+      <svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 10a4.5 4.5 0 0 1 9 0"/><path d="M12 10l1.8-2.4"/></svg>Poids
+    </button>
+    <button class="tab" data-action="tab" data-tab="actus">
+      <svg class="i" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7M7 16h4"/></svg>Actus
+    </button>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay" data-action="close-sheet"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+  <div class="sheet-head">
+    <h3 id="sheetTitle"></h3>
+    <button class="icon-btn" data-action="close-sheet" aria-label="Fermer"><svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="sheet-body" id="sheetBody"></div>
+</div>
+
+<div class="viewer" id="viewer" data-action="close-viewer">
+  <button class="close" data-action="close-viewer" aria-label="Fermer la photo">×</button>
+  <img id="viewerImg" alt="">
+  <p id="viewerCap"></p>
+</div>
+
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+'use strict';
+
+/* ================= Configuration ================= */
+const ACTIVITIES = [
+  { id:'pied',    label:'Travail à pied',  color:'#24479A' },
+  { id:'liberte', label:'Liberté',          color:'#2A9A86' },
+  { id:'renes',   label:'Longues rênes',    color:'#7B52B8' },
+  { id:'longe',   label:'Longe',            color:'#C48A22' },
+  { id:'monte',   label:'Monte',            color:'#C4394B' },
+  { id:'balade',  label:'Balade',           color:'#4F8A2E' },
+  { id:'soin',    label:'Soin',             color:'#8792A6' }
+];
+const FORME = ['Fatigué','Mou','Normal','Motivé','Très motivé'];
+const SENSATIONS = ['Difficile','Moyenne','Correcte','Bonne','Excellente'];
+const HUMEURS = ['Calme','Attentif','Joueur','Distrait','Tendu','Chaud','Câlin'];
+const METEO = [
+  { id:'soleil', label:'☀️ Soleil' }, { id:'nuages', label:'☁️ Nuageux' }, { id:'pluie', label:'🌧️ Pluie' },
+  { id:'vent', label:'💨 Vent' }, { id:'froid', label:'❄️ Froid' }, { id:'chaud', label:'🥵 Chaud' }, { id:'orage', label:'⛈️ Orage' }
+];
+const METHODS = ['Balance','Ruban','Estimation'];
+const WEEKDAYS = ['Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche'];
+
+/* Sources d'actualités (sites de référence). Modifiable ici. */
+const SOURCES = [
+  { id:'ffe',       name:'FFE',        full:'Fédération Française d’Équitation', domain:'ffe.com',        url:'https://www.ffe.com' },
+  { id:'ifce',      name:'IFCE',       full:'Institut français du cheval et de l’équitation', domain:'ifce.fr', url:'https://www.ifce.fr' },
+  { id:'eperon',    name:'L’Éperon',   full:'Magazine des sports équestres', domain:'leperon.fr',     url:'https://www.leperon.fr' },
+  { id:'grandprix', name:'Grand Prix', full:'Média des sports équestres',     domain:'grandprix.info', url:'https://www.grandprix.info' }
+];
+const PROXIES = [
+  u => 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u),
+  u => 'https://corsproxy.io/?url=' + encodeURIComponent(u),
+  u => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u)
+];
+
+/* ================= Utilitaires ================= */
+const $ = s => document.querySelector(s);
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+const pad = n => String(n).padStart(2, '0');
+const ymd = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const parseYmd = s => { const [y,m,d] = s.split('-').map(Number); return new Date(y, m-1, d); };
+const todayKey = () => ymd(new Date());
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const mondayOf = d => { const x = new Date(d); x.setHours(0,0,0,0); return addDays(x, -((x.getDay()+6)%7)); };
+const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num = (n, d=1) => Number(n).toLocaleString('fr-FR', { maximumFractionDigits:d });
+const fmtLong = k => cap(parseYmd(k).toLocaleDateString('fr-FR', { weekday:'long', day:'numeric', month:'long' }));
+const fmtDate = k => parseYmd(k).toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' });
+const fmtShort = d => d.toLocaleDateString('fr-FR', { day:'numeric', month:'short' });
+const act = id => ACTIVITIES.find(a => a.id === id) || ACTIVITIES[0];
+const parseNum = v => { const n = parseFloat(String(v).replace(',', '.').trim()); return isNaN(n) ? null : n; };
+const daysBetween = (a, b) => Math.round((parseYmd(b) - parseYmd(a)) / 86400000);
+
+function toast(msg){
+  const t = $('#toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toast._t); toast._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ================= Base de données (IndexedDB) ================= */
+const DB = {
+  db: null,
+  open(){
+    return new Promise((res, rej) => {
+      const r = indexedDB.open('manza-carnet', 1);
+      r.onupgradeneeded = () => {
+        const d = r.result;
+        ['sessions','weights','photos','meta'].forEach(s => { if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath:'id' }); });
+      };
+      r.onsuccess = () => { this.db = r.result; res(); };
+      r.onerror = () => rej(r.error);
+    });
+  },
+  req(store, mode, fn){
+    return new Promise((res, rej) => {
+      const tx = this.db.transaction(store, mode); const q = fn(tx.objectStore(store));
+      tx.oncomplete = () => res(q && q.result); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error);
+    });
+  },
+  all(s){ return this.req(s, 'readonly', o => o.getAll()); },
+  get(s, id){ return this.req(s, 'readonly', o => o.get(id)); },
+  put(s, v){ return this.req(s, 'readwrite', o => o.put(v)); },
+  del(s, id){ return this.req(s, 'readwrite', o => o.delete(id)); },
+  clear(s){ return this.req(s, 'readwrite', o => o.clear()); },
+  putMany(s, arr){ return this.req(s, 'readwrite', o => { arr.forEach(v => o.put(v)); }); }
+};
+
+let sessions = [], weights = [], photos = [];
+async function loadAll(){
+  [sessions, weights, photos] = await Promise.all([DB.all('sessions'), DB.all('weights'), DB.all('photos')]);
+  sessions.sort((a,b) => b.date.localeCompare(a.date) || (b.created||0) - (a.created||0));
+  weights.sort((a,b) => b.date.localeCompare(a.date) || (b.created||0) - (a.created||0));
+  photos.sort((a,b) => b.date.localeCompare(a.date));
+}
+async function getMeta(id){ try { const r = await DB.get('meta', id); return r ? r.value : null; } catch { return null; } }
+const setMeta = (id, value) => DB.put('meta', { id, value });
+
+/* ================= Navigation ================= */
+let currentTab = 'seances';
+function showTab(tab){
+  currentTab = tab;
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === 'view-' + tab));
+  document.querySelectorAll('.tab').forEach(b => {
+    const on = b.dataset.tab === tab; b.classList.toggle('active', on); b.setAttribute('aria-current', on ? 'page' : 'false');
+  });
+  window.scrollTo(0, 0);
+  if (tab === 'actus') loadNews(false);
+}
+
+/* ================= Feuille modale ================= */
+let sheetOpen = false;
+function openSheet(title, html, onMount){
+  if (!sheetOpen){ history.pushState({ sheet:1 }, ''); sheetOpen = true; }
+  $('#sheetTitle').textContent = title;
+  const body = $('#sheetBody'); body.innerHTML = html; body.scrollTop = 0;
+  $('#sheet').classList.add('open'); $('#overlay').classList.add('open'); document.body.classList.add('locked');
+  if (onMount) onMount(body);
+}
+function closeSheet(fromPop){
+  if (!sheetOpen) return;
+  sheetOpen = false;
+  $('#sheet').classList.remove('open'); $('#overlay').classList.remove('open'); document.body.classList.remove('locked');
+  if (!fromPop) history.back();
+}
+window.addEventListener('popstate', () => {
+  if ($('#viewer').classList.contains('open')) { $('#viewer').classList.remove('open'); }
+  if (sheetOpen) closeSheet(true);
+});
+
+/* ================= SÉANCES ================= */
+let calMonth = new Date(); calMonth.setDate(1); calMonth.setHours(0,0,0,0);
+
+function sessionsByDay(){
+  const m = {}; sessions.forEach(s => (m[s.date] = m[s.date] || []).push(s)); return m;
+}
+
+function renderSessStats(){
+  const now = new Date(); const prefix = `${now.getFullYear()}-${pad(now.getMonth()+1)}`;
+  const month = sessions.filter(s => s.date.startsWith(prefix));
+  const minutes = month.reduce((t, s) => t + (s.duration || 0), 0);
+  const past = sessions.filter(s => s.date <= todayKey());
+  let last = '–';
+  if (past.length){
+    const d = daysBetween(past[0].date, todayKey());
+    last = d === 0 ? 'Auj.' : d === 1 ? 'Hier' : d + ' j';
+  }
+  $('#sessStats').innerHTML = `
+    <div class="stat"><b>${month.length}</b><span>séances ce mois</span></div>
+    <div class="stat"><b>${num(minutes/60)} h</b><span>de travail ce mois</span></div>
+    <div class="stat"><b>${last}</b><span>dernière séance</span></div>`;
+}
+
+function renderCalendar(){
+  const y = calMonth.getFullYear(), m = calMonth.getMonth();
+  $('#calTitle').textContent = cap(calMonth.toLocaleDateString('fr-FR', { month:'long', year:'numeric' }));
+  const offset = (new Date(y, m, 1).getDay() + 6) % 7;
+  const days = new Date(y, m+1, 0).getDate();
+  const byDay = sessionsByDay(); const tk = todayKey();
+  let html = '';
+  for (let i = 0; i < offset; i++) html += '<div class="cal-cell empty"></div>';
+  for (let d = 1; d <= days; d++){
+    const key = ymd(new Date(y, m, d)); const list = byDay[key] || [];
+    const dots = list.slice(0, 4).map(s => `<i style="background:${act(s.activity).color}"></i>`).join('');
+    const cls = ['cal-cell', list.length ? 'has' : '', key === tk ? 'today' : '', key > tk ? 'future' : ''].join(' ');
+    html += `<button class="${cls}" data-action="open-day" data-date="${key}" aria-label="${fmtLong(key)}, ${list.length} séance${list.length>1?'s':''}"><span class="num">${d}</span><span class="dots">${dots}</span></button>`;
+  }
+  $('#calGrid').innerHTML = html;
+}
+
+function renderLegend(){
+  $('#calLegend').innerHTML = ACTIVITIES.map(a => `<span><i style="background:${a.color}"></i>${a.label}</span>`).join('');
+}
+
+function renderHeatmap(){
+  const WEEKS = 26;
+  const start = addDays(mondayOf(new Date()), -(WEEKS-1)*7);
+  const tk = todayKey();
+  const load = {};
+  sessions.forEach(s => { load[s.date] = (load[s.date] || 0) + (s.duration || 30); });
+  const level = v => !v ? 0 : v <= 30 ? 1 : v <= 60 ? 2 : v <= 90 ? 3 : 4;
+
+  let months = '', cells = '', prevMonth = -1;
+  for (let w = 0; w < WEEKS; w++){
+    const monday = addDays(start, w*7);
+    const mo = monday.getMonth();
+    months += `<span>${mo !== prevMonth && w < WEEKS-2 ? monday.toLocaleDateString('fr-FR', { month:'short' }).replace('.', '') : ''}</span>`;
+    prevMonth = mo;
+    for (let d = 0; d < 7; d++){
+      const day = addDays(monday, d); const key = ymd(day);
+      if (key > tk){ cells += '<span class="hc out"></span>'; continue; }
+      const v = load[key] || 0;
+      cells += `<button class="hc l${level(v)}" data-action="open-day" data-date="${key}" aria-label="${fmtLong(key)} : ${v ? v + ' min' : 'aucune séance'}"></button>`;
+    }
+  }
+  $('#heatmap').innerHTML = `
+    <div class="heat-wrap">
+      <div class="heat-months" style="grid-template-columns:repeat(${WEEKS},1fr)">${months}</div>
+      <div class="heat-days"><span>L</span><span></span><span>M</span><span></span><span>V</span><span></span><span>D</span></div>
+      <div class="heat" style="grid-template-columns:repeat(${WEEKS},1fr)">${cells}</div>
+    </div>
+    <div class="heat-legend">Moins <i style="background:var(--h0)"></i><i style="background:var(--h1)"></i><i style="background:var(--h2)"></i><i style="background:var(--h3)"></i><i style="background:var(--h4)"></i> Plus</div>`;
+}
+
+function renderWeekdayStats(){
+  const past = sessions.filter(s => s.date <= todayKey());
+  if (!past.length){ $('#weekdayStats').innerHTML = '<p class="empty-msg" style="margin-top:12px">La carte se remplira au fil des séances notées.</p>'; return; }
+  const wd = [0,0,0,0,0,0,0];
+  const dates = new Set();
+  past.forEach(s => { if (!dates.has(s.date)){ dates.add(s.date); wd[(parseYmd(s.date).getDay()+6)%7]++; } });
+  const maxWd = Math.max(...wd);
+  const topIdx = wd.indexOf(maxWd);
+  const byAct = {}; past.forEach(s => byAct[s.activity] = (byAct[s.activity] || 0) + 1);
+  const acts = ACTIVITIES.filter(a => byAct[a.id]).sort((a,b) => byAct[b.id] - byAct[a.id]);
+  const maxAct = Math.max(...Object.values(byAct));
+  $('#weekdayStats').innerHTML = `
+    <p class="sub-title">Jours où je viens le plus</p>
+    <p class="insight muted">Le ${WEEKDAYS[topIdx].toLowerCase()} arrive en tête, avec ${maxWd} jour${maxWd>1?'s':''} de présence.</p>
+    <div class="bars">${wd.map((v,i) => `<div class="bar-row${v === maxWd && v ? ' top' : ''}"><span>${WEEKDAYS[i]}</span><div class="bar"><i style="width:${maxWd ? v/maxWd*100 : 0}%"></i></div><b>${v}</b></div>`).join('')}</div>
+    <p class="sub-title">Répartition des activités</p>
+    <div class="bars">${acts.map(a => `<div class="bar-row"><span>${a.label}</span><div class="bar"><i style="width:${byAct[a.id]/maxAct*100}%;background:${a.color}"></i></div><b>${byAct[a.id]}</b></div>`).join('')}</div>`;
+}
+
+function sessionCard(s, withActions){
+  const a = act(s.activity);
+  const tags = [];
+  if (s.forme) tags.push('Forme : ' + FORME[s.forme-1]);
+  if (s.sensation) tags.push('Sensations : ' + SENSATIONS[s.sensation-1]);
+  (s.humeurs || []).forEach(h => tags.push(h));
+  (s.meteo || []).forEach(id => { const m = METEO.find(x => x.id === id); if (m) tags.push(m.label); });
+  if (s.temp !== null && s.temp !== undefined && s.temp !== '') tags.push(num(s.temp) + ' °C');
+  const body = `
+    <div class="sess-head"><span class="sess-title">${a.label}</span><span class="sess-meta">${s.duration ? s.duration + ' min' : ''}</span></div>
+    <div class="sess-meta">${fmtLong(s.date)}</div>
+    ${tags.length ? `<div class="tags">${tags.map(t => `<span class="tag">${esc(t)}</span>`).join('')}</div>` : ''}
+    ${s.sensationNote ? `<p class="sess-notes"><em>Ressenti :</em> ${esc(s.sensationNote)}</p>` : ''}
+    ${s.notes ? `<p class="sess-notes">${esc(s.notes)}</p>` : ''}`;
+  return `<div class="sess"><span class="stripe" style="background:${a.color}"></span><div>${body}
+    ${withActions ? `<div class="sess-actions"><button class="btn sm ghost" data-action="edit-session" data-id="${s.id}">Modifier</button><button class="btn sm danger" data-action="delete-session" data-id="${s.id}">Supprimer</button></div>` : ''}
+  </div></div>`;
+}
+
+function renderRecent(){
+  const list = sessions.slice(0, 6);
+  $('#recentList').innerHTML = list.length
+    ? list.map(s => sessionCard(s, true)).join('')
+    : '<p class="empty-msg">Aucune séance pour l’instant. Note la première avec le bouton du haut.</p>';
+}
+
+function renderSessions(){ renderSessStats(); renderCalendar(); renderHeatmap(); renderWeekdayStats(); renderRecent(); }
+
+function openDay(date){
+  const list = sessions.filter(s => s.date === date);
+  openSheet(fmtLong(date), `
+    ${list.length ? list.map(s => sessionCard(s, true)).join('') : '<p class="empty-msg">Aucune séance ce jour-là.</p>'}
+    <button class="btn primary block" style="margin-top:14px" data-action="new-session" data-date="${date}" data-from-day="1">Ajouter une séance ce jour</button>`);
+  openSheet.dayContext = date;
+}
+
+function scaleField(name, labels, value){
+  return `<div class="scale">${labels.map((l, i) => `<label class="opt"><input type="radio" name="${name}" value="${i+1}" ${value === i+1 ? 'checked' : ''}><span>${l}</span></label>`).join('')}</div>`;
+}
+function chipsField(name, items, values){
+  values = values || [];
+  return `<div class="chips">${items.map(it => `<label class="opt"><input type="checkbox" name="${name}" value="${esc(it.id)}" ${values.includes(it.id) ? 'checked' : ''}><span>${esc(it.label)}</span></label>`).join('')}</div>`;
+}
+
+function openSessionForm(id, date, fromDay){
+  const s = id ? sessions.find(x => x.id === id) : { date: date || todayKey(), activity:'monte', duration:45, forme:null, sensation:null, humeurs:[], meteo:[], temp:'', notes:'', sensationNote:'' };
+  if (!s) return;
+  const backDate = fromDay ? s.date : null;
+  openSheet(id ? 'Modifier la séance' : 'Nouvelle séance', `
+    <form id="fSession" novalidate>
+      <div class="row2">
+        <label class="field"><span>Date</span><input type="date" name="date" value="${s.date}" required></label>
+        <label class="field"><span>Durée (min)</span><input type="number" name="duration" inputmode="numeric" min="0" max="600" step="5" value="${s.duration ?? ''}"></label>
+      </div>
+      <label class="field"><span>Activité</span>
+        <select name="activity">${ACTIVITIES.map(a => `<option value="${a.id}" ${a.id === s.activity ? 'selected' : ''}>${a.label}</option>`).join('')}</select>
+      </label>
+      <fieldset class="field"><legend>État de forme de Manza</legend>${scaleField('forme', FORME, s.forme)}</fieldset>
+      <fieldset class="field"><legend>Comportement</legend>${chipsField('humeurs', HUMEURS.map(h => ({ id:h, label:h })), s.humeurs)}</fieldset>
+      <fieldset class="field"><legend>Mes sensations</legend>${scaleField('sensation', SENSATIONS, s.sensation)}
+        <textarea name="sensationNote" rows="2" placeholder="Contact, équilibre, confiance, ce que j’ai ressenti…">${esc(s.sensationNote)}</textarea>
+      </fieldset>
+      <fieldset class="field"><legend>Météo</legend>${chipsField('meteo', METEO, s.meteo)}
+        <div class="inline"><input type="number" name="temp" step="0.5" placeholder="Temp." value="${s.temp ?? ''}" aria-label="Température en degrés"><span class="muted">°C</span></div>
+      </fieldset>
+      <label class="field"><span>Annotations</span>
+        <textarea name="notes" rows="4" placeholder="Exercices travaillés, progrès, points à revoir…">${esc(s.notes)}</textarea>
+      </label>
+      <div class="actions">
+        <button type="button" class="btn ghost" data-cancel>Annuler</button>
+        <button type="submit" class="btn primary">Enregistrer</button>
+      </div>
+    </form>`, body => {
+      const f = body.querySelector('#fSession');
+      f.querySelector('[data-cancel]').onclick = () => backDate ? openDay(backDate) : closeSheet();
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const fd = new FormData(f);
+        const dateVal = fd.get('date');
+        if (!dateVal){ toast('Choisis une date.'); return; }
+        const rec = {
+          id: s.id || uid(), created: s.created || Date.now(), date: dateVal,
+          activity: fd.get('activity'),
+          duration: parseNum(fd.get('duration')),
+          forme: fd.get('forme') ? Number(fd.get('forme')) : null,
+          sensation: fd.get('sensation') ? Number(fd.get('sensation')) : null,
+          humeurs: fd.getAll('humeurs'), meteo: fd.getAll('meteo'),
+          temp: parseNum(fd.get('temp')),
+          sensationNote: fd.get('sensationNote').trim(), notes: fd.get('notes').trim()
+        };
+        try {
+          await DB.put('sessions', rec); await loadAll(); renderSessions(); checkBackup(); askPersist();
+          toast('Séance enregistrée');
+          if (backDate) openDay(rec.date); else closeSheet();
+        } catch (err){ toast('Échec de l’enregistrement : ' + err.message); }
+      };
+    });
+}
+
+async function deleteSession(id){
+  if (!confirm('Supprimer cette séance ?')) return;
+  const s = sessions.find(x => x.id === id);
+  await DB.del('sessions', id); await loadAll(); renderSessions();
+  toast('Séance supprimée');
+  if (sheetOpen && s) openDay(s.date);
+}
+
+function shiftMonth(n){ calMonth.setMonth(calMonth.getMonth() + n); renderCalendar(); }
+
+/* ================= POIDS ================= */
+let chartMode = 'week', chartPeriod = 182;
+
+function weightPoints(){
+  let pts = weights.filter(w => w.weight).map(w => ({ date: parseYmd(w.date), v: w.weight })).sort((a,b) => a.date - b.date);
+  if (chartPeriod){ const lim = addDays(new Date(), -chartPeriod); pts = pts.filter(p => p.date >= lim); }
+  if (chartMode === 'week'){
+    const g = new Map();
+    pts.forEach(p => { const k = ymd(mondayOf(p.date)); const o = g.get(k) || { sum:0, n:0 }; o.sum += p.v; o.n++; g.set(k, o); });
+    pts = [...g.entries()].sort((a,b) => a[0].localeCompare(b[0])).map(([k,o]) => ({ date: parseYmd(k), v: o.sum/o.n }));
+  }
+  return pts;
+}
+
+function renderWeightChart(){
+  const pts = weightPoints();
+  const el = $('#weightChart');
+  if (!pts.length){ el.innerHTML = '<p class="empty-msg">Pas encore de pesée sur cette période.</p>'; return; }
+  const W = 340, H = 200, L = 38, R = 14, T = 22, B = 26;
+  let min = Math.min(...pts.map(p => p.v)), max = Math.max(...pts.map(p => p.v));
+  if (max - min < 10){ const mid = (max+min)/2; min = mid - 5; max = mid + 5; }
+  const padv = (max - min) * .12; min = Math.floor(min - padv); max = Math.ceil(max + padv);
+  const n = pts.length;
+  const x = i => n === 1 ? L + (W-L-R)/2 : L + i * (W-L-R)/(n-1);
+  const y = v => T + (max - v) * (H-T-B) / (max - min);
+  let grid = '';
+  for (let i = 0; i <= 4; i++){
+    const v = min + (max-min) * i/4; const yy = y(v);
+    grid += `<line class="grid" x1="${L}" x2="${W-R}" y1="${yy}" y2="${yy}"/><text class="axis" x="${L-6}" y="${yy+4}" text-anchor="end">${Math.round(v)}</text>`;
+  }
+  const step = Math.max(1, Math.ceil(n / 5));
+  let xl = '';
+  pts.forEach((p, i) => { if (i % step === 0 || i === n-1){ if (i !== n-1 && n-1 - i < step/2 && i !== 0) return; xl += `<text class="axis" x="${x(i)}" y="${H-6}" text-anchor="middle">${fmtShort(p.date).replace('.', '')}</text>`; } });
+  const line = pts.map((p,i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join(' ');
+  const area = n > 1 ? `${line} L${x(n-1)},${H-B} L${x(0)},${H-B} Z` : '';
+  const dots = pts.map((p,i) => `<circle class="pt${i === n-1 ? ' last' : ''}" cx="${x(i)}" cy="${y(p.v)}" r="${n > 30 ? 2.5 : 4}"><title>${fmtShort(p.date)} : ${num(p.v)} kg</title></circle>`).join('');
+  const last = pts[n-1];
+  const lx = Math.min(Math.max(x(n-1), L+20), W-R-20);
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Courbe de poids, dernière valeur ${num(last.v)} kg">
+    ${grid}${area ? `<path class="area" d="${area}"/>` : ''}<path class="line" d="${line}"/>${dots}${xl}
+    <text class="val" x="${lx}" y="${y(last.v) - 10}" text-anchor="middle">${num(last.v)} kg</text></svg>`;
+}
+
+function renderWeightSummary(){
+  const withW = weights.filter(w => w.weight);
+  if (!withW.length){
+    $('#weightSummary').innerHTML = '<h3>Poids actuel</h3><p class="empty-msg">Ajoute une première pesée pour suivre l’évolution de Manza.</p>';
+    return;
+  }
+  const last = withW[0];
+  // moyenne de la semaine précédente
+  const thisMon = mondayOf(parseYmd(last.date));
+  const prevMon = addDays(thisMon, -7);
+  const prev = withW.filter(w => { const d = parseYmd(w.date); return d >= prevMon && d < thisMon; });
+  let delta = '';
+  if (prev.length){
+    const avg = prev.reduce((t,w) => t + w.weight, 0) / prev.length;
+    const diff = last.weight - avg;
+    delta = `<p class="delta">${diff > 0 ? '+' : ''}${num(diff)} kg par rapport à la semaine précédente</p>`;
+  } else if (withW[1]){
+    const diff = last.weight - withW[1].weight;
+    delta = `<p class="delta">${diff > 0 ? '+' : ''}${num(diff)} kg depuis la pesée du ${fmtDate(withW[1].date)}</p>`;
+  }
+  $('#weightSummary').innerHTML = `
+    <div class="card-head" style="margin-bottom:6px"><h3>Poids actuel</h3><span class="small muted">${fmtDate(last.date)}${last.method ? ', ' + esc(last.method.toLowerCase()) : ''}</span></div>
+    <div class="big-weight"><b>${num(last.weight)}</b><span>kg</span></div>${delta}`;
+}
+
+function renderRegime(){
+  const r = weights.find(w => w.ration); const c = weights.find(w => w.complements);
+  $('#regimeCard').innerHTML = `
+    <div class="card-head"><h3>Ration et compléments</h3></div>
+    ${!r && !c ? '<p class="empty-msg">Renseigne la ration et les compléments lors d’une pesée : ils s’afficheront ici.</p>' : ''}
+    ${r ? `<h4>Ration <span class="small muted">depuis le ${fmtDate(r.date)}</span></h4><p>${esc(r.ration)}</p>` : ''}
+    ${c ? `<h4>Compléments <span class="small muted">depuis le ${fmtDate(c.date)}</span></h4><p>${esc(c.complements)}</p>` : ''}`;
+}
+
+function renderGallery(){
+  $('#photoCount').textContent = photos.length ? `${photos.length} photo${photos.length > 1 ? 's' : ''}` : '';
+  $('#photoGallery').innerHTML = photos.length
+    ? `<div class="photos">${photos.slice(0, 30).map(p => `<button data-action="view-photo" data-id="${p.id}" aria-label="Photo du ${fmtDate(p.date)}"><img src="${p.data}" alt="" loading="lazy"><span class="cap">${fmtShort(parseYmd(p.date))}</span></button>`).join('')}</div>`
+    : '<p class="empty-msg">Ajoute des photos à une pesée pour comparer l’état de Manza dans le temps.</p>';
+}
+
+function renderWeightList(){
+  $('#weightList').innerHTML = weights.length ? weights.map(w => {
+    const ph = photos.filter(p => p.entryId === w.id);
+    return `<div class="w-item">
+      <div class="w-row"><span>${fmtDate(w.date)}${w.method ? ` <span class="small muted">${esc(w.method)}</span>` : ''}</span><b>${w.weight ? num(w.weight) + ' kg' : ''}</b></div>
+      ${w.ration ? `<p class="w-text"><strong>Ration :</strong> ${esc(w.ration)}</p>` : ''}
+      ${w.complements ? `<p class="w-text"><strong>Compléments :</strong> ${esc(w.complements)}</p>` : ''}
+      ${w.notes ? `<p class="w-text muted">${esc(w.notes)}</p>` : ''}
+      ${ph.length ? `<div class="thumbs">${ph.map(p => `<button data-action="view-photo" data-id="${p.id}" aria-label="Voir la photo"><img src="${p.data}" alt="" loading="lazy"></button>`).join('')}</div>` : ''}
+      <div class="sess-actions"><button class="btn sm ghost" data-action="edit-weight" data-id="${w.id}">Modifier</button><button class="btn sm danger" data-action="delete-weight" data-id="${w.id}">Supprimer</button></div>
+    </div>`;
+  }).join('') : '<p class="empty-msg">Aucune pesée enregistrée.</p>';
+}
+
+function renderWeights(){ renderWeightSummary(); renderWeightChart(); renderRegime(); renderGallery(); renderWeightList(); }
+
+async function compressImage(file, max = 1280, q = .78){
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = () => rej(new Error('image illisible')); i.src = url; });
+    const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const c = document.createElement('canvas'); c.width = Math.round(img.naturalWidth*s); c.height = Math.round(img.naturalHeight*s);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    return c.toDataURL('image/jpeg', q);
+  } finally { URL.revokeObjectURL(url); }
+}
+
+function openWeightForm(id){
+  const prevW = weights[0] || {};
+  const w = id ? weights.find(x => x.id === id) : { date: todayKey(), weight:null, method: prevW.method || 'Ruban', ration: prevW.ration || '', complements: prevW.complements || '', notes:'' };
+  if (!w) return;
+  let pending = id ? photos.filter(p => p.entryId === id).map(p => ({ id:p.id, data:p.data, existing:true })) : [];
+  const removed = [];
+
+  openSheet(id ? 'Modifier la pesée' : 'Nouvelle pesée', `
+    <form id="fWeight" novalidate>
+      <div class="row2">
+        <label class="field"><span>Date</span><input type="date" name="date" value="${w.date}" required></label>
+        <label class="field"><span>Poids (kg)</span><input type="text" name="weight" inputmode="decimal" placeholder="ex. 480" value="${w.weight != null ? String(w.weight).replace('.', ',') : ''}"></label>
+      </div>
+      <label class="field"><span>Méthode</span>
+        <select name="method">${METHODS.map(m => `<option ${m === w.method ? 'selected' : ''}>${m}</option>`).join('')}</select>
+      </label>
+      <details class="calc">
+        <summary>Estimer au ruban</summary>
+        <div class="row2" style="margin-top:10px">
+          <label class="field" style="margin:0"><span>Tour de poitrine (cm)</span><input type="text" inputmode="decimal" id="tp"></label>
+          <label class="field" style="margin:0"><span>Longueur (cm)</span><input type="text" inputmode="decimal" id="lg"></label>
+        </div>
+        <p class="note">Longueur : de la pointe de l’épaule à la pointe de la fesse. Formule : tour² × longueur ÷ 11 877.</p>
+        <div class="calc-out"><b id="calcOut">– kg</b><button type="button" class="btn sm ghost" id="useCalc">Utiliser ce poids</button></div>
+      </details>
+      <label class="field"><span>Ration</span><textarea name="ration" rows="3" placeholder="Foin à volonté, 2 kg de floconné matin et soir…">${esc(w.ration)}</textarea></label>
+      <label class="field"><span>Compléments mis en place</span><textarea name="complements" rows="2" placeholder="Huile de lin 50 ml/j, minéraux…">${esc(w.complements)}</textarea></label>
+      <label class="field"><span>Notes</span><textarea name="notes" rows="2" placeholder="État corporel, musculature, appétit…">${esc(w.notes)}</textarea></label>
+      <div class="field"><span>Photos</span>
+        <label class="file-btn"><input type="file" accept="image/*" multiple id="photoInput">Ajouter des photos</label>
+        <div class="pending" id="pendingPhotos"></div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn ghost" data-cancel>Annuler</button>
+        <button type="submit" class="btn primary">Enregistrer</button>
+      </div>
+    </form>`, body => {
+      const f = body.querySelector('#fWeight');
+      const drawPending = () => {
+        body.querySelector('#pendingPhotos').innerHTML = pending.map((p, i) =>
+          `<div><img src="${p.data}" alt=""><button type="button" data-rm="${i}" aria-label="Retirer la photo">×</button></div>`).join('');
+      };
+      drawPending();
+      body.querySelector('#pendingPhotos').addEventListener('click', e => {
+        const b = e.target.closest('[data-rm]'); if (!b) return;
+        const [p] = pending.splice(Number(b.dataset.rm), 1); if (p.existing) removed.push(p.id); drawPending();
+      });
+      body.querySelector('#photoInput').addEventListener('change', async e => {
+        const files = [...e.target.files]; e.target.value = '';
+        for (const file of files){
+          try { pending.push({ id: uid(), data: await compressImage(file), existing:false }); drawPending(); }
+          catch { toast('Une photo n’a pas pu être lue.'); }
+        }
+      });
+      const tp = body.querySelector('#tp'), lg = body.querySelector('#lg'), out = body.querySelector('#calcOut');
+      let est = null;
+      const calc = () => {
+        const a = parseNum(tp.value), b = parseNum(lg.value);
+        est = a && b ? Math.round(a*a*b/11877) : null; out.textContent = est ? `${est} kg` : '– kg';
+      };
+      tp.oninput = calc; lg.oninput = calc;
+      body.querySelector('#useCalc').onclick = () => {
+        if (!est){ toast('Renseigne les deux mesures.'); return; }
+        f.weight.value = est; f.method.value = 'Ruban'; toast('Poids estimé reporté');
+      };
+      f.querySelector('[data-cancel]').onclick = () => closeSheet();
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const fd = new FormData(f);
+        const weight = parseNum(fd.get('weight'));
+        if (weight !== null && (weight < 50 || weight > 1500)){ toast('Poids hors limites, vérifie la saisie.'); return; }
+        const rec = {
+          id: w.id || uid(), created: w.created || Date.now(), date: fd.get('date') || todayKey(),
+          weight, method: fd.get('method'),
+          ration: fd.get('ration').trim(), complements: fd.get('complements').trim(), notes: fd.get('notes').trim()
+        };
+        if (!rec.weight && !rec.ration && !rec.complements && !rec.notes && !pending.length){ toast('Renseigne au moins un poids, une note ou une photo.'); return; }
+        try {
+          await DB.put('weights', rec);
+          for (const pid of removed) await DB.del('photos', pid);
+          const fresh = pending.map(p => ({ id: p.id, entryId: rec.id, date: rec.date, data: p.data }));
+          if (fresh.length) await DB.putMany('photos', fresh);
+          await loadAll(); renderWeights(); checkBackup(); askPersist();
+          toast('Pesée enregistrée'); closeSheet();
+        } catch (err){ toast('Échec de l’enregistrement : ' + err.message); }
+      };
+    });
+}
+
+async function deleteWeight(id){
+  if (!confirm('Supprimer cette pesée et ses photos ?')) return;
+  await DB.del('weights', id);
+  for (const p of photos.filter(p => p.entryId === id)) await DB.del('photos', p.id);
+  await loadAll(); renderWeights(); toast('Pesée supprimée');
+}
+
+function openViewer(id){
+  const p = photos.find(x => x.id === id); if (!p) return;
+  const w = weights.find(x => x.id === p.entryId);
+  $('#viewerImg').src = p.data;
+  $('#viewerCap').textContent = fmtDate(p.date) + (w && w.weight ? ` : ${num(w.weight)} kg` : '');
+  $('#viewer').classList.add('open');
+}
+
+/* ================= ACTUS ================= */
+let news = [], newsFetchedAt = 0, newsFilter = 'all', newsLoading = false;
+
+async function fetchWithTimeout(url, ms = 9000){
+  const c = new AbortController(); const t = setTimeout(() => c.abort(), ms);
+  try { const r = await fetch(url, { signal: c.signal }); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.text(); }
+  finally { clearTimeout(t); }
+}
+
+function parseRSS(xml, src){
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  if (doc.querySelector('parsererror')) throw new Error('flux illisible');
+  const items = [...doc.querySelectorAll('item')];
+  if (!items.length) throw new Error('flux vide');
+  return items.slice(0, 15).map(it => {
+    let title = it.querySelector('title')?.textContent?.trim() || '';
+    const sName = it.querySelector('source')?.textContent?.trim();
+    if (sName && title.endsWith(' - ' + sName)) title = title.slice(0, -(sName.length + 3));
+    return { title, link: it.querySelector('link')?.textContent?.trim() || src.url, date: Date.parse(it.querySelector('pubDate')?.textContent || '') || 0, source: src.id };
+  }).filter(n => n.title);
+}
+
+async function fetchSource(src){
+  const feed = `https://news.google.com/rss/search?q=${encodeURIComponent('site:' + src.domain)}&hl=fr&gl=FR&ceid=FR:fr`;
+  let lastErr;
+  for (const p of PROXIES){
+    try { return parseRSS(await fetchWithTimeout(p(feed)), src); } catch (e){ lastErr = e; }
+  }
+  throw lastErr;
+}
+
+async function loadNews(force){
+  if (newsLoading) return;
+  if (!force && news.length && Date.now() - newsFetchedAt < 3*3600*1000){ renderNews(); return; }
+  newsLoading = true;
+  $('#newsStatus').innerHTML = '';
+  if (!news.length) $('#newsList').innerHTML = '<div class="loading"><span class="spinner"></span>Chargement des actualités…</div>';
+  else $('#newsStatus').innerHTML = '<span class="loading" style="padding:0"><span class="spinner"></span>Mise à jour…</span>';
+  const results = await Promise.allSettled(SOURCES.map(fetchSource));
+  const fresh = results.flatMap(r => r.status === 'fulfilled' ? r.value : []);
+  const failed = SOURCES.filter((s, i) => results[i].status === 'rejected').map(s => s.name);
+  if (fresh.length){
+    const seen = new Set();
+    news = fresh.filter(n => { const k = n.title.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; }).sort((a,b) => b.date - a.date);
+    newsFetchedAt = Date.now();
+    try { await setMeta('news', { items: news, at: newsFetchedAt }); } catch {}
+  }
+  newsLoading = false;
+  renderNews(failed, !fresh.length);
+}
+
+function relTime(ts){
+  if (!ts) return '';
+  const d = Math.floor((Date.now() - ts) / 86400000);
+  if (d <= 0){ const h = Math.max(1, Math.floor((Date.now() - ts) / 3600000)); return `il y a ${h} h`; }
+  if (d === 1) return 'hier';
+  if (d < 30) return `il y a ${d} j`;
+  return new Date(ts).toLocaleDateString('fr-FR', { day:'numeric', month:'short', year:'numeric' });
+}
+
+function renderNews(failed = [], allFailed = false){
+  $('#srcChips').innerHTML = [{ id:'all', name:'Toutes' }, ...SOURCES].map(s =>
+    `<button class="${newsFilter === s.id ? 'on' : ''}" data-action="news-filter" data-src="${s.id}">${esc(s.name)}</button>`).join('');
+  const list = news.filter(n => newsFilter === 'all' || n.source === newsFilter);
+  let status = newsFetchedAt ? `Mis à jour ${relTime(newsFetchedAt) === 'il y a 1 h' && Date.now() - newsFetchedAt < 3600000 ? 'à l’instant' : relTime(newsFetchedAt)}.` : '';
+  if (allFailed) status = news.length ? 'Pas de connexion aux sources : affichage des dernières actualités enregistrées.' : '';
+  else if (failed.length) status += ` Indisponible pour le moment : ${failed.join(', ')}.`;
+  $('#newsStatus').textContent = status;
+  if (!list.length){
+    $('#newsList').innerHTML = allFailed && !news.length
+      ? '<p class="empty-msg">Impossible de charger les actualités. Vérifie la connexion puis touche Actualiser, ou ouvre directement les sites ci-dessous.</p>'
+      : '<p class="empty-msg">Aucun article récent pour cette source. Ouvre le site ci-dessous pour voir ses dernières publications.</p>';
+  } else {
+    $('#newsList').innerHTML = list.slice(0, 40).map(n => {
+      const s = SOURCES.find(x => x.id === n.source);
+      return `<a class="news-item" href="${esc(n.link)}" target="_blank" rel="noopener noreferrer">
+        <div class="news-meta"><span class="src-badge">${esc(s ? s.name : '')}</span><span>${relTime(n.date)}</span></div>
+        <div class="news-title">${esc(n.title)}</div></a>`;
+    }).join('');
+  }
+  $('#siteLinks').innerHTML = SOURCES.map(s =>
+    `<a href="${s.url}" target="_blank" rel="noopener noreferrer"><span><strong>${esc(s.name)}</strong><br><small>${esc(s.full)}</small></span><svg class="i" viewBox="0 0 24 24" width="20" height="20"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>`).join('');
+}
+
+/* ================= Sauvegarde ================= */
+async function askPersist(){
+  try { if (navigator.storage && navigator.storage.persist && !(await navigator.storage.persisted())) await navigator.storage.persist(); } catch {}
+}
+
+async function checkBackup(){
+  const last = await getMeta('lastBackup');
+  const count = sessions.length + weights.length;
+  const old = !last || Date.now() - last > 14*86400000;
+  const show = count >= 3 && old;
+  $('#backupBanner').classList.toggle('show', show);
+  $('#btnSave').classList.toggle('alert', show);
+  if (show) $('#backupBannerText').textContent = last ? `Dernière sauvegarde il y a ${Math.floor((Date.now()-last)/86400000)} jours.` : 'Aucune sauvegarde exportée pour l’instant.';
+}
+
+async function openSettings(){
+  let persisted = null, usage = '';
+  try { persisted = navigator.storage && navigator.storage.persisted ? await navigator.storage.persisted() : null; } catch {}
+  try { if (navigator.storage && navigator.storage.estimate){ const e = await navigator.storage.estimate(); usage = `${num((e.usage||0)/1048576)} Mo`; } } catch {}
+  const last = await getMeta('lastBackup');
+  openSheet('Sauvegarde des données', `
+    <p style="margin-top:0">Les données sont enregistrées <strong>uniquement dans ce navigateur, sur ce téléphone</strong>. Exporte régulièrement une sauvegarde et range-la dans tes fichiers, iCloud, Google Drive ou par e-mail.</p>
+    <div class="card" style="background:var(--bg)">
+      <div class="kv"><span>Séances</span><strong>${sessions.length}</strong></div>
+      <div class="kv"><span>Pesées</span><strong>${weights.length}</strong></div>
+      <div class="kv"><span>Photos</span><strong>${photos.length}</strong></div>
+      ${usage ? `<div class="kv"><span>Espace utilisé</span><strong>${usage}</strong></div>` : ''}
+      <div class="kv"><span>Stockage protégé</span><strong>${persisted === null ? 'Inconnu' : persisted ? 'Oui' : 'Non'}</strong></div>
+      <div class="kv"><span>Dernière sauvegarde</span><strong>${last ? new Date(last).toLocaleDateString('fr-FR') : 'Jamais'}</strong></div>
+    </div>
+    <div class="stack">
+      <button class="btn primary block" data-action="export">Exporter une sauvegarde</button>
+      <button class="btn ghost block" data-action="import">Importer une sauvegarde</button>
+      <button class="btn danger block" data-action="wipe">Effacer toutes les données</button>
+    </div>
+    <p class="note">Astuce iPhone : ouvre la page dans Safari puis « Partager » et « Sur l’écran d’accueil ». L’application s’ouvre alors comme une app et ses données sont mieux protégées.</p>
+    <p class="note">L’import remplace toutes les données actuelles par celles du fichier.</p>`);
+}
+
+async function exportData(){
+  const data = { app:'manza-carnet', version:1, exportedAt: new Date().toISOString(), sessions, weights, photos };
+  const name = `manza-sauvegarde-${todayKey()}.json`;
+  const blob = new Blob([JSON.stringify(data)], { type:'application/json' });
+  let done = false;
+  try {
+    const file = new File([blob], name, { type:'application/json' });
+    if (navigator.canShare && navigator.canShare({ files:[file] })){
+      await navigator.share({ files:[file], title:'Sauvegarde Manza' }); done = true;
+    }
+  } catch (e){ if (e.name === 'AbortError') return; }
+  if (!done){
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  }
+  await setMeta('lastBackup', Date.now()); checkBackup();
+  toast('Sauvegarde exportée');
+  if (sheetOpen) openSettings();
+}
+
+async function importData(file){
+  try {
+    const data = JSON.parse(await file.text());
+    if (data.app !== 'manza-carnet' || !Array.isArray(data.sessions) || !Array.isArray(data.weights)) throw new Error('fichier non reconnu');
+    if (!confirm(`Importer ${data.sessions.length} séances, ${data.weights.length} pesées et ${(data.photos||[]).length} photos ? Les données actuelles seront remplacées.`)) return;
+    await Promise.all(['sessions','weights','photos'].map(s => DB.clear(s)));
+    await DB.putMany('sessions', data.sessions); await DB.putMany('weights', data.weights);
+    if (Array.isArray(data.photos)) await DB.putMany('photos', data.photos);
+    await setMeta('lastBackup', Date.now());
+    await loadAll(); renderAll(); toast('Sauvegarde importée');
+    if (sheetOpen) closeSheet();
+  } catch (e){ toast('Import impossible : ' + e.message); }
+}
+
+async function wipe(){
+  if (!confirm('Effacer définitivement toutes les séances, pesées et photos ?')) return;
+  if (!confirm('Dernière confirmation : as-tu exporté une sauvegarde ?')) return;
+  await Promise.all(['sessions','weights','photos'].map(s => DB.clear(s)));
+  await loadAll(); renderAll(); closeSheet(); toast('Données effacées');
+}
+
+/* ================= Événements ================= */
+document.addEventListener('click', e => {
+  const t = e.target.closest('[data-action]'); if (!t) return;
+  const id = t.dataset.id;
+  switch (t.dataset.action){
+    case 'tab': showTab(t.dataset.tab); break;
+    case 'prev-month': shiftMonth(-1); break;
+    case 'next-month': shiftMonth(1); break;
+    case 'open-day': openDay(t.dataset.date); break;
+    case 'new-session': openSessionForm(null, t.dataset.date, !!t.dataset.fromDay); break;
+    case 'edit-session': openSessionForm(id, null, sheetOpen); break;
+    case 'delete-session': deleteSession(id); break;
+    case 'new-weight': openWeightForm(null); break;
+    case 'edit-weight': openWeightForm(id); break;
+    case 'delete-weight': deleteWeight(id); break;
+    case 'view-photo': openViewer(id); break;
+    case 'close-viewer': $('#viewer').classList.remove('open'); break;
+    case 'close-sheet': closeSheet(); break;
+    case 'settings': openSettings(); break;
+    case 'export': exportData(); break;
+    case 'import': $('#importFile').click(); break;
+    case 'wipe': wipe(); break;
+    case 'news-refresh': loadNews(true); break;
+    case 'news-filter': newsFilter = t.dataset.src; renderNews(); break;
+    case 'weight-mode':
+      chartMode = t.dataset.mode;
+      document.querySelectorAll('#segMode button').forEach(b => b.classList.toggle('on', b === t)); renderWeightChart(); break;
+    case 'weight-period':
+      chartPeriod = Number(t.dataset.p);
+      document.querySelectorAll('#segPeriod button').forEach(b => b.classList.toggle('on', b === t)); renderWeightChart(); break;
+  }
+});
+$('#importFile').addEventListener('change', e => { const f = e.target.files[0]; e.target.value = ''; if (f) importData(f); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape'){ if ($('#viewer').classList.contains('open')) $('#viewer').classList.remove('open'); else closeSheet(); } });
+
+// Balayage horizontal sur le calendrier pour changer de mois
+(() => {
+  const g = $('#calGrid'); let sx = null, sy = null;
+  g.addEventListener('touchstart', e => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive:true });
+  g.addEventListener('touchend', e => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) shiftMonth(dx < 0 ? 1 : -1);
+    sx = null;
+  });
+})();
+
+// Icône pour l'écran d'accueil (iPhone / Android)
+(() => {
+  try {
+    const c = document.createElement('canvas'); c.width = c.height = 180; const x = c.getContext('2d');
+    x.fillStyle = '#24479A'; x.fillRect(0, 0, 180, 180);
+    x.fillStyle = '#FFFFFF'; x.font = 'bold 120px "Arial Narrow", Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle';
+    x.fillText('M', 90, 98);
+    x.fillStyle = '#E2B45E'; x.fillRect(50, 150, 80, 6);
+    $('#touchIcon').href = c.toDataURL('image/png');
+  } catch {}
+})();
+
+function renderAll(){ renderLegend(); renderSessions(); renderWeights(); checkBackup(); }
+
+/* ================= Démarrage ================= */
+(async () => {
+  try {
+    await DB.open();
+    await loadAll();
+    const cached = await getMeta('news');
+    if (cached && cached.items){ news = cached.items; newsFetchedAt = cached.at || 0; }
+    renderAll();
+    askPersist();
+  } catch (e){
+    document.querySelector('.app').insertAdjacentHTML('afterbegin',
+      `<div class="banner show" style="background:var(--ochre-soft)">Le stockage du navigateur est indisponible (navigation privée ?). Les données ne pourront pas être enregistrées.</div>`);
+    renderLegend(); renderSessions(); renderWeights();
+  }
+})();
+
+})();
+</script>
+</body>
+</html>
