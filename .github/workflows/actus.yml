@@ -1,0 +1,139 @@
+# Récupère les actualités équestres toutes les 4 heures et les enregistre dans news.json.
+# Emplacement dans le dépôt : .github/workflows/actus.yml
+name: Actualités équestres
+
+on:
+  schedule:
+    - cron: '17 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actus
+  cancel-in-progress: true
+
+jobs:
+  actus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Récupérer les actualités
+        run: |
+          node --input-type=module <<'EOF'
+          import { readFileSync, writeFileSync } from 'node:fs';
+
+          // Mêmes identifiants que dans index.html
+          const SOURCES = [
+            { id: 'ffe',       domain: 'ffe.com',        url: 'https://www.ffe.com' },
+            { id: 'ifce',      domain: 'ifce.fr',        url: 'https://www.ifce.fr' },
+            { id: 'eperon',    domain: 'leperon.fr',     url: 'https://www.leperon.fr' },
+            { id: 'grandprix', domain: 'grandprix.info', url: 'https://www.grandprix.info' }
+          ];
+
+          const decode = s => s
+            .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
+            .replace(/<[^>]+>/g, '')
+            .replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'")
+            .replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+            .replace(/&#(\d+);/g, (m, n) => String.fromCharCode(Number(n)))
+            .replace(/&amp;/g, '&')
+            .trim();
+
+          const tag = (block, name) => {
+            const m = block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)</${name}>`));
+            return m ? decode(m[1]) : '';
+          };
+
+          function parse(xml, src) {
+            const blocks = xml.match(/<(item|entry)[\s>][\s\S]*?<\/\1>/g) || [];
+            return blocks.slice(0, 20).map(b => {
+              let title = tag(b, 'title');
+              const sourceName = tag(b, 'source');
+              if (sourceName && title.endsWith(' - ' + sourceName)) title = title.slice(0, -(sourceName.length + 3));
+              let link = tag(b, 'link');
+              if (!link) { const m = b.match(/<link[^>]*href="([^"]+)"/); if (m) link = m[1]; }
+              const date = Date.parse(tag(b, 'pubDate') || tag(b, 'published') || tag(b, 'updated') || tag(b, 'dc:date')) || 0;
+              return { title, link: link || src.url, date, source: src.id };
+            }).filter(i => i.title && /^https?:\/\//.test(i.link));
+          }
+
+          async function get(url) {
+            const c = new AbortController();
+            const t = setTimeout(() => c.abort(), 20000);
+            try {
+              const r = await fetch(url, {
+                signal: c.signal,
+                headers: {
+                  'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+                  'Accept': 'application/rss+xml, application/atom+xml, application/xml, text/xml, */*',
+                  'Accept-Language': 'fr-FR,fr;q=0.9'
+                }
+              });
+              if (!r.ok) throw new Error('HTTP ' + r.status);
+              return await r.text();
+            } finally { clearTimeout(t); }
+          }
+
+          async function fromSource(src) {
+            const candidates = [
+              `https://news.google.com/rss/search?q=${encodeURIComponent('site:' + src.domain)}&hl=fr&gl=FR&ceid=FR:fr`,
+              `${src.url}/feed/`,
+              `${src.url}/rss`,
+              `${src.url}/rss.xml`
+            ];
+            for (const u of candidates) {
+              try {
+                const items = parse(await get(u), src);
+                if (items.length) { console.log(`${src.id} : ${items.length} articles (${u})`); return items; }
+              } catch (e) { console.log(`${src.id} : échec ${u} (${e.message})`); }
+            }
+            return [];
+          }
+
+          let previous = { items: [] };
+          try { previous = JSON.parse(readFileSync('news.json', 'utf8')); } catch {}
+
+          const items = [];
+          const failed = [];
+          for (const src of SOURCES) {
+            const found = await fromSource(src);
+            if (found.length) items.push(...found);
+            else {
+              failed.push(src.id);
+              items.push(...(previous.items || []).filter(i => i.source === src.id)); // on garde les anciens articles
+            }
+          }
+
+          const seen = new Set();
+          const unique = items
+            .filter(i => { const k = i.title.toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; })
+            .sort((a, b) => b.date - a.date)
+            .slice(0, 120);
+
+          if (!unique.length) { console.log('Aucun article récupéré, news.json inchangé.'); process.exit(0); }
+
+          const same = JSON.stringify(unique) === JSON.stringify(previous.items || []);
+          if (same) { console.log('Pas de nouvel article.'); process.exit(0); }
+
+          writeFileSync('news.json', JSON.stringify({ updated: new Date().toISOString(), failed, items: unique }, null, 1));
+          console.log(`news.json écrit : ${unique.length} articles.`);
+          EOF
+
+      - name: Enregistrer news.json dans le dépôt
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git add -A news.json || true
+          if git diff --cached --quiet; then
+            echo "Rien à enregistrer."
+          else
+            git commit -m "Actualités : mise à jour"
+            git push
+          fi
