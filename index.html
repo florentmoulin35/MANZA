@@ -3,8 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#F1F3EF" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#10141C" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" id="themeColor" content="#F1F3EF">
+<script>
+/* Applique tout de suite le thème et la taille du texte choisis (évite un flash au démarrage) */
+try { var t = localStorage.getItem('manza-theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      if (localStorage.getItem('manza-size') === 'large') document.documentElement.dataset.size = 'large'; } catch (e) {}
+</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -12,7 +16,8 @@
 <meta name="description" content="Carnet de suivi de Manza : séances, poids, ration et actualités équestres.">
 <title>Manza – carnet de suivi</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐴</text></svg>">
-<link rel="apple-touch-icon" id="touchIcon" href="">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
@@ -24,15 +29,28 @@
   --h0:#E4E7E0; --h1:#C3D0EC; --h2:#8EA7DC; --h3:#5174C2; --h4:#24479A;
   --font-d:'Barlow Condensed','Arial Narrow','Roboto Condensed',sans-serif;
   --font-b:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --ok:#1F8A73; --ok-soft:#DDF1EC; --late-soft:#F8E1DF; color-scheme:light;
 }
+/* Mode sombre : automatique (selon le téléphone) sauf si le mode clair est imposé, ou imposé dans les paramètres */
 @media (prefers-color-scheme: dark){
-  :root{
+  :root:not([data-theme="light"]){
     --bg:#10141C; --surface:#1A202B; --ink:#E7EAF0; --muted:#9AA3B2; --line:#2B3342;
     --blue:#8AA8EE; --on-blue:#10141C; --blue-soft:#22304D;
     --ochre:#E2B45E; --ochre-soft:#3A3020; --danger:#F2867E;
     --h0:#232B38; --h1:#2B3F6A; --h2:#3D5DA2; --h3:#6286D4; --h4:#9BB6F4;
+    --ok:#5CC9AE; --ok-soft:#183A33; --late-soft:#3D2424; color-scheme:dark;
   }
 }
+:root[data-theme="dark"]{
+    --bg:#10141C; --surface:#1A202B; --ink:#E7EAF0; --muted:#9AA3B2; --line:#2B3342;
+    --blue:#8AA8EE; --on-blue:#10141C; --blue-soft:#22304D;
+    --ochre:#E2B45E; --ochre-soft:#3A3020; --danger:#F2867E;
+    --h0:#232B38; --h1:#2B3F6A; --h2:#3D5DA2; --h3:#6286D4; --h4:#9BB6F4;
+    --ok:#5CC9AE; --ok-soft:#183A33; --late-soft:#3D2424; color-scheme:dark;
+}
+/* Grande taille de texte */
+html[data-size="large"] .app, html[data-size="large"] .sheet-head, html[data-size="large"] .sheet-body,
+html[data-size="large"] .tabs-in{zoom:1.12}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--font-b);
@@ -51,6 +69,12 @@ img{max-width:100%;display:block}
   border:1px solid var(--line);background:var(--surface);font-size:14px;font-weight:600;margin-top:4px}
 .save-btn svg{width:20px;height:20px}
 .save-btn.alert{border-color:var(--ochre);color:var(--ochre)}
+.top > div{min-width:0}
+@media (max-width:480px){
+  .save-btn{width:46px;height:46px;padding:0;justify-content:center;border-radius:12px;flex:0 0 auto}
+  .save-btn svg{width:23px;height:23px}
+  .save-btn .lbl{display:none}
+}
 
 /* Vues */
 .view{display:none}
@@ -259,7 +283,7 @@ details.calc summary{font-weight:600;font-size:15px;cursor:pointer}
 /* Navigation basse */
 .tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);
   padding-bottom:env(safe-area-inset-bottom,0px)}
-.tabs-in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr)}
+.tabs-in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
 .tab{border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
   min-height:64px;font-size:13px;font-weight:600;color:var(--muted);position:relative}
 .tab svg{width:24px;height:24px}
@@ -273,6 +297,111 @@ details.calc summary{font-weight:600;font-size:15px;cursor:pointer}
 
 svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
+
+/* Santé */
+
+.view-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.view-head h2{margin:0}
+.sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:24px 0 10px}
+.sec-head h3{font-size:24px}
+.soin{display:grid;grid-template-columns:40px 1fr auto;gap:4px 12px;align-items:center;width:100%;text-align:left;
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 10px}
+.soin-ic{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.soin-ic svg{width:20px;height:20px}
+.soin-main b{display:block;font-weight:600;line-height:1.25}
+.soin-main small{display:block;color:var(--muted);font-size:13.5px;line-height:1.35;margin-top:2px}
+.badge{font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;white-space:nowrap}
+.prog{grid-column:1/-1;height:5px;border-radius:3px;background:var(--h0);overflow:hidden;margin-top:8px}
+.prog i{display:block;height:100%;border-radius:3px}
+.soin.late .soin-ic,.soin.late .badge{background:var(--late-soft);color:var(--danger)}
+.soin.late .prog i{background:var(--danger)}
+.soin.soon .soin-ic,.soin.soon .badge{background:var(--ochre-soft);color:var(--ochre)}
+.soin.soon .prog i{background:var(--ochre)}
+.soin.ok .soin-ic,.soin.ok .badge{background:var(--ok-soft);color:var(--ok)}
+.soin.ok .prog i{background:var(--ok)}
+.soin.none .soin-ic,.soin.none .badge{background:var(--bg);color:var(--muted)}
+.dashed{display:flex;justify-content:center;gap:4px 18px;flex-wrap:wrap;border:1px dashed var(--line);border-radius:14px;padding:6px}
+.dashed button{background:none;border:0;font-weight:600;min-height:40px;color:var(--blue)}
+.pchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pchips button{border:1px solid var(--line);background:var(--bg);border-radius:999px;min-height:38px;padding:0 13px;font-size:14px}
+.obs{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px;margin:0 0 10px}
+.obs-head{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:8px}
+.obs-tag{font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px}
+.obs-head .small{white-space:nowrap}
+.int-1,.int-2{background:var(--ochre-soft);color:var(--ochre)}
+.int-3{background:var(--late-soft);color:var(--danger)}
+.obs-note{display:block;margin:0 0 8px;white-space:pre-wrap;word-break:break-word}
+.obs-up{display:block;font-size:14px;color:var(--muted);margin-bottom:8px}
+.obs-foot{display:flex;align-items:center;gap:10px;margin-top:4px}
+.obs-photo{width:52px;height:52px;border-radius:10px;overflow:hidden;border:1px solid var(--line);background:var(--bg);
+  padding:0;flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.obs-photo img{width:100%;height:100%;object-fit:cover}
+.obs-photo svg{width:22px;height:22px}
+.obs-count{font-size:13px;color:var(--muted);flex:1}
+.obs-actions{display:flex;gap:8px;margin-top:12px}
+.obs-actions .btn{flex:1}
+.const{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.const div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+.const span{font-size:13px;color:var(--muted)}
+.const b{display:block;font:600 30px/1.1 var(--font-d)}
+.const small{font-size:13px;color:var(--muted);font-weight:500;font-family:var(--font-b)}
+.const .warn{border-color:var(--danger)}
+.const .warn b{color:var(--danger)}
+.zone-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.zone-grid .opt span{display:flex;justify-content:center;align-items:center;min-height:46px;border-radius:10px;
+  border:1px solid var(--line);background:var(--bg);font-size:14px;text-align:center;padding:0 6px}
+.segf{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.segf .opt span{display:flex;justify-content:center;align-items:center;min-height:46px;background:var(--bg);font-size:15px}
+.segf .opt + .opt span{border-left:1px solid var(--line)}
+.switch-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);
+  border-radius:14px;padding:12px 14px;margin-bottom:18px}
+.switch-row b{display:block}
+.switch-row small{color:var(--muted);font-size:13.5px}
+.switch{position:relative;width:52px;height:30px;flex:0 0 auto}
+.switch input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer;z-index:1}
+.switch span{position:absolute;inset:0;border-radius:999px;background:var(--h0);transition:background .2s}
+.switch span::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;
+  box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .2s}
+.switch input:checked + span{background:var(--blue)}
+.switch input:checked + span::after{transform:translateX(22px)}
+.switch input:focus-visible + span{outline:2px solid var(--ochre);outline-offset:2px}
+.id-name{font:700 44px/1 var(--font-d);margin:0}
+.contact{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--surface);
+  border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+.contact small{display:block;color:var(--muted);font-size:13px}
+.contact b{display:block}
+.contact .t{display:block;color:var(--muted);font-size:14px}
+.call{width:46px;height:46px;border-radius:50%;background:var(--blue);color:var(--on-blue);display:flex;
+  align-items:center;justify-content:center;flex:0 0 auto}
+.call.off{background:var(--bg);color:var(--muted);border:1px solid var(--line)}
+.call svg{width:20px;height:20px}
+.st-ok{color:var(--ok)} .st-late{color:var(--danger)} .st-soon{color:var(--ochre)}
+.list-row{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:12px 0}
+.list-row:first-child{border-top:0;padding-top:2px}
+.list-row b{display:block}
+.list-row span{font-size:14px;color:var(--muted)}
+.rem-status{font-size:15px;margin:0 0 12px}
+.pref{margin:0 0 22px}
+.pref > b{display:block;font-size:15px;margin-bottom:8px}
+.pref .note{margin-top:8px}
+.segf.two{grid-template-columns:repeat(2,1fr)}
+.pref-group{font:600 13px var(--font-b);color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:6px 0 12px}
+#printArea{display:none}
+@media print{
+  body{background:#fff !important;color:#000 !important;padding:0 !important}
+  body > *:not(#printArea){display:none !important}
+  #printArea{display:block !important;font:10.5pt/1.45 Arial,Helvetica,sans-serif;color:#000}
+  #printArea h1{font-size:20pt;margin:0 0 2pt}
+  #printArea h2{font-size:13pt;margin:16pt 0 6pt;padding-bottom:3pt;border-bottom:1.5pt solid #24479A;color:#24479A}
+  #printArea table{width:100%;border-collapse:collapse}
+  #printArea th,#printArea td{text-align:left;vertical-align:top;padding:4pt 6pt;border-bottom:.5pt solid #ccc}
+  #printArea th{width:32%;font-weight:600}
+  #printArea thead th{width:auto;background:#eef1f8}
+  #printArea .pm{color:#555;margin:0}
+  #printArea p{margin:0 0 6pt;white-space:pre-wrap}
+  @page{margin:14mm}
+}
+
 @media (prefers-reduced-motion: reduce){
   *{transition:none !important;animation:none !important}
 }
@@ -285,11 +414,11 @@ svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke
   <header class="top">
     <div>
       <h1 class="name">MANZA</h1>
-      <p class="sub">Pure Race Espagnole, 5 ans</p>
+      <p class="sub" id="horseSub">Pure Race Espagnole, 5 ans</p>
     </div>
-    <button class="save-btn" id="btnSave" data-action="settings" aria-label="Sauvegarde des données">
-      <svg class="i" viewBox="0 0 24 24"><path d="M7 18a4 4 0 0 1-.7-7.9A6 6 0 0 1 17.7 9 4.5 4.5 0 0 1 17.5 18H7z"/><path d="M12 11v6M9.5 14.5 12 17l2.5-2.5"/></svg>
-      Sauvegarde
+    <button class="save-btn" id="btnSave" data-action="prefs" aria-label="Paramètres">
+      <svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+      <span class="lbl">Paramètres</span>
     </button>
   </header>
 
@@ -363,6 +492,34 @@ svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke
     </div>
   </section>
 
+  <!-- ============ SANTÉ ============ -->
+  <section class="view" id="view-sante">
+    <div class="view-head">
+      <h2>Santé</h2>
+      <button class="btn sm ghost" data-action="fiche">
+        <svg class="i" viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4M14 10h4M14 13h3"/></svg>
+        Fiche et urgences
+      </button>
+    </div>
+
+    <div class="sec-head" style="margin-top:14px"><h3>À venir</h3><span class="small muted" id="soinsCount"></span></div>
+    <div id="soinsUpcoming"></div>
+    <div class="dashed"><button data-action="all-soins">Voir tous les soins</button><button data-action="new-soin">Ajouter un soin</button></div>
+
+    <div class="sec-head"><h3>À surveiller</h3><button class="btn sm ghost" data-action="obs-history">Historique</button></div>
+    <div id="obsWatch"></div>
+    <button class="btn primary block" data-action="new-obs">Ajouter une observation</button>
+
+    <div class="sec-head"><h3>Constantes de repos</h3><span class="small muted" id="constDate"></span></div>
+    <div id="constBox"></div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="btn ghost" style="flex:1" data-action="new-const">Noter les constantes</button>
+      <button class="btn ghost" data-action="const-history">Historique</button>
+    </div>
+
+    <div class="card" id="remCard" style="margin-top:24px"></div>
+  </section>
+
   <!-- ============ ACTUS ============ -->
   <section class="view" id="view-actus">
     <div class="card-head" style="margin-bottom:10px">
@@ -389,6 +546,9 @@ svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke
     <button class="tab" data-action="tab" data-tab="poids">
       <svg class="i" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M7.5 10a4.5 4.5 0 0 1 9 0"/><path d="M12 10l1.8-2.4"/></svg>Poids
     </button>
+    <button class="tab" data-action="tab" data-tab="sante">
+      <svg class="i" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></svg>Santé
+    </button>
     <button class="tab" data-action="tab" data-tab="actus">
       <svg class="i" viewBox="0 0 24 24"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2"/><path d="M7 9h7M7 13h7M7 16h4"/></svg>Actus
     </button>
@@ -412,6 +572,7 @@ svg.i{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke
 
 <input type="file" id="importFile" accept="application/json,.json" hidden>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div id="printArea"></div>
 
 <script>
 (() => {
@@ -477,13 +638,24 @@ const DB = {
   db: null,
   open(){
     return new Promise((res, rej) => {
-      const r = indexedDB.open('manza-carnet', 1);
+      // Version 2 : ajoute uniquement les tiroirs Santé. Les données existantes ne sont pas modifiées.
+      const r = indexedDB.open('manza-carnet', 2);
       r.onupgradeneeded = () => {
         const d = r.result;
-        ['sessions','weights','photos','meta'].forEach(s => { if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath:'id' }); });
+        ['sessions','weights','photos','meta','soins','observations','constants'].forEach(s => { if (!d.objectStoreNames.contains(s)) d.createObjectStore(s, { keyPath:'id' }); });
       };
-      r.onsuccess = () => { this.db = r.result; res(); };
+      r.onsuccess = () => {
+        this.db = r.result;
+        this.db.onversionchange = () => { this.db.close(); toast('Nouvelle version disponible : recharge la page.'); };
+        const b = document.getElementById('blockedBanner'); if (b) b.remove();
+        res();
+      };
       r.onerror = () => rej(r.error);
+      r.onblocked = () => {
+        if (document.getElementById('blockedBanner')) return;
+        document.querySelector('.app').insertAdjacentHTML('afterbegin',
+          '<div class="banner show" id="blockedBanner">Mise à jour en attente : ferme les autres onglets ou fenêtres de l’application Manza, puis recharge cette page. Tes données ne risquent rien.</div>');
+      };
     });
   },
   req(store, mode, fn){
@@ -500,9 +672,13 @@ const DB = {
   putMany(s, arr){ return this.req(s, 'readwrite', o => { arr.forEach(v => o.put(v)); }); }
 };
 
-let sessions = [], weights = [], photos = [];
+let sessions = [], weights = [], photos = [], soins = [], observations = [], constants = [], fiche = {};
 async function loadAll(){
-  [sessions, weights, photos] = await Promise.all([DB.all('sessions'), DB.all('weights'), DB.all('photos')]);
+  [sessions, weights, photos, soins, observations, constants] = await Promise.all(
+    ['sessions','weights','photos','soins','observations','constants'].map(st => DB.all(st)));
+  observations.sort((a,b) => b.date.localeCompare(a.date) || (b.created||0) - (a.created||0));
+  constants.sort((a,b) => (b.date + (b.time||'')).localeCompare(a.date + (a.time||'')) || (b.created||0) - (a.created||0));
+  fiche = (await getMeta('fiche')) || {};
   sessions.sort((a,b) => b.date.localeCompare(a.date) || (b.created||0) - (a.created||0));
   weights.sort((a,b) => b.date.localeCompare(a.date) || (b.created||0) - (a.created||0));
   photos.sort((a,b) => b.date.localeCompare(a.date));
@@ -520,6 +696,7 @@ function showTab(tab){
   });
   window.scrollTo(0, 0);
   if (tab === 'actus') loadNews(false);
+  if (tab === 'sante') renderHealth();
 }
 
 /* ================= Feuille modale ================= */
@@ -680,7 +857,7 @@ function chipsField(name, items, values){
 }
 
 function openSessionForm(id, date, fromDay){
-  const s = id ? sessions.find(x => x.id === id) : { date: date || todayKey(), activity:'monte', duration:45, forme:null, sensation:null, humeurs:[], meteo:[], temp:'', notes:'', sensationNote:'' };
+  const s = id ? sessions.find(x => x.id === id) : { date: date || todayKey(), activity: settings.defActivity, duration: settings.defDuration || null, forme:null, sensation:null, humeurs:[], meteo:[], temp:'', notes:'', sensationNote:'' };
   if (!s) return;
   const backDate = fromDay ? s.date : null;
   openSheet(id ? 'Modifier la séance' : 'Nouvelle séance', `
@@ -822,9 +999,10 @@ function renderRegime(){
 }
 
 function renderGallery(){
-  $('#photoCount').textContent = photos.length ? `${photos.length} photo${photos.length > 1 ? 's' : ''}` : '';
-  $('#photoGallery').innerHTML = photos.length
-    ? `<div class="photos">${photos.slice(0, 30).map(p => `<button data-action="view-photo" data-id="${p.id}" aria-label="Photo du ${fmtDate(p.date)}"><img src="${p.data}" alt="" loading="lazy"><span class="cap">${fmtShort(parseYmd(p.date))}</span></button>`).join('')}</div>`
+  const wp = photos.filter(p => p.kind !== 'obs');
+  $('#photoCount').textContent = wp.length ? `${wp.length} photo${wp.length > 1 ? 's' : ''}` : '';
+  $('#photoGallery').innerHTML = wp.length
+    ? `<div class="photos">${wp.slice(0, 30).map(p => `<button data-action="view-photo" data-id="${p.id}" aria-label="Photo du ${fmtDate(p.date)}"><img src="${p.data}" alt="" loading="lazy"><span class="cap">${fmtShort(parseYmd(p.date))}</span></button>`).join('')}</div>`
     : '<p class="empty-msg">Ajoute des photos à une pesée pour comparer l’état de Manza dans le temps.</p>';
 }
 
@@ -955,7 +1133,8 @@ function openViewer(id){
   const p = photos.find(x => x.id === id); if (!p) return;
   const w = weights.find(x => x.id === p.entryId);
   $('#viewerImg').src = p.data;
-  $('#viewerCap').textContent = fmtDate(p.date) + (w && w.weight ? ` : ${num(w.weight)} kg` : '');
+  const o = observations.find(x => x.id === p.entryId);
+  $('#viewerCap').textContent = fmtDate(p.date) + (w && w.weight ? ` : ${num(w.weight)} kg` : '') + (o ? ` : ${[o.type, o.zone].filter(Boolean).join(', ')}` : '');
   $('#viewer').classList.add('open');
 }
 
@@ -1033,7 +1212,7 @@ function relTime(ts){
 function renderNews(failed = [], allFailed = false){
   $('#srcChips').innerHTML = [{ id:'all', name:'Toutes' }, ...SOURCES].map(s =>
     `<button class="${newsFilter === s.id ? 'on' : ''}" data-action="news-filter" data-src="${s.id}">${esc(s.name)}</button>`).join('');
-  const list = news.filter(n => newsFilter === 'all' || n.source === newsFilter);
+  const list = news.filter(n => SOURCES.some(x => x.id === n.source) && (newsFilter === 'all' || n.source === newsFilter));
   let status = newsFetchedAt ? `Actualités mises à jour ${relTime(newsFetchedAt)}.` : '';
   if (allFailed) status = news.length ? 'Sources injoignables pour le moment : affichage des dernières actualités enregistrées.' : '';
   else if (failed.length) status += ` Sans nouvel article récupéré : ${failed.join(', ')}.`;
@@ -1054,6 +1233,704 @@ function renderNews(failed = [], allFailed = false){
     `<a href="${s.url}" target="_blank" rel="noopener noreferrer"><span><strong>${esc(s.name)}</strong><br><small>${esc(s.full)}</small></span><svg class="i" viewBox="0 0 24 24" width="20" height="20"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg></a>`).join('');
 }
 
+/* ================= SANTÉ ================= */
+const BREED = 'Pure Race Espagnole';
+const BIRTH = '2021-04-16';
+const BIRTH_PLACE = 'Espagne';
+const fmtBirth = () => parseYmd(BIRTH).toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric' });
+function ageYears(){
+  const b = parseYmd(BIRTH), n = new Date();
+  let a = n.getFullYear() - b.getFullYear();
+  if (n.getMonth() < b.getMonth() || (n.getMonth() === b.getMonth() && n.getDate() < b.getDate())) a--;
+  return a;
+}
+
+const SOIN_CATS = [
+  { id:'vermifuge', label:'Vermifuge / coproscopie' },
+  { id:'marechal',  label:'Maréchal-ferrant' },
+  { id:'vaccin',    label:'Vaccin' },
+  { id:'dentiste',  label:'Dentiste' },
+  { id:'osteo',     label:'Ostéopathe' },
+  { id:'autre',     label:'Autre soin' }
+];
+const SOIN_PRESETS = [
+  { cat:'vermifuge', name:'Vermifuge / coproscopie', every:3,  unit:'mois' },
+  { cat:'marechal',  name:'Maréchal-ferrant',        every:6,  unit:'semaines' },
+  { cat:'vaccin',    name:'Vaccin grippe',           every:6,  unit:'mois' },
+  { cat:'vaccin',    name:'Vaccin tétanos',          every:12, unit:'mois' },
+  { cat:'dentiste',  name:'Dentiste',                every:12, unit:'mois' },
+  { cat:'osteo',     name:'Ostéopathe',              every:6,  unit:'mois' }
+];
+const OBS_TYPES = ['Chaleur / gonflement','Boiterie','Plaie','Appétit','Digestion','Respiration','Comportement','Autre'];
+const OBS_ZONES = ['Antérieur gauche','Antérieur droit','Postérieur gauche','Postérieur droit','Dos / reins','Tête / encolure','Ventre / flancs','Général'];
+const INTENSITIES = ['Léger','Modéré','Important'];
+const NORMS = { temp:[37.5, 38.5], pouls:[28, 44], resp:[8, 16] };
+
+const IC = {
+  late:'<svg class="i" viewBox="0 0 24 24"><path d="M12 4 2.8 19.5h18.4z"/><path d="M12 10v4.2M12 17h.01"/></svg>',
+  soon:'<svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+  ok:'<svg class="i" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+  none:'<svg class="i" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16"/></svg>',
+  camera:'<svg class="i" viewBox="0 0 24 24"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
+  phone:'<svg class="i" viewBox="0 0 24 24"><path d="M6.6 3.5h3l1.5 4-2 1.3a11 11 0 0 0 6.1 6.1l1.3-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>'
+};
+
+/* ---------- Échéances ---------- */
+function addInterval(key, n, unit){
+  const d = parseYmd(key);
+  if (unit === 'jours') return ymd(addDays(d, n));
+  if (unit === 'semaines') return ymd(addDays(d, n*7));
+  const r = new Date(d.getFullYear(), d.getMonth() + n, 1);
+  r.setDate(Math.min(d.getDate(), new Date(r.getFullYear(), r.getMonth()+1, 0).getDate()));
+  return ymd(r);
+}
+const nextOf = s => s.next || (s.last && s.every ? addInterval(s.last, s.every, s.unit) : null);
+function freqText(s){
+  if (!s.every) return 'ponctuel';
+  if (s.every === 1) return { jours:'chaque jour', semaines:'chaque semaine', mois:'chaque mois' }[s.unit];
+  return s.unit === 'semaines' ? `toutes les ${s.every} semaines` : `tous les ${s.every} ${s.unit}`;
+}
+function soinStatus(s){
+  const n = nextOf(s);
+  if (!n) return { cls:'none', label: s.last ? 'Fait' : 'À planifier', n:null, d:null, pct:0 };
+  const d = daysBetween(todayKey(), n);
+  let cls, label;
+  if (d < 0){ cls = 'late'; label = `En retard, ${-d} j`; }
+  else if (d === 0){ cls = 'late'; label = 'Aujourd’hui'; }
+  else if (d <= 14){ cls = 'soon'; label = d === 1 ? 'Demain' : `Dans ${d} j`; }
+  else { cls = 'ok'; label = d < 60 ? `Dans ${Math.round(d/7)} sem.` : `Dans ${Math.round(d/30.44)} mois`; }
+  let pct = 100;
+  if (s.last && s.last < n){ pct = Math.min(100, Math.max(2, daysBetween(s.last, todayKey()) / daysBetween(s.last, n) * 100)); }
+  return { cls, label, n, d, pct };
+}
+const sortedSoins = () => [...soins].sort((a, b) => {
+  const na = nextOf(a), nb = nextOf(b);
+  if (na && nb) return na.localeCompare(nb);
+  if (na) return -1; if (nb) return 1;
+  return a.name.localeCompare(b.name);
+});
+
+function soinCard(s){
+  const st = soinStatus(s);
+  const sub = [s.last ? `Dernier : ${fmtShort(parseYmd(s.last))}` : 'Dernière date à renseigner', freqText(s)].join(', ');
+  return `<button class="soin ${st.cls}" data-action="open-soin" data-id="${s.id}">
+    <span class="soin-ic">${IC[st.cls]}</span>
+    <span class="soin-main"><b>${esc(s.name)}</b><small>${sub}${st.n ? `<br>Prévu le ${fmtDate(st.n)}` : ''}</small></span>
+    <span class="badge">${st.label}</span>
+    ${st.n ? `<span class="prog"><i style="width:${st.pct}%"></i></span>` : ''}
+  </button>`;
+}
+
+function renderSoins(){
+  const list = sortedSoins();
+  const shown = list.slice(0, 3);
+  $('#soinsCount').textContent = soins.length ? `${shown.length} sur ${soins.length} soin${soins.length > 1 ? 's' : ''} suivi${soins.length > 1 ? 's' : ''}` : '';
+  $('#soinsUpcoming').innerHTML = shown.length ? shown.map(soinCard).join('') : `
+    <div class="card"><p class="empty-msg" style="margin:0">Ajoute les soins réguliers de Manza pour voir les échéances ici. Pour commencer :</p>
+    <div class="pchips">${SOIN_PRESETS.map((p, i) => `<button data-action="new-soin" data-preset="${i}">+ ${esc(p.name)}</button>`).join('')}</div></div>`;
+}
+
+function openAllSoins(){
+  const missing = SOIN_PRESETS.map((p, i) => ({ ...p, i })).filter(p => !soins.some(s => s.name.toLowerCase() === p.name.toLowerCase()));
+  openSheet('Tous les soins', `
+    ${soins.length ? sortedSoins().map(soinCard).join('') : '<p class="empty-msg">Aucun soin suivi pour le moment.</p>'}
+    <button class="btn primary block" style="margin-top:6px" data-action="new-soin">Ajouter un soin</button>
+    ${missing.length ? `<p class="sub-title">Suggestions</p><div class="pchips">${missing.map(p => `<button data-action="new-soin" data-preset="${p.i}">+ ${esc(p.name)}</button>`).join('')}</div>` : ''}`);
+}
+
+function openSoinDetail(id){
+  const s = soins.find(x => x.id === id); if (!s) return;
+  const st = soinStatus(s);
+  const hist = [...(s.history || [])].sort((a, b) => b.date.localeCompare(a.date));
+  openSheet(s.name, `
+    ${soinCard(s).replace('<button class="soin', '<div class="soin').replace(/<\/button>\s*$/, '</div>').replace(` data-action="open-soin" data-id="${s.id}"`, '')}
+    <div class="card" style="background:var(--bg)">
+      <div class="kv"><span>Prochaine échéance</span><strong>${st.n ? fmtDate(st.n) : 'Non planifiée'}</strong></div>
+      <div class="kv"><span>Dernière fois</span><strong>${s.last ? fmtDate(s.last) : '–'}</strong></div>
+      <div class="kv"><span>Fréquence</span><strong>${freqText(s)}</strong></div>
+      <div class="kv"><span>Catégorie</span><strong>${esc((SOIN_CATS.find(c => c.id === s.cat) || SOIN_CATS[5]).label)}</strong></div>
+    </div>
+    ${s.notes ? `<p class="sess-notes" style="margin:0 0 14px">${esc(s.notes)}</p>` : ''}
+    <div class="stack">
+      <button class="btn primary block" data-action="soin-done" data-id="${s.id}">Noter comme fait</button>
+      ${st.n ? `<button class="btn ghost block" data-action="soin-ics" data-id="${s.id}">Ajouter à mon agenda</button>` : ''}
+    </div>
+    <p class="sub-title">Historique</p>
+    ${hist.length ? `<div>${hist.map(h => `<div class="list-row"><b>${fmtDate(h.date)}</b>${h.note ? `<span>${esc(h.note)}</span>` : ''}</div>`).join('')}</div>` : '<p class="empty-msg">Pas encore d’historique.</p>'}
+    <div class="sess-actions" style="margin-top:16px"><button class="btn sm ghost" data-action="edit-soin" data-id="${s.id}">Modifier</button><button class="btn sm danger" data-action="delete-soin" data-id="${s.id}">Supprimer</button></div>`);
+}
+
+function openSoinForm(id, presetIdx){
+  const p = presetIdx != null ? SOIN_PRESETS[presetIdx] : null;
+  const s = id ? soins.find(x => x.id === id)
+    : { cat: p ? p.cat : 'autre', name: p ? p.name : '', last:'', every: p ? p.every : '', unit: p ? p.unit : 'mois', next:'', notes:'', history:[] };
+  if (!s) return;
+  openSheet(id ? 'Modifier le soin' : 'Nouveau soin', `
+    <form id="fSoin" novalidate>
+      <label class="field"><span>Nom du soin</span><input type="text" name="name" value="${esc(s.name)}" placeholder="ex. Vaccin grippe"></label>
+      <label class="field"><span>Catégorie</span>
+        <select name="cat">${SOIN_CATS.map(c => `<option value="${c.id}" ${c.id === s.cat ? 'selected' : ''}>${c.label}</option>`).join('')}</select></label>
+      <label class="field"><span>Dernière fois</span><input type="date" name="last" value="${s.last || ''}"></label>
+      <div class="field"><span>Fréquence</span>
+        <div class="row2"><input type="number" name="every" min="0" max="120" inputmode="numeric" value="${s.every || ''}" placeholder="0 = ponctuel" aria-label="Nombre">
+        <select name="unit" aria-label="Unité">${['jours','semaines','mois'].map(u => `<option ${u === s.unit ? 'selected' : ''}>${u}</option>`).join('')}</select></div>
+      </div>
+      <label class="field"><span>Prochaine date imposée <small class="muted">(facultatif)</small></span><input type="date" name="next" value="${s.next || ''}"></label>
+      <p class="note" style="margin:-10px 0 18px">Sans date imposée, la prochaine échéance est calculée à partir de la dernière fois et de la fréquence.</p>
+      <label class="field"><span>Notes</span><textarea name="notes" rows="2" placeholder="Produit utilisé, vétérinaire, remarques…">${esc(s.notes)}</textarea></label>
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const f = body.querySelector('#fSoin');
+      const nameIn = f.elements['name'];
+      f.cat.addEventListener('change', () => { if (!nameIn.value.trim()) nameIn.value = (SOIN_CATS.find(c => c.id === f.cat.value) || {}).label || ''; });
+      f.querySelector('[data-cancel]').onclick = () => id ? openSoinDetail(id) : closeSheet();
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const fd = new FormData(f);
+        const name = fd.get('name').trim();
+        if (!name){ toast('Donne un nom au soin.'); return; }
+        const every = Math.max(0, Math.round(parseNum(fd.get('every')) || 0));
+        const rec = { ...s, id: s.id || uid(), created: s.created || Date.now(), name, cat: fd.get('cat'),
+          last: fd.get('last') || null, every, unit: fd.get('unit'), next: fd.get('next') || null, notes: fd.get('notes').trim(),
+          history: [...(s.history || [])] };
+        if (rec.last && !rec.history.some(h => h.date === rec.last)) rec.history.push({ date: rec.last, note:'' });
+        try {
+          await DB.put('soins', rec); await loadAll(); renderHealth(); checkBackup(); checkReminders();
+          toast('Soin enregistré'); openSoinDetail(rec.id);
+        } catch (err){ toast('Échec de l’enregistrement : ' + err.message); }
+      };
+    });
+}
+
+function openSoinDone(id){
+  const s = soins.find(x => x.id === id); if (!s) return;
+  openSheet('Noter comme fait', `
+    <form id="fDone" novalidate>
+      <p style="margin-top:0"><strong>${esc(s.name)}</strong></p>
+      <label class="field"><span>Date du soin</span><input type="date" name="date" value="${todayKey()}"></label>
+      <label class="field"><span>Note <small class="muted">(facultatif)</small></span><textarea name="note" rows="2" placeholder="Produit, résultat de coproscopie, remarque du vétérinaire…"></textarea></label>
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const f = body.querySelector('#fDone');
+      f.querySelector('[data-cancel]').onclick = () => openSoinDetail(id);
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const date = f.date.value || todayKey();
+        const history = (s.history || []).filter(h => h.date !== date);
+        history.push({ date, note: f.note.value.trim() });
+        const rec = { ...s, history, last: !s.last || date > s.last ? date : s.last, next: null };
+        await DB.put('soins', rec); await loadAll(); renderHealth(); checkReminders();
+        const n = nextOf(rec);
+        toast(n ? `Noté. Prochaine échéance : ${fmtDate(n)}` : 'Soin noté');
+        openSoinDetail(id);
+      };
+    });
+}
+
+async function deleteSoin(id){
+  if (!confirm('Supprimer ce soin et son historique ?')) return;
+  await DB.del('soins', id); await loadAll(); renderHealth(); closeSheet(); toast('Soin supprimé');
+}
+
+/* ---------- Observations ---------- */
+function radioChips(name, items, value, cls){
+  return `<div class="${cls}">${items.map((it, i) => {
+    const v = typeof it === 'string' ? it : it.v; const l = typeof it === 'string' ? it : it.l;
+    return `<label class="opt"><input type="radio" name="${name}" value="${esc(v)}" ${String(value) === String(v) ? 'checked' : ''}><span>${esc(l)}</span></label>`;
+  }).join('')}</div>`;
+}
+const photoField = () => `<div class="field"><span>Photos</span>
+  <label class="file-btn"><input type="file" accept="image/*" multiple class="photo-input">${IC.camera.replace('class="i"', 'class="i" width="20" height="20"')} Ajouter une photo</label>
+  <div class="pending"></div></div>`;
+function photoPicker(body, pending, removed){
+  const box = body.querySelector('.pending'), input = body.querySelector('.photo-input');
+  const draw = () => { box.innerHTML = pending.map((p, i) => `<div><img src="${p.data}" alt=""><button type="button" data-rm="${i}" aria-label="Retirer la photo">×</button></div>`).join(''); };
+  draw();
+  box.addEventListener('click', e => {
+    const b = e.target.closest('[data-rm]'); if (!b) return;
+    const [p] = pending.splice(Number(b.dataset.rm), 1); if (p.existing) removed.push(p.id); draw();
+  });
+  input.addEventListener('change', async e => {
+    const files = [...e.target.files]; e.target.value = '';
+    for (const file of files){
+      try { pending.push({ id: uid(), data: await compressImage(file), existing:false }); draw(); }
+      catch { toast('Une photo n’a pas pu être lue.'); }
+    }
+  });
+}
+async function savePhotos(entryId, date, pending, removed){
+  for (const pid of removed) await DB.del('photos', pid);
+  const fresh = pending.filter(p => !p.existing).map(p => ({ id: p.id, entryId, date, data: p.data, kind:'obs' }));
+  if (fresh.length) await DB.putMany('photos', fresh);
+}
+const obsLabel = o => [o.type, o.zone].filter(Boolean).join(', ') || 'Observation';
+
+function obsCard(o){
+  const ph = photos.filter(p => p.entryId === o.id);
+  const since = daysBetween(o.date, todayKey());
+  const ups = o.updates || [];
+  const count = [ph.length ? `${ph.length} photo${ph.length > 1 ? 's' : ''}` : '', ups.length ? `${ups.length} mise${ups.length > 1 ? 's' : ''} à jour` : ''].filter(Boolean).join(', ') || INTENSITIES[(o.intensity || 1) - 1];
+  return `<div class="obs">
+    <div class="obs-head"><span class="obs-tag int-${o.intensity || 1}">${esc(obsLabel(o))}</span>
+      <span class="small muted">${since <= 0 ? 'Aujourd’hui' : since === 1 ? 'Depuis hier' : `Depuis ${since} jours`}</span></div>
+    <button class="linkish" data-action="open-obs" data-id="${o.id}">
+      <span class="obs-note">${esc(o.note || 'Sans note')}</span>
+      ${ups[0] ? `<span class="obs-up"><strong>${fmtShort(parseYmd(ups[0].date))} :</strong> ${esc(ups[0].note)}</span>` : ''}
+    </button>
+    <div class="obs-foot">
+      <button class="obs-photo" data-action="${ph.length ? 'view-photo' : 'obs-update'}" data-id="${ph.length ? ph[0].id : o.id}" aria-label="${ph.length ? 'Voir la photo' : 'Ajouter un suivi avec photo'}">${ph.length ? `<img src="${ph[0].data}" alt="">` : IC.camera}</button>
+      <span class="obs-count">${count}</span>
+    </div>
+    <div class="obs-actions">
+      <button class="btn sm ghost" data-action="obs-update" data-id="${o.id}">Ajouter un suivi</button>
+      <button class="btn sm primary" data-action="obs-resolve" data-id="${o.id}">Marquer résolu</button>
+    </div>
+  </div>`;
+}
+
+function renderObs(){
+  const watch = observations.filter(o => o.watch && !o.resolved);
+  $('#obsWatch').innerHTML = watch.length ? watch.map(obsCard).join('')
+    : '<p class="empty-msg" style="margin:0 0 12px">Rien à surveiller pour le moment.</p>';
+}
+
+function openObsForm(id){
+  const o = id ? observations.find(x => x.id === id) : { date: todayKey(), type:'', zone:'', intensity:1, note:'', watch:true };
+  if (!o) return;
+  const pending = id ? photos.filter(p => p.entryId === id).map(p => ({ id:p.id, data:p.data, existing:true })) : [];
+  const removed = [];
+  openSheet(id ? 'Modifier l’observation' : 'Nouvelle observation', `
+    <form id="fObs" novalidate>
+      <label class="field"><span>Date</span><input type="date" name="date" value="${o.date}"></label>
+      <fieldset class="field"><legend>Type de signe</legend>${radioChips('type', OBS_TYPES, o.type, 'chips')}</fieldset>
+      <fieldset class="field"><legend>Zone concernée</legend>${radioChips('zone', OBS_ZONES, o.zone, 'zone-grid')}</fieldset>
+      <fieldset class="field"><legend>Intensité</legend>${radioChips('intensity', INTENSITIES.map((l, i) => ({ v:i+1, l })), o.intensity || 1, 'segf')}</fieldset>
+      <label class="field"><span>Note</span><textarea name="note" rows="3" placeholder="Ce que tu observes, depuis quand, ce qui a changé…">${esc(o.note)}</textarea></label>
+      ${photoField()}
+      <label class="switch-row"><span><b>À surveiller</b><small>Reste en haut de l’écran Santé jusqu’à résolution</small></span>
+        <span class="switch"><input type="checkbox" name="watch" ${o.watch ? 'checked' : ''}><span></span></span></label>
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const f = body.querySelector('#fObs');
+      photoPicker(body, pending, removed);
+      f.querySelector('[data-cancel]').onclick = () => id ? openObsDetail(id) : closeSheet();
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const fd = new FormData(f);
+        const rec = { ...o, id: o.id || uid(), created: o.created || Date.now(), date: fd.get('date') || todayKey(),
+          type: fd.get('type') || '', zone: fd.get('zone') || '', intensity: Number(fd.get('intensity') || 1),
+          note: fd.get('note').trim(), watch: !!fd.get('watch'), resolved: o.resolved || false, updates: o.updates || [] };
+        if (!rec.type && !rec.note && !pending.length){ toast('Choisis un type de signe ou écris une note.'); return; }
+        try {
+          await DB.put('observations', rec); await savePhotos(rec.id, rec.date, pending, removed);
+          await loadAll(); renderHealth(); checkBackup(); askPersist();
+          toast('Observation enregistrée'); id ? openObsDetail(id) : closeSheet();
+        } catch (err){ toast('Échec de l’enregistrement : ' + err.message); }
+      };
+    });
+}
+
+function openObsDetail(id){
+  const o = observations.find(x => x.id === id); if (!o) return;
+  const ph = photos.filter(p => p.entryId === id);
+  const ups = o.updates || [];
+  openSheet(obsLabel(o), `
+    <div class="tags" style="margin:0 0 10px"><span class="obs-tag int-${o.intensity || 1}">${INTENSITIES[(o.intensity || 1) - 1]}</span>
+      <span class="tag">${o.resolved ? `Résolu le ${fmtDate(o.resolvedDate || todayKey())}` : o.watch ? 'À surveiller' : 'Noté'}</span></div>
+    <p class="sess-meta" style="margin:0 0 6px">Observé le ${fmtDate(o.date)}</p>
+    <p class="sess-notes" style="margin:0 0 14px">${esc(o.note || 'Sans note')}</p>
+    ${ph.length ? `<div class="photos" style="margin-bottom:14px">${ph.map(p => `<button data-action="view-photo" data-id="${p.id}" aria-label="Voir la photo"><img src="${p.data}" alt=""><span class="cap">${fmtShort(parseYmd(p.date))}</span></button>`).join('')}</div>` : ''}
+    <p class="sub-title" style="margin-top:0">Suivi</p>
+    ${ups.length ? `<div>${ups.map(u => `<div class="list-row"><b>${fmtDate(u.date)}</b><span>${esc(u.note)}</span></div>`).join('')}</div>` : '<p class="empty-msg">Pas encore de mise à jour.</p>'}
+    <div class="stack" style="margin-top:14px">
+      <button class="btn ghost block" data-action="obs-update" data-id="${id}">Ajouter un suivi</button>
+      ${o.resolved ? `<button class="btn ghost block" data-action="obs-reopen" data-id="${id}">Remettre à surveiller</button>` : `<button class="btn primary block" data-action="obs-resolve" data-id="${id}">Marquer résolu</button>`}
+    </div>
+    <div class="sess-actions" style="margin-top:16px"><button class="btn sm ghost" data-action="edit-obs" data-id="${id}">Modifier</button><button class="btn sm danger" data-action="delete-obs" data-id="${id}">Supprimer</button></div>`);
+}
+
+function openObsUpdate(id){
+  const o = observations.find(x => x.id === id); if (!o) return;
+  const pending = [], removed = [];
+  openSheet('Ajouter un suivi', `
+    <form id="fUp" novalidate>
+      <p style="margin-top:0"><strong>${esc(obsLabel(o))}</strong></p>
+      <label class="field"><span>Date</span><input type="date" name="date" value="${todayKey()}"></label>
+      <label class="field"><span>Évolution</span><textarea name="note" rows="3" placeholder="Toujours chaud ? Moins gonflé ? Avis du vétérinaire…"></textarea></label>
+      ${photoField()}
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const f = body.querySelector('#fUp');
+      photoPicker(body, pending, removed);
+      f.querySelector('[data-cancel]').onclick = () => openObsDetail(id);
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const note = f.note.value.trim(), date = f.date.value || todayKey();
+        if (!note && !pending.length){ toast('Écris une note ou ajoute une photo.'); return; }
+        const updates = [{ date, note: note || 'Photo ajoutée' }, ...(o.updates || [])].sort((a, b) => b.date.localeCompare(a.date));
+        await DB.put('observations', { ...o, updates }); await savePhotos(id, date, pending, removed);
+        await loadAll(); renderHealth(); toast('Suivi ajouté'); openObsDetail(id);
+      };
+    });
+}
+
+async function resolveObs(id, resolved){
+  const o = observations.find(x => x.id === id); if (!o) return;
+  await DB.put('observations', { ...o, resolved, watch: resolved ? o.watch : true, resolvedDate: resolved ? todayKey() : null });
+  await loadAll(); renderHealth();
+  toast(resolved ? 'Observation marquée résolue' : 'Observation remise à surveiller');
+  if (sheetOpen) openObsDetail(id);
+}
+
+async function deleteObs(id){
+  if (!confirm('Supprimer cette observation et ses photos ?')) return;
+  await DB.del('observations', id);
+  for (const p of photos.filter(p => p.entryId === id)) await DB.del('photos', p.id);
+  await loadAll(); renderHealth(); closeSheet(); toast('Observation supprimée');
+}
+
+function openObsHistory(){
+  openSheet('Historique des observations', observations.length
+    ? observations.map(o => `<button class="list-row" data-action="open-obs" data-id="${o.id}"><b>${esc(obsLabel(o))}</b>
+        <span>${fmtDate(o.date)}, ${INTENSITIES[(o.intensity || 1) - 1].toLowerCase()}, ${o.resolved ? 'résolu' : o.watch ? 'à surveiller' : 'noté'}</span></button>`).join('')
+    : '<p class="empty-msg">Aucune observation enregistrée.</p>');
+}
+
+/* ---------- Constantes ---------- */
+const outOfRange = (k, v) => v != null && (v < NORMS[k][0] || v > NORMS[k][1]);
+function constWhen(c){
+  const d = daysBetween(c.date, todayKey());
+  const day = d === 0 ? 'Aujourd’hui' : d === 1 ? 'Hier' : fmtShort(parseYmd(c.date));
+  return c.time ? `${day}, ${c.time.replace(':', ' h ')}` : day;
+}
+function renderConst(){
+  const c = constants[0];
+  $('#constDate').textContent = c ? constWhen(c) : '';
+  const tile = (k, label, v, unit, d) => `<div class="${outOfRange(k, v) ? 'warn' : ''}"><span>${label}</span><b>${v != null ? num(v, d) : '–'} <small>${unit}</small></b></div>`;
+  $('#constBox').innerHTML = (c ? `<div class="const">${tile('temp', 'Température', c.temp, '°C', 1)}${tile('pouls', 'Pouls', c.pouls, '/min', 0)}${tile('resp', 'Respiration', c.resp, '/min', 0)}</div>`
+    : '<p class="empty-msg" style="margin:0">Note les constantes de Manza au repos, quand tout va bien : elles serviront de référence.</p>')
+    + '<p class="note">Repères pour un cheval adulte au repos : 37,5 à 38,5 °C, 28 à 44 battements et 8 à 16 respirations par minute.</p>';
+}
+function openConstForm(){
+  const now = new Date();
+  openSheet('Constantes de repos', `
+    <form id="fConst" novalidate>
+      <div class="row2">
+        <label class="field"><span>Date</span><input type="date" name="date" value="${todayKey()}"></label>
+        <label class="field"><span>Heure</span><input type="time" name="time" value="${pad(now.getHours())}:${pad(now.getMinutes())}" style="width:100%;font:16px var(--font-b);padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:48px"></label>
+      </div>
+      <label class="field"><span>Température (°C)</span><input type="text" inputmode="decimal" name="temp" placeholder="ex. 37,8"></label>
+      <div class="row2">
+        <label class="field"><span>Pouls (/min)</span><input type="number" inputmode="numeric" name="pouls" placeholder="ex. 36"></label>
+        <label class="field"><span>Respiration (/min)</span><input type="number" inputmode="numeric" name="resp" placeholder="ex. 14"></label>
+      </div>
+      <label class="field"><span>Note</span><textarea name="note" rows="2" placeholder="Contexte : au box, après l’effort, chaleur…"></textarea></label>
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const f = body.querySelector('#fConst');
+      f.querySelector('[data-cancel]').onclick = () => closeSheet();
+      f.onsubmit = async e => {
+        e.preventDefault();
+        const temp = parseNum(f.temp.value), pouls = parseNum(f.pouls.value), resp = parseNum(f.resp.value);
+        if (temp == null && pouls == null && resp == null){ toast('Renseigne au moins une valeur.'); return; }
+        if ((temp != null && (temp < 34 || temp > 43)) || (pouls != null && (pouls < 10 || pouls > 150)) || (resp != null && (resp < 3 || resp > 100))){ toast('Une valeur semble erronée, vérifie la saisie.'); return; }
+        await DB.put('constants', { id: uid(), created: Date.now(), date: f.date.value || todayKey(), time: f.time.value || '', temp, pouls, resp, note: f.note.value.trim() });
+        await loadAll(); renderHealth(); closeSheet();
+        toast(outOfRange('temp', temp) || outOfRange('pouls', pouls) || outOfRange('resp', resp) ? 'Enregistré. Une valeur sort des repères habituels.' : 'Constantes enregistrées');
+      };
+    });
+}
+function openConstHistory(){
+  openSheet('Historique des constantes', constants.length ? constants.map(c => `<div class="list-row">
+      <b>${fmtDate(c.date)}${c.time ? ', ' + c.time.replace(':', ' h ') : ''}</b>
+      <span>${[c.temp != null ? num(c.temp) + ' °C' : '', c.pouls != null ? c.pouls + ' pulsations/min' : '', c.resp != null ? c.resp + ' respirations/min' : ''].filter(Boolean).join(', ')}</span>
+      ${c.note ? `<span style="display:block">${esc(c.note)}</span>` : ''}
+      <div class="sess-actions"><button class="btn sm danger" data-action="delete-const" data-id="${c.id}">Supprimer</button></div></div>`).join('')
+    : '<p class="empty-msg">Aucune mesure enregistrée.</p>');
+}
+async function deleteConst(id){
+  if (!confirm('Supprimer cette mesure ?')) return;
+  await DB.del('constants', id); await loadAll(); renderHealth(); openConstHistory();
+}
+
+/* ---------- Fiche et urgences ---------- */
+function openFiche(){
+  const f = fiche;
+  const contact = (role, c) => {
+    c = c || {}; const tel = (c.tel || '').replace(/[^\d+]/g, '');
+    return `<div class="contact"><div><small>${role}</small><b>${esc(c.name || 'À renseigner')}</b>${c.detail ? `<span class="t">${esc(c.detail)}</span>` : ''}${c.tel ? `<span class="t">${esc(c.tel)}</span>` : ''}</div>
+      ${tel ? `<a class="call" href="tel:${tel}" aria-label="Appeler : ${role}">${IC.phone}</a>` : `<span class="call off" aria-hidden="true">${IC.phone}</span>`}</div>`;
+  };
+  const vaccins = soins.filter(s => s.cat === 'vaccin');
+  const val = v => v ? esc(v) : '<span class="muted">À renseigner</span>';
+  openSheet('Fiche et urgences', `
+    <div class="card">
+      <div class="card-head" style="margin-bottom:2px"><p class="id-name">Manza</p><span class="muted">${ageYears()} ans</span></div>
+      <p class="muted" style="margin:0 0 10px">${BREED}</p>
+      <div class="kv"><span>Date de naissance</span><strong>${fmtBirth()}</strong></div>
+      <div class="kv"><span>Lieu de naissance</span><strong>${BIRTH_PLACE}</strong></div>
+      <div class="kv"><span>Robe</span><strong>${val(f.robe)}</strong></div>
+      <div class="kv"><span>N° SIRE</span><strong>${val(f.sire)}</strong></div>
+      <div class="kv"><span>N° de puce</span><strong>${val(f.puce)}</strong></div>
+      <div class="kv"><span>Assurance</span><strong>${val(f.assurance)}</strong></div>
+    </div>
+    ${f.medical ? `<div class="card"><h3 style="margin-bottom:6px">Infos médicales importantes</h3><p class="sess-notes" style="margin:0">${esc(f.medical)}</p></div>` : ''}
+    <h3 style="margin:18px 0 10px">Contacts</h3>
+    ${contact('Vétérinaire', f.vet)}${contact('Maréchal-ferrant', f.marechal)}${contact('Écurie / urgence', f.ecurie)}
+    <h3 style="margin:18px 0 10px">Vaccins</h3>
+    <div class="card">${vaccins.length ? vaccins.map(v => { const st = soinStatus(v); return `<div class="kv"><span><strong>${esc(v.name)}</strong><br><small class="muted">${v.last ? 'Fait le ' + fmtDate(v.last) : 'Date à renseigner'}</small></span><strong class="st-${st.cls}">${st.n ? 'Prochain : ' + fmtShort(parseYmd(st.n)) : ''}</strong></div>`; }).join('')
+      : '<p class="empty-msg" style="margin:0">Ajoute les vaccins dans les soins, catégorie Vaccin : ils apparaîtront ici.</p>'}</div>
+    <div class="stack">
+      <button class="btn primary block" data-action="vet-pdf">Exporter le dossier vétérinaire (PDF)</button>
+      <button class="btn ghost block" data-action="edit-fiche">Modifier la fiche</button>
+    </div>
+    <p class="note">Pour le PDF, choisis « Enregistrer au format PDF » comme imprimante.</p>`);
+}
+
+function openFicheForm(){
+  const f = fiche, c = k => f[k] || {};
+  const inp = (name, label, value, type = 'text', ph = '') => `<label class="field"><span>${label}</span><input type="${type}" name="${name}" value="${esc(value || '')}" placeholder="${ph}"${type === 'tel' ? ' inputmode="tel" autocomplete="off"' : ''}></label>`;
+  openSheet('Modifier la fiche', `
+    <form id="fFiche" novalidate>
+      <p class="note" style="margin:0 0 16px">Date de naissance (${fmtBirth()}) et lieu de naissance (${BIRTH_PLACE}) sont déjà enregistrés.</p>
+      ${inp('robe', 'Robe', f.robe, 'text', 'ex. Gris')}
+      ${inp('sire', 'N° SIRE', f.sire)}
+      ${inp('puce', 'N° de puce', f.puce)}
+      ${inp('assurance', 'Assurance', f.assurance, 'text', 'Assureur et n° de contrat')}
+      <label class="field"><span>Infos médicales importantes</span><textarea name="medical" rows="3" placeholder="Allergies, traitements en cours, antécédents…">${esc(f.medical)}</textarea></label>
+      <p class="sub-title">Vétérinaire</p>
+      ${inp('vet_name', 'Nom', c('vet').name)}${inp('vet_detail', 'Clinique', c('vet').detail)}${inp('vet_tel', 'Téléphone', c('vet').tel, 'tel')}
+      <p class="sub-title">Maréchal-ferrant</p>
+      ${inp('marechal_name', 'Nom', c('marechal').name)}${inp('marechal_tel', 'Téléphone', c('marechal').tel, 'tel')}
+      <p class="sub-title">Écurie / urgence</p>
+      ${inp('ecurie_name', 'Nom', c('ecurie').name)}${inp('ecurie_detail', 'Précision', c('ecurie').detail, 'text', 'ex. Gérante de l’écurie')}${inp('ecurie_tel', 'Téléphone', c('ecurie').tel, 'tel')}
+      <div class="actions"><button type="button" class="btn ghost" data-cancel>Annuler</button><button type="submit" class="btn primary">Enregistrer</button></div>
+    </form>`, body => {
+      const fm = body.querySelector('#fFiche');
+      fm.querySelector('[data-cancel]').onclick = () => openFiche();
+      fm.onsubmit = async e => {
+        e.preventDefault();
+        const g = n => (fm.elements[n] ? fm.elements[n].value.trim() : '');
+        const rec = { robe:g('robe'), sire:g('sire'), puce:g('puce'), assurance:g('assurance'), medical:g('medical'),
+          vet:{ name:g('vet_name'), detail:g('vet_detail'), tel:g('vet_tel') },
+          marechal:{ name:g('marechal_name'), tel:g('marechal_tel') },
+          ecurie:{ name:g('ecurie_name'), detail:g('ecurie_detail'), tel:g('ecurie_tel') } };
+        await setMeta('fiche', rec); fiche = rec; toast('Fiche enregistrée'); openFiche();
+      };
+    });
+}
+
+function exportVetPdf(){
+  const f = fiche, e = esc, since = ymd(addDays(new Date(), -365));
+  const row = (k, v) => v ? `<tr><th>${k}</th><td>${e(v)}</td></tr>` : '';
+  const lastW = weights.find(w => w.weight);
+  const r = weights.find(w => w.ration), c = weights.find(w => w.complements);
+  const obs = observations.filter(o => o.date >= since || (!o.resolved && o.watch));
+  $('#printArea').innerHTML = `
+    <h1>Dossier vétérinaire : Manza</h1>
+    <p class="pm">Document édité le ${fmtDate(todayKey())}</p>
+    <h2>Identité</h2>
+    <table>${row('Nom', 'Manza')}${row('Race', BREED)}${row('Date de naissance', `${fmtBirth()} (${ageYears()} ans)`)}${row('Lieu de naissance', BIRTH_PLACE)}
+      ${row('Robe', f.robe)}${row('N° SIRE', f.sire)}${row('N° de puce', f.puce)}${row('Assurance', f.assurance)}
+      ${lastW ? row('Dernier poids', `${num(lastW.weight)} kg le ${fmtDate(lastW.date)}${lastW.method ? ' (' + lastW.method.toLowerCase() + ')' : ''}`) : ''}</table>
+    ${f.medical ? `<h2>Informations médicales importantes</h2><p>${e(f.medical)}</p>` : ''}
+    <h2>Contacts</h2>
+    <table>${[['Vétérinaire', f.vet], ['Maréchal-ferrant', f.marechal], ['Écurie / urgence', f.ecurie]].map(([k, v]) => v && (v.name || v.tel) ? `<tr><th>${k}</th><td>${e([v.name, v.detail, v.tel].filter(Boolean).join(', '))}</td></tr>` : '').join('') || '<tr><td>Non renseignés</td></tr>'}</table>
+    <h2>Vaccins et soins</h2>
+    ${soins.length ? `<table><thead><tr><th>Soin</th><th>Dernière fois</th><th>Prochaine échéance</th><th>Fréquence</th></tr></thead><tbody>
+      ${sortedSoins().map(s => { const n = nextOf(s); return `<tr><td>${e(s.name)}${s.notes ? `<br><span class="pm">${e(s.notes)}</span>` : ''}</td><td>${s.last ? fmtDate(s.last) : '–'}</td><td>${n ? fmtDate(n) : '–'}</td><td>${freqText(s)}</td></tr>`; }).join('')}</tbody></table>` : '<p>Aucun soin enregistré.</p>'}
+    <h2>Observations de santé (12 derniers mois)</h2>
+    ${obs.length ? `<table><thead><tr><th>Date</th><th>Signe et zone</th><th>Détail et suivi</th><th>Statut</th></tr></thead><tbody>
+      ${obs.map(o => `<tr><td>${fmtDate(o.date)}</td><td>${e(obsLabel(o))}<br><span class="pm">${INTENSITIES[(o.intensity || 1) - 1]}</span></td>
+        <td>${e(o.note)}${(o.updates || []).map(u => `<br><span class="pm">${fmtDate(u.date)} : ${e(u.note)}</span>`).join('')}</td>
+        <td>${o.resolved ? 'Résolu' + (o.resolvedDate ? ' le ' + fmtDate(o.resolvedDate) : '') : o.watch ? 'En cours' : 'Noté'}</td></tr>`).join('')}</tbody></table>` : '<p>Aucune observation sur la période.</p>'}
+    <h2>Constantes de repos</h2>
+    ${constants.length ? `<table><thead><tr><th>Date</th><th>Température</th><th>Pouls</th><th>Respiration</th></tr></thead><tbody>
+      ${constants.slice(0, 10).map(k => `<tr><td>${fmtDate(k.date)}${k.time ? ', ' + k.time : ''}</td><td>${k.temp != null ? num(k.temp) + ' °C' : '–'}</td><td>${k.pouls != null ? k.pouls + ' /min' : '–'}</td><td>${k.resp != null ? k.resp + ' /min' : '–'}</td></tr>`).join('')}</tbody></table>` : '<p>Aucune mesure enregistrée.</p>'}
+    <h2>Poids, ration et compléments</h2>
+    ${weights.some(w => w.weight) ? `<table><thead><tr><th>Date</th><th>Poids</th><th>Méthode</th></tr></thead><tbody>
+      ${weights.filter(w => w.weight).slice(0, 8).map(w => `<tr><td>${fmtDate(w.date)}</td><td>${num(w.weight)} kg</td><td>${e(w.method || '')}</td></tr>`).join('')}</tbody></table>` : '<p>Aucune pesée enregistrée.</p>'}
+    ${r ? `<p><strong>Ration (depuis le ${fmtDate(r.date)}) :</strong> ${e(r.ration)}</p>` : ''}
+    ${c ? `<p><strong>Compléments (depuis le ${fmtDate(c.date)}) :</strong> ${e(c.complements)}</p>` : ''}`;
+  const title = document.title;
+  document.title = `Dossier vétérinaire Manza ${todayKey()}`;
+  setTimeout(() => { window.print(); setTimeout(() => { document.title = title; }, 1500); }, 200);
+}
+
+/* ---------- Rappels : notifications et agenda ---------- */
+async function swReg(){
+  if (!('serviceWorker' in navigator)) return null;
+  try { return await Promise.race([navigator.serviceWorker.ready, new Promise(r => setTimeout(() => r(null), 3000))]); } catch { return null; }
+}
+async function notify(title, body, tag){
+  const opts = { body, tag, icon:'icon-192.png', badge:'icon-192.png', lang:'fr', data:{ url:'./#sante' } };
+  try {
+    const reg = await swReg();
+    if (reg) return await reg.showNotification(title, opts);
+    new Notification(title, opts);
+  } catch { toast(title); }
+}
+function dueReminders(sent){
+  const out = [], tk = todayKey();
+  const offs = [...(settings.remind && settings.remind.length ? settings.remind : [7, 1])].sort((a, b) => a - b);
+  soins.forEach(s => {
+    const n = nextOf(s); if (!n) return;
+    const d = daysBetween(tk, n); let k, title;
+    if (d < 0){ if (d < -30) return; k = 'late'; title = `En retard : ${s.name}`; }
+    else {
+      const o = offs.find(x => d <= x); if (o === undefined) return;
+      k = 'j' + o; title = d === 0 ? `Aujourd’hui : ${s.name}` : d === 1 ? `Demain : ${s.name}` : `Dans ${d} jours : ${s.name}`;
+    }
+    const key = `${s.id}|${n}|${k}`;
+    if (!sent.includes(key)) out.push({ key, title, body:`Manza : prévu le ${fmtDate(n)}.` });
+  });
+  return out;
+}
+async function checkReminders(){
+  if (!DB.db || !('Notification' in window) || Notification.permission !== 'granted') return;
+  const sent = (await getMeta('notifSent')) || [];
+  const due = dueReminders(sent);
+  for (const r of due){ await notify(r.title, r.body, r.key); sent.push(r.key); }
+  if (due.length) await setMeta('notifSent', sent.slice(-300));
+}
+async function registerPeriodic(){
+  try {
+    const reg = await swReg(); if (!reg || !('periodicSync' in reg)) return false;
+    const st = await navigator.permissions.query({ name:'periodic-background-sync' });
+    if (st.state !== 'granted') return false;
+    await reg.periodicSync.register('manza-rappels', { minInterval: 12*3600*1000 });
+    return true;
+  } catch { return false; }
+}
+async function enableNotifications(){
+  if (!('Notification' in window)){ toast('Ce navigateur ne gère pas les notifications.'); return; }
+  const p = await Notification.requestPermission();
+  if (p !== 'granted'){ toast('Notifications non autorisées.'); renderRemCard(); return; }
+  await registerPeriodic();
+  await notify('Rappels activés', `Tu recevras un rappel ${remindText()} chaque soin de Manza.`, 'manza-test');
+  renderRemCard(); checkReminders();
+}
+function renderRemCard(){
+  const supported = 'Notification' in window;
+  const perm = supported ? Notification.permission : 'unsupported';
+  const installed = window.matchMedia && matchMedia('(display-mode: standalone)').matches;
+  let status;
+  if (!supported) status = 'Ce navigateur ne gère pas les notifications. Utilise l’ajout à l’agenda ci-dessous.';
+  else if (perm === 'granted') status = installed
+    ? `Notifications activées : rappel ${remindText()} chaque soin.`
+    : 'Notifications activées. Pour les recevoir sans ouvrir l’app, installe-la : menu ⋮ du navigateur, puis « Installer l’application ».';
+  else if (perm === 'denied') status = 'Notifications bloquées. Autorise-les dans les réglages du navigateur pour ce site, puis recharge la page.';
+  else status = `Reçois un rappel ${remindText()} chaque soin à venir.`;
+  $('#remCard').innerHTML = `<div class="card-head" style="margin-bottom:6px"><h3>Rappels</h3></div>
+    <p class="rem-status">${status}</p>
+    <div class="stack">
+      ${supported && perm === 'default' ? '<button class="btn primary block" data-action="notif-enable">Activer les notifications</button>' : ''}
+      ${perm === 'granted' ? '<button class="btn ghost block" data-action="notif-test">Envoyer une notification de test</button>' : ''}
+      <button class="btn ghost block" data-action="ics-all">Ajouter les rappels à l’agenda du téléphone</button>
+    </div>
+    <p class="note">L’agenda est la méthode la plus sûre : il prévient même quand l’application est fermée. Refais l’ajout après avoir noté un soin comme fait.</p>`;
+}
+
+function icsFor(list){
+  const dt = d => d.replace(/-/g, '');
+  const stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+/, '');
+  const ei = v => String(v).replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  const L = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Manza//Carnet de suivi//FR', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH'];
+  list.forEach(s => {
+    const n = nextOf(s); if (!n) return;
+    L.push('BEGIN:VEVENT', `UID:manza-${s.id}-${dt(n)}@manza-carnet`, `DTSTAMP:${stamp}`,
+      `DTSTART;VALUE=DATE:${dt(n)}`, `DTEND;VALUE=DATE:${dt(ymd(addDays(parseYmd(n), 1)))}`,
+      `SUMMARY:${ei('Manza : ' + s.name)}`, `DESCRIPTION:${ei((s.notes ? s.notes + '\n' : '') + 'Rappel créé depuis le carnet de Manza.')}`,
+      ...(settings.remind && settings.remind.length ? settings.remind : [7, 1]).flatMap(o => ['BEGIN:VALARM', 'ACTION:DISPLAY',
+        `DESCRIPTION:${ei((o === 1 ? 'Demain : ' : `Dans ${o} jours : `) + s.name)}`, o === 1 ? 'TRIGGER:-PT15H' : `TRIGGER:-P${o-1}DT15H`, 'END:VALARM']),
+      'END:VEVENT');
+  });
+  L.push('END:VCALENDAR');
+  return L.join('\r\n');
+}
+async function exportIcs(list, name){
+  if (!list.length){ toast('Aucun soin à venir à ajouter.'); return; }
+  const blob = new Blob([icsFor(list)], { type:'text/calendar' });
+  if (await shareOrDownload(blob, name, 'Rappels santé de Manza')) toast('Ouvre le fichier avec ton agenda pour ajouter les rappels');
+}
+
+function renderHealth(){ renderSoins(); renderObs(); renderConst(); renderRemCard(); }
+
+/* ================= Paramètres ================= */
+const DEFAULT_SETTINGS = { theme:'auto', size:'normal', startTab:'seances', defActivity:'monte', defDuration:45, remind:[7, 1], backupDays:14 };
+let settings = { ...DEFAULT_SETTINGS };
+const REMIND_CHOICES = [14, 7, 3, 1];
+
+function remindText(){
+  const r = [...(settings.remind && settings.remind.length ? settings.remind : [7, 1])].sort((a, b) => b - a);
+  const parts = r.map(o => o === 1 ? '1 jour' : `${o} jours`);
+  return (parts.length > 1 ? parts.slice(0, -1).join(', ') + ' puis ' + parts[parts.length - 1] : parts[0]) + ' avant';
+}
+function effectiveDark(){
+  return settings.theme === 'dark' || (settings.theme === 'auto' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+}
+function applyAppearance(){
+  const root = document.documentElement;
+  if (settings.theme === 'auto') delete root.dataset.theme; else root.dataset.theme = settings.theme;
+  if (settings.size === 'large') root.dataset.size = 'large'; else delete root.dataset.size;
+  const m = document.getElementById('themeColor'); if (m) m.content = effectiveDark() ? '#10141C' : '#F1F3EF';
+  try { localStorage.setItem('manza-theme', settings.theme); localStorage.setItem('manza-size', settings.size); } catch {}
+}
+try { matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyAppearance); } catch {}
+
+async function savePrefs(patch){
+  settings = { ...settings, ...patch };
+  applyAppearance();
+  try { await setMeta('settings', settings); } catch {}
+}
+
+function openPrefs(){
+  const seg = (name, items, value, extra) => radioChips(name, items, value, 'segf' + (extra ? ' ' + extra : ''));
+  openSheet('Paramètres', `
+    <form id="fPrefs" novalidate>
+      <p class="pref-group">Affichage</p>
+      <div class="pref"><b>Apparence</b>
+        ${seg('theme', [{ v:'auto', l:'Auto' }, { v:'light', l:'Clair' }, { v:'dark', l:'Sombre' }], settings.theme)}
+        <p class="note">Auto suit le réglage du téléphone.</p></div>
+      <div class="pref"><b>Taille du texte</b>${seg('size', [{ v:'normal', l:'Normale' }, { v:'large', l:'Grande' }], settings.size, 'two')}</div>
+      <label class="field"><span>Onglet à l’ouverture</span>
+        <select name="startTab">${[['seances','Séances'],['poids','Poids'],['sante','Santé'],['actus','Actus']].map(([v, l]) => `<option value="${v}" ${v === settings.startTab ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+
+      <p class="pref-group">Nouvelle séance</p>
+      <div class="row2">
+        <label class="field"><span>Activité proposée</span>
+          <select name="defActivity">${ACTIVITIES.map(a => `<option value="${a.id}" ${a.id === settings.defActivity ? 'selected' : ''}>${a.label}</option>`).join('')}</select></label>
+        <label class="field"><span>Durée (min)</span><input type="number" name="defDuration" inputmode="numeric" min="0" max="600" step="5" value="${settings.defDuration || ''}"></label>
+      </div>
+
+      <p class="pref-group">Rappels santé</p>
+      <div class="pref"><b>Me prévenir</b>
+        <div class="chips">${REMIND_CHOICES.map(o => `<label class="opt"><input type="checkbox" name="remind" value="${o}" ${settings.remind.includes(o) ? 'checked' : ''}><span>${o === 1 ? 'La veille' : o + ' jours avant'}</span></label>`).join('')}</div>
+        <p class="note">S’applique aux notifications et à l’ajout dans l’agenda. Après un changement, refais l’ajout à l’agenda depuis l’onglet Santé.</p></div>
+
+      <p class="pref-group">Données</p>
+      <label class="field"><span>Me rappeler d’exporter une sauvegarde</span>
+        <select name="backupDays">${[[7,'Chaque semaine'],[14,'Toutes les 2 semaines'],[30,'Chaque mois'],[0,'Jamais']].map(([v, l]) => `<option value="${v}" ${v === settings.backupDays ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
+      <button type="button" class="btn ghost block" data-action="settings">Sauvegarde, import et effacement</button>
+      <p class="note" style="text-align:center;margin-top:20px">Carnet de Manza, version 3</p>
+    </form>`, body => {
+      const f = body.querySelector('#fPrefs');
+      f.addEventListener('change', async e => {
+        const n = e.target.name;
+        if (n === 'remind'){
+          const vals = [...f.querySelectorAll('input[name=remind]:checked')].map(i => Number(i.value));
+          if (!vals.length){ e.target.checked = true; toast('Garde au moins un rappel.'); return; }
+          await savePrefs({ remind: vals }); renderRemCard();
+        }
+        else if (['theme', 'size', 'startTab', 'defActivity'].includes(n)) await savePrefs({ [n]: e.target.value });
+        else if (n === 'defDuration') await savePrefs({ defDuration: Math.max(0, Math.round(parseNum(e.target.value) || 0)) });
+        else if (n === 'backupDays'){ await savePrefs({ backupDays: Number(e.target.value) }); checkBackup(); }
+        else return;
+        toast('Préférence enregistrée');
+      });
+    });
+}
+
 /* ================= Sauvegarde ================= */
 async function askPersist(){
   try { if (navigator.storage && navigator.storage.persist && !(await navigator.storage.persisted())) await navigator.storage.persist(); } catch {}
@@ -1061,9 +1938,10 @@ async function askPersist(){
 
 async function checkBackup(){
   const last = await getMeta('lastBackup');
-  const count = sessions.length + weights.length;
-  const old = !last || Date.now() - last > 14*86400000;
-  const show = count >= 3 && old;
+  const count = sessions.length + weights.length + soins.length + observations.length;
+  const days = settings.backupDays;
+  const old = !last || Date.now() - last > days*86400000;
+  const show = days > 0 && count >= 3 && old;
   $('#backupBanner').classList.toggle('show', show);
   $('#btnSave').classList.toggle('alert', show);
   if (show) $('#backupBannerText').textContent = last ? `Dernière sauvegarde il y a ${Math.floor((Date.now()-last)/86400000)} jours.` : 'Aucune sauvegarde exportée pour l’instant.';
@@ -1075,10 +1953,13 @@ async function openSettings(){
   try { if (navigator.storage && navigator.storage.estimate){ const e = await navigator.storage.estimate(); usage = `${num((e.usage||0)/1048576)} Mo`; } } catch {}
   const last = await getMeta('lastBackup');
   openSheet('Sauvegarde des données', `
+    <button class="btn sm ghost" data-action="prefs" style="margin-bottom:12px">‹ Paramètres</button>
     <p style="margin-top:0">Les données sont enregistrées <strong>uniquement dans ce navigateur, sur ce téléphone</strong>. Exporte régulièrement une sauvegarde et range-la dans tes fichiers, iCloud, Google Drive ou par e-mail.</p>
     <div class="card" style="background:var(--bg)">
       <div class="kv"><span>Séances</span><strong>${sessions.length}</strong></div>
       <div class="kv"><span>Pesées</span><strong>${weights.length}</strong></div>
+      <div class="kv"><span>Soins suivis</span><strong>${soins.length}</strong></div>
+      <div class="kv"><span>Observations santé</span><strong>${observations.length}</strong></div>
       <div class="kv"><span>Photos</span><strong>${photos.length}</strong></div>
       ${usage ? `<div class="kv"><span>Espace utilisé</span><strong>${usage}</strong></div>` : ''}
       <div class="kv"><span>Stockage protégé</span><strong>${persisted === null ? 'Inconnu' : persisted ? 'Oui' : 'Non'}</strong></div>
@@ -1093,21 +1974,23 @@ async function openSettings(){
     <p class="note">L’import remplace toutes les données actuelles par celles du fichier.</p>`);
 }
 
+async function shareOrDownload(blob, name, title){
+  try {
+    const file = new File([blob], name, { type: blob.type });
+    if (navigator.canShare && navigator.canShare({ files:[file] })){
+      await navigator.share({ files:[file], title }); return true;
+    }
+  } catch (e){ if (e.name === 'AbortError') return false; }
+  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
+  document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+  return true;
+}
+
 async function exportData(){
-  const data = { app:'manza-carnet', version:1, exportedAt: new Date().toISOString(), sessions, weights, photos };
+  const data = { app:'manza-carnet', version:2, exportedAt: new Date().toISOString(), sessions, weights, photos, soins, observations, constants, fiche, settings };
   const name = `manza-sauvegarde-${todayKey()}.json`;
   const blob = new Blob([JSON.stringify(data)], { type:'application/json' });
-  let done = false;
-  try {
-    const file = new File([blob], name, { type:'application/json' });
-    if (navigator.canShare && navigator.canShare({ files:[file] })){
-      await navigator.share({ files:[file], title:'Sauvegarde Manza' }); done = true;
-    }
-  } catch (e){ if (e.name === 'AbortError') return; }
-  if (!done){
-    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name;
-    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
-  }
+  if (!(await shareOrDownload(blob, name, 'Sauvegarde Manza'))) return;
   await setMeta('lastBackup', Date.now()); checkBackup();
   toast('Sauvegarde exportée');
   if (sheetOpen) openSettings();
@@ -1117,10 +2000,18 @@ async function importData(file){
   try {
     const data = JSON.parse(await file.text());
     if (data.app !== 'manza-carnet' || !Array.isArray(data.sessions) || !Array.isArray(data.weights)) throw new Error('fichier non reconnu');
-    if (!confirm(`Importer ${data.sessions.length} séances, ${data.weights.length} pesées et ${(data.photos||[]).length} photos ? Les données actuelles seront remplacées.`)) return;
+    const hasHealth = Array.isArray(data.soins);
+    if (!confirm(`Importer ${data.sessions.length} séances, ${data.weights.length} pesées, ${(data.photos||[]).length} photos${hasHealth ? `, ${data.soins.length} soins et ${(data.observations||[]).length} observations` : ''} ? Les données actuelles seront remplacées.${hasHealth ? '' : ' Ta partie Santé actuelle sera conservée.'}`)) return;
+    const healthPhotos = hasHealth ? [] : photos.filter(p => p.kind === 'obs');
     await Promise.all(['sessions','weights','photos'].map(s => DB.clear(s)));
     await DB.putMany('sessions', data.sessions); await DB.putMany('weights', data.weights);
     if (Array.isArray(data.photos)) await DB.putMany('photos', data.photos);
+    if (healthPhotos.length) await DB.putMany('photos', healthPhotos);
+    for (const st of ['soins','observations','constants']){
+      if (Array.isArray(data[st])){ await DB.clear(st); await DB.putMany(st, data[st]); }
+    }
+    if (data.fiche && typeof data.fiche === 'object') await setMeta('fiche', data.fiche);
+    if (data.settings && typeof data.settings === 'object'){ settings = { ...DEFAULT_SETTINGS, ...data.settings }; await setMeta('settings', settings); applyAppearance(); }
     await setMeta('lastBackup', Date.now());
     await loadAll(); renderAll(); toast('Sauvegarde importée');
     if (sheetOpen) closeSheet();
@@ -1128,9 +2019,10 @@ async function importData(file){
 }
 
 async function wipe(){
-  if (!confirm('Effacer définitivement toutes les séances, pesées et photos ?')) return;
+  if (!confirm('Effacer définitivement toutes les séances, pesées, photos et données de santé ?')) return;
   if (!confirm('Dernière confirmation : as-tu exporté une sauvegarde ?')) return;
-  await Promise.all(['sessions','weights','photos'].map(s => DB.clear(s)));
+  await Promise.all(['sessions','weights','photos','soins','observations','constants'].map(s => DB.clear(s)));
+  await DB.del('meta', 'fiche');
   await loadAll(); renderAll(); closeSheet(); toast('Données effacées');
 }
 
@@ -1153,11 +2045,36 @@ document.addEventListener('click', e => {
     case 'close-viewer': $('#viewer').classList.remove('open'); break;
     case 'close-sheet': closeSheet(); break;
     case 'settings': openSettings(); break;
+    case 'prefs': openPrefs(); break;
     case 'export': exportData(); break;
     case 'import': $('#importFile').click(); break;
     case 'wipe': wipe(); break;
     case 'news-refresh': loadNews(true); break;
     case 'news-filter': newsFilter = t.dataset.src; renderNews(); break;
+    case 'fiche': openFiche(); break;
+    case 'edit-fiche': openFicheForm(); break;
+    case 'vet-pdf': exportVetPdf(); break;
+    case 'all-soins': openAllSoins(); break;
+    case 'new-soin': openSoinForm(null, t.dataset.preset != null ? Number(t.dataset.preset) : null); break;
+    case 'open-soin': openSoinDetail(id); break;
+    case 'edit-soin': openSoinForm(id); break;
+    case 'delete-soin': deleteSoin(id); break;
+    case 'soin-done': openSoinDone(id); break;
+    case 'soin-ics': exportIcs(soins.filter(x => x.id === id), 'manza-rappel.ics'); break;
+    case 'ics-all': exportIcs(soins.filter(x => { const n = nextOf(x); return n && n >= todayKey(); }), 'manza-rappels-sante.ics'); break;
+    case 'new-obs': openObsForm(null); break;
+    case 'open-obs': openObsDetail(id); break;
+    case 'edit-obs': openObsForm(id); break;
+    case 'delete-obs': deleteObs(id); break;
+    case 'obs-update': openObsUpdate(id); break;
+    case 'obs-resolve': resolveObs(id, true); break;
+    case 'obs-reopen': resolveObs(id, false); break;
+    case 'obs-history': openObsHistory(); break;
+    case 'new-const': openConstForm(); break;
+    case 'const-history': openConstHistory(); break;
+    case 'delete-const': deleteConst(id); break;
+    case 'notif-enable': enableNotifications(); break;
+    case 'notif-test': notify('Test de rappel', 'Les notifications de Manza fonctionnent.', 'manza-test'); break;
     case 'weight-mode':
       chartMode = t.dataset.mode;
       document.querySelectorAll('#segMode button').forEach(b => b.classList.toggle('on', b === t)); renderWeightChart(); break;
@@ -1181,29 +2098,35 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape'){ if ($('#vie
   });
 })();
 
-// Icône pour l'écran d'accueil (iPhone / Android)
-(() => {
-  try {
-    const c = document.createElement('canvas'); c.width = c.height = 180; const x = c.getContext('2d');
-    x.fillStyle = '#24479A'; x.fillRect(0, 0, 180, 180);
-    x.fillStyle = '#FFFFFF'; x.font = 'bold 120px "Arial Narrow", Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle';
-    x.fillText('M', 90, 98);
-    x.fillStyle = '#E2B45E'; x.fillRect(50, 150, 80, 6);
-    $('#touchIcon').href = c.toDataURL('image/png');
-  } catch {}
-})();
 
-function renderAll(){ renderLegend(); renderSessions(); renderWeights(); checkBackup(); }
+function renderAll(){
+  $('#horseSub').textContent = `${BREED}, ${ageYears()} ans`;
+  renderLegend(); renderSessions(); renderWeights(); renderHealth(); checkBackup();
+}
+
+// Service worker : hors connexion, rappels en arrière-plan, clic sur une notification
+if ('serviceWorker' in navigator && location.protocol.startsWith('http')){
+  navigator.serviceWorker.register('sw.js').catch(() => {});
+}
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && DB.db){ renderHealth(); renderSessStats(); checkReminders(); }
+});
 
 /* ================= Démarrage ================= */
 (async () => {
   try {
     await DB.open();
+    settings = { ...DEFAULT_SETTINGS, ...((await getMeta('settings')) || {}) };
+    applyAppearance();
     await loadAll();
     const cached = await getMeta('news');
     if (cached && cached.items){ news = cached.items; newsFetchedAt = cached.at || 0; }
     renderAll();
     askPersist();
+    const startTab = location.hash === '#sante' ? 'sante' : settings.startTab;
+    if (startTab && startTab !== 'seances') showTab(startTab);
+    checkReminders();
+    if ('Notification' in window && Notification.permission === 'granted') registerPeriodic();
   } catch (e){
     document.querySelector('.app').insertAdjacentHTML('afterbegin',
       `<div class="banner show" style="background:var(--ochre-soft)">Le stockage du navigateur est indisponible (navigation privée ?). Les données ne pourront pas être enregistrées.</div>`);

@@ -1,0 +1,16 @@
+{
+  "name": "Manza – carnet de suivi",
+  "short_name": "Manza",
+  "description": "Séances, poids, santé et actualités équestres de Manza.",
+  "lang": "fr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F1F3EF",
+  "theme_color": "#24479A",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
