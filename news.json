@@ -1,7 +1,13 @@
 {
- "updated": "2026-10-10T04:33:24.126Z",
+ "updated": "2026-10-10T08:31:58.790Z",
  "failed": [],
  "items": [
+  {
+   "title": "Himalaya du Temple, aux portes du très haut niveau-là",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPSDI5TDNNME5oWV9sQnR2SmxlaHd2M0k0cktEWDR4NDZZRXJOTThGYWFJZlVWcVdKeXNkeFYyd1Q2Zzl1U21nVjhHWUhMNW1TYm9VUTZxWG0wMVJ0TjBmOHRiTDZnMnNUeEZ3QXBoQWJ5YWhHYjUyT245NEFsbHZ3SnB3?oc=5",
+   "date": 1791586900000,
+   "source": "eperon"
+  },
   {
    "title": "Journée mondiale de la santé mentale : le cheval, un partenaire singulier du bien-être",
    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdkN0VHk3T0I5eWRCM1lNWkpMZjJTTTZ4Q0JWVUVQZVhxcHZtMXRrdjAxNkxEZUNyWHpOSmJPYjdYQmlFZXk1c1JmX0ZNV19yb1dDUWVyY2ZZWVdMV1RTckU5VTFfR0R1aHo4LTdZZ0hWLUxIb1dPMGh5bzF1WmRmc0hSRzVMX3IySDRhd3RqM01mYVVCTXlmOUNfRnFzNVdmcWptVU5uNWZ3LXZTSzctaWlENG0?oc=5",
@@ -43,6 +49,12 @@
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0RwajMyRFplLTdVYWtHbVVBVWJJbXNKSG8wRk5LOEE5ZkVyVmxSbW11Ny1udmNuTVhsZWhBaG1HeHdVdUhYTHRtS0VyTi1sNkZ2VGxZUnZQdTM4XzhkQi0wVHRJa1dtemhSRGFhWWZkYmZRcnNuZXFBY0NIUDRDeE1NRXVBUldi?oc=5",
    "date": 1791448399000,
    "source": "grandprix"
+  },
+  {
+   "title": "Podium Breton Championnat de France de TREC",
+   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNak55NFZKZmxjV2c0czhqYUYyMzZSb0FMb083bHQ1QnV5dmh2OFNVTnZTZGdOdWRwSFlfVExCajBEdU5ibWJBSFhmLXRaX1psTXJuaU1MaUxaT2VwYmlJeFRTLXVkMTZSZ1RaNVpETUhQYzA3QU5IRTZLQ09OTGsycmJabV9ydw?oc=5",
+   "date": 1791445067000,
+   "source": "ffe"
   },
   {
    "title": "Le CHI de Genève prépare cinq jours de compétition pour son centenaire",
@@ -187,12 +199,6 @@
    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZWRqYjN4U29KVzVkTHpMY3diaWhYSGs0bGtRX1pzNmZUVVlzUjBiRWtqaTdGNGYxUV8zb0MwOV9pTHpCaFJpNEFKbmx2X3lWdTNxaWlmeWdRQUM4eFRuRml6YlNpOHpsZkZGWndMcERVT1NWSTdBVTZTTFlpZjVFZXREY0ZHUDVGUTBpZnk4ZzI2b1pHT2p0aTRwYVQzX04yazc2dE84TVJjb2ZaSHZGdms0YjE2MFYtZFBjWE1adzdneWxHajdhTw?oc=5",
    "date": 1770364800000,
    "source": "ifce"
-  },
-  {
-   "title": "Nicolas Blondeau, dernier pied à terre",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FT1drNXROZjFkMm4zekl4QWJ4ams3d25mbUgzOXdfWUw4VlhrYVk2S0RzWlNfYjAxUFVTeTdZZnRmb2RsLWxTY1Z0RDVXdjY3NDN1c3VhTWpHZkZYMVpxSHVVc3VsUTUzUHR1OWZn?oc=5",
-   "date": 1769068800000,
-   "source": "eperon"
   },
   {
    "title": "Quatre vidéos de Medical Training disponibles sur Youtube",
@@ -474,12 +480,6 @@
    "title": "FFE Compet",
    "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBNZnY2Ql90QTVtbDVrSWxwMTlSVlBGU2gwaVZCcnpyQ0djdjVJS0lmMHRReFZHMnFhYzNJdFBGbw?oc=5",
    "date": 1341656329000,
-   "source": "ffe"
-  },
-  {
-   "title": "Accueil - Grand Public | Fédération Française d'Équitation - FFE",
-   "link": "https://news.google.com/rss/articles/CBMiN0FVX3lxTE9xeVlPRlUzV3lTQ3d4MHdKMlUwXzN1eTZ2N1YxWTlhWnRHNXBYVFhqWUpFTG1hdEE?oc=5",
-   "date": 1269982152000,
    "source": "ffe"
   }
  ]
