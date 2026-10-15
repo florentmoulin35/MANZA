@@ -1,7 +1,15 @@
 {
- "updated": "2026-10-15T13:01:04.345Z",
- "failed": [],
+ "updated": "2026-10-15T16:49:54.807Z",
+ "failed": [
+  "grandprix"
+ ],
  "items": [
+  {
+   "title": "Attelage: résultats prometteurs au Touquet et une place de numéro 1 mondial",
+   "link": "https://www.ifce.fr/ifce/attelage-retour-sur-le-cai3-du-touquet-et-classement-mondial/",
+   "date": 1792071151000,
+   "source": "ifce"
+  },
   {
    "title": "Suivez en intégralité le CSI 5*-W d’El Jadida sur ClipMyHorse.tv",
    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSFE1em5seDN1aHBRMzZoV0gwOERncUc0Z2hLdWpQSk9KOXRzQk1HRXNrbzhlNEtXQnpTOG1YWEVlcUE5VHpRQlNvcUFQSWY3eGpjc2htcEdEWXdHZVN2QU1uSkFtYjhVcVBaZWtlMW1qb09Rd1JXdXIxN0o5cTBnLTV2dlZ3bXBvWFBSZHgyaHlyRkt3NUN4V3VkVQ?oc=5",
@@ -9,22 +17,22 @@
    "source": "grandprix"
   },
   {
-   "title": "Franc succès pour le nouveau cycle de formation continue dédié aux juges Club de dressage et aux enseignants",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZWQ3MkgtMkNUNFNhSG8yZTRNMllmQ0hKTzdXZmNjTmVKYjRGMTdYMTFfeVh1RERKempTdkdUdk0tSVFJVWN3Vkxlenl1VkdSMHpJVkhFZHVDZVVMamdqYjFGYXpGWkNWWjhhMjhfeGxhRHlMY09KU0FkbU5yNE5Lc2tGYkFMSWl5R01jaE42aVNtSnFUc2xxcmdWMkVpTy1ENnlyTTFib0R1SnNZZHUtVU9TXzIwUHZfam1tR0NvNTJwVVVTNHc?oc=5",
-   "date": 1792054200000,
-   "source": "ffe"
+   "title": "Dictionnaire équestre visuel en dix langues : une nouvelle édition enrichie",
+   "link": "https://www.ifce.fr/ifce/dictionnaire-equestre-visuel-en-dix-langues-une-nouvelle-edition-enrichie/",
+   "date": 1792054818000,
+   "source": "ifce"
   },
   {
-   "title": "GN FFE-AC Print de CSO : Cap sur Saint-Lô (50) pour le lancement de la saison indoor",
-   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNSW42eGtQYXNxaS0yTzhoeWlsZFlCY0wzdmZBV2ZNelU5dEdvV01HV1BGMVdtTUdvZFA4ZVNSUGdSbGdDLXVKYm44TE9kTGRCX3pvbzFvcEdBMVc2V3hqSDhPVHZFZTJzLWhnMkt4UHhUdHNoYkxheHJlNUNoblI3dnRKM2FUZzZmejNqbnRlVDBQbWNpVkxxQnZMN1FFNWFiTkNrcWR5ckRSekQ0MFJlYw?oc=5",
-   "date": 1792011404000,
-   "source": "ffe"
+   "title": "Mondial du Lion : les Selle Français décrocheront-ils une étoile ?",
+   "link": "https://www.leperon.fr/mondial-du-lion-les-selle-francais-decrocheront-ils-une-etoile/",
+   "date": 1792051377000,
+   "source": "eperon"
   },
   {
-   "title": "Petites Annonces FFE",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1LRDRFdUtfeWpDU0dqMFZMbVBpZ05JSW9tNEh3aTlKaU52RWZZaHRpTmRTOVpyajFfbUw5QW00blFJeC1HVWI4dnh0UFlvZFZR?oc=5",
-   "date": 1791992702000,
-   "source": "ffe"
+   "title": "2026, année du Cheval de Feu : faire vivre les patrimoines et les savoir-faire équestres français",
+   "link": "https://www.ifce.fr/ifce/2026-annee-du-cheval-de-feu-faire-vivre-les-patrimoines-et-les-savoir-faire-equestres-francais/",
+   "date": 1792050870000,
+   "source": "ifce"
   },
   {
    "title": "En Bretagne, un séminaire pour accompagner les structures équestres face aux défis de demain",
@@ -33,10 +41,40 @@
    "source": "grandprix"
   },
   {
-   "title": "Le National Enseignants 2026 a tenu toutes ses promesses à Saumur (49)",
-   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOLXV1cGRSYWtneWFsM3dnZGRDeDAwM1Zmb2o3RkNsOUlCNEdacEVPSFh6bHU4R3M0R0xuX2JGa0MyWVRqNF81QzVLMk5HTHNMX2NMd29ZVEtaSnJzSWVvZll1MmtreXVpNHJJUWhoX2o5Q0JCY2FuWkNPbmRlYnVMd2J1blRNMkRfMlFmRHlnRl96TXByMnZDNXhxOUZxLWcy?oc=5",
-   "date": 1791979588000,
-   "source": "ffe"
+   "title": "Balou du Rouet, héritier de Baloubet du Rouet, n’est plus",
+   "link": "https://www.leperon.fr/balou-du-rouet-heritier-de-baloubet-du-rouet-nest-plus/",
+   "date": 1791984525000,
+   "source": "eperon"
+  },
+  {
+   "title": "Endurance – Cycle Libre 6 ans : Kiestu de Sommant, la vitesse en héritage",
+   "link": "https://www.leperon.fr/endurance-cycle-libre-6-ans-kiestu-de-sommant-la-vitesse-en-heritage/",
+   "date": 1791884343000,
+   "source": "eperon"
+  },
+  {
+   "title": "Endurance – Cycle Libre 5 ans : Zoa de Breyt, bon sang ne saurait mentir",
+   "link": "https://www.leperon.fr/endurance-cycle-libre-5-ans-zoa-de-breyt-bon-sang-ne-saurait-mentir/",
+   "date": 1791883718000,
+   "source": "eperon"
+  },
+  {
+   "title": "Endurance : Kalak de l’Aulne confirme chez les 6 ans",
+   "link": "https://www.leperon.fr/endurance-kalak-de-laulne-confirme-chez-les-6-ans/",
+   "date": 1791882921000,
+   "source": "eperon"
+  },
+  {
+   "title": "Nouveau : le e-passeport arrive dans votre Espace SIRE",
+   "link": "https://www.ifce.fr/ifce/nouveau-epasseport-equide-accessible-espace-sire/",
+   "date": 1791878373000,
+   "source": "ifce"
+  },
+  {
+   "title": "Opérateurs détenant des équidés : la gestion des lieux de résidence habituels est ouverte",
+   "link": "https://www.ifce.fr/ifce/ouverture-gestion-des-lieux-de-residence-habituels/",
+   "date": 1791875834000,
+   "source": "ifce"
   },
   {
    "title": "La FEI ouvre les candidatures pour les championnats du monde de 2030",
@@ -45,28 +83,40 @@
    "source": "grandprix"
   },
   {
-   "title": "Podcast - Parlons cheval , 87 - Tout savoir sur les maladies : la fièvre de West Nile",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVeVFweEtURDRqM0ZyNk1aT0dvV3ZQb0oyakdreEsydlB2Y3A3NUJlZ1pKQmN3cXdlUjhQTDRJeU04cVBPbVIyTDhGbWlXZFh5TVhnNUNEeWxwOE1GN1Y3QzF2eTFaMHVVRkFsLUFma3M4bEpCQ2c?oc=5",
-   "date": 1791802718000,
-   "source": "ifce"
-  },
-  {
-   "title": "Auteur M. Jensen",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wWS14TzdJcURTZlRhR0RWRHNpeEdKZ1ZFQ1Z0Z09sV043cFM5MDVORVdEUTZHU254ZHYwb19IMm9nUl9aU2tRbjdQZHpXemRyS01GdkRId0FYSk5jWEVIOVJfVU5MSDZ5ZzVjTWtR?oc=5",
-   "date": 1791795376000,
-   "source": "ifce"
-  },
-  {
-   "title": "Rencontres du pony-games 2026",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81MTlPVzFMT2hpeFk1ZlFCaTJtRUYwU3RkalhHaFNDSGtkRHFNZERwSkQ3bEFIYzJobGYyX1l2d3ZkTHBRUExYUGFiNzctQklGV0djOVhvUEM2YlZVREZMei1LRTFfRnJjNEJRYg?oc=5",
-   "date": 1791764363000,
-   "source": "ffe"
-  },
-  {
-   "title": "Himalaya du Temple, aux portes du très haut niveau",
-   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERTItMkpyMXZaQ1J0ZjMtRzRXb3NOZ3RhQTZqZlVlT25zallvb2FHYXIwZmQ1VHJxY2dLU216QnJ1UnFfVE9MZG5iT0xhZ1JSUVM1b3BzYUluZEUwbVRYM1laREpiYXdjYXFRWmo0TzkwaUhXUmRVMHBlN1FhZw?oc=5",
-   "date": 1791622301000,
+   "title": "Olivier Guillon : « C’était un régal ! »",
+   "link": "https://www.leperon.fr/olivier-guillon-cetait-un-regal/",
+   "date": 1791827648000,
    "source": "eperon"
+  },
+  {
+   "title": "Coupe des Nations CSIO4*-W de Rabat : Jeanne Sadran toute en Dexter-ité.. !",
+   "link": "https://www.leperon.fr/coupe-des-nations-csio4-w-de-rabat-jeanne-sadran-toute-en-dexter-ite/",
+   "date": 1791748250000,
+   "source": "eperon"
+  },
+  {
+   "title": "Le Maroc, l’atout ‘choc’ de Philippe Rozier",
+   "link": "https://www.leperon.fr/le-maroc-latout-choc-de-philippe-rozier/",
+   "date": 1791747638000,
+   "source": "eperon"
+  },
+  {
+   "title": "Finales SHF Endurance 5 ans : Lordkila Al Mounjoye, la victoire de bout en bout",
+   "link": "https://www.leperon.fr/finales-shf-endurance-5-ans-lordkila-al-mounjoye-la-victoire-de-bout-en-bout/",
+   "date": 1791661177000,
+   "source": "eperon"
+  },
+  {
+   "title": "« Tout le mérite revient à mon cheval », Jeanne Sadran",
+   "link": "https://www.leperon.fr/tout-le-merite-revient-a-mon-cheval-jeanne-sadran/",
+   "date": 1791660995000,
+   "source": "eperon"
+  },
+  {
+   "title": "Retour sur le National des enseignants 2026",
+   "link": "https://www.ifce.fr/ifce/retour-sur-le-national-des-enseignants-2026/",
+   "date": 1791556692000,
+   "source": "ifce"
   },
   {
    "title": "CSIO 4*-W Rabat : Alix Ragot et Serafina DBH continuent sur leur lancée",
@@ -79,6 +129,24 @@
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNN0RwajMyRFplLTdVYWtHbVVBVWJJbXNKSG8wRk5LOEE5ZkVyVmxSbW11Ny1udmNuTVhsZWhBaG1HeHdVdUhYTHRtS0VyTi1sNkZ2VGxZUnZQdTM4XzhkQi0wVHRJa1dtemhSRGFhWWZkYmZRcnNuZXFBY0NIUDRDeE1NRXVBUldi?oc=5",
    "date": 1791448399000,
    "source": "grandprix"
+  },
+  {
+   "title": "Vaccination : l’IFCE et Boehringer Ingelheim s’associent pour promouvoir les bonnes pratiques sanitaires",
+   "link": "https://www.ifce.fr/ifce/vaccination-lifce-et-boehringer-ingelheim-sassocient-pour-promouvoir-les-bonnes-pratiques-sanitaires/",
+   "date": 1791442848000,
+   "source": "ifce"
+  },
+  {
+   "title": "Semaine du développement durable : et si vous mesuriez l’impact environnemental de votre activité équine ?",
+   "link": "https://www.ifce.fr/ifce/semaine-du-developpement-durable-et-si-vous-mesuriez-limpact-environnemental-de-votre-activite-equine/",
+   "date": 1791385086000,
+   "source": "ifce"
+  },
+  {
+   "title": "Sécheresse et pénurie de fourrages : quelles solutions pour les structures équines ?",
+   "link": "https://www.ifce.fr/ifce/secheresse-et-penurie-de-fourrages-quelles-solutions-pour-les-structures-equines/",
+   "date": 1791359419000,
+   "source": "ifce"
   },
   {
    "title": "En Ukraine, les chevaux soignent les traumatismes de guerre",
@@ -97,6 +165,12 @@
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS2UxeVhMemtGQlBYR0VtVlJXeDlPS0RzM3lsSVFCN2ZqaTdfRHhwNVdHX21NT3lpa0t5b3l6cHhGcnY4QXh5aHdtSktYMzhSVjB6RGphVnBfWDRsYVFYWExTYllwellWUWFxaU0xUVhWa3FvUjNsRXNlU0k5bmEtYUZSTkRDQlV1YktWcHpETk53V0ZsczFMcDE4N3RCVjhjd2o4NjB6Y1JVNXFEUi15aGRnQWNZcGJ0WnJWYlZwcl9HcXFN?oc=5",
    "date": 1791223444000,
    "source": "grandprix"
+  },
+  {
+   "title": "Journées portes ouvertes 2027 : découvrir les formations et préparer son projet professionnel",
+   "link": "https://www.ifce.fr/ifce/journees-portes-ouvertes-2027-decouvrir-les-formations-et-preparer-son-projet-professionnel/",
+   "date": 1790692306000,
+   "source": "ifce"
   },
   {
    "title": "Polo : la Suisse se qualifie pour le Mondial à Chantilly",
@@ -123,24 +197,6 @@
    "source": "grandprix"
   },
   {
-   "title": "Les Concours",
-   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFB5RDlQcUtfMnJEZFZqbWcwNnJoVFRqaUhMOEJBaWJ2MVFmQ1NlbmFKcHdZaWFiaHJMWVpLUEJlejhKVF8zcE1GM1JGaHg1TkoycEJGXzZmTUREMWs?oc=5",
-   "date": 1789609045000,
-   "source": "ffe"
-  },
-  {
-   "title": "Aachen 2026 – Saut d’obstacles : les 25 finalistes acceptés à l’inspection",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPQmdTbnZVcE01ck5sUnhJZHB3dmFXenpLZ3RyZktSQTFzcDFPWUhnQkJvUUFhQU93ZDV3SV9XRkhCemdfM1NfV3VsejhyQ0c3WlU2TkZhVFA4aW5PMWRwb01rTG9OVTVVaUJVX0U1RUtZVXcxQ2hnSHJ4Q0lJTlJEMjVlSXUtNFBIQkRSUDctLXJ3cXA1dFpR?oc=5",
-   "date": 1787382000000,
-   "source": "eperon"
-  },
-  {
-   "title": "- FFE CAMPUS",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE10V2hESDVqdFdLX09BeTlYb0pPYU5EQ1JjYnE4VlJ0ZWRGMHBWZU5LVnZ5ZjNDUFBRTXFKUUJUZlF1SkY4VEZodlJwNEdwTlNWbmJsZERKS3A4LThrTUJJVUhn?oc=5",
-   "date": 1784967962000,
-   "source": "ffe"
-  },
-  {
    "title": "Michel Perrin nous a quittés",
    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5qOGJYRGVoNGJSZURQMllCSTRnYzZFM0E2NV9xWXZmbFJ4SVhRekdIYXJkLW84ODV4Z2lTQ3YzS0JBWGRocldoU2hjM1JYLWhOSm9kRXM0OHRHWms3dWhvX3JwR01aQWtOQkVYUWN3ZWYtUFNnYlE?oc=5",
    "date": 1784530800000,
@@ -153,154 +209,16 @@
    "source": "grandprix"
   },
   {
-   "title": "Vigo Cécé disponible en ICSI",
-   "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9LcVlCbElvWVVkbVBOV0pEc2RJU3diWm9vQmhqdE9TdDZqZXU0bVY0RjVaZUVsMkE1ZGVtVUFHRjEzZVhDbmZjSUdUWHkwdndBS2ljb0hOQThZRG9RNUwwNnpR?oc=5",
-   "date": 1781852400000,
-   "source": "eperon"
-  },
-  {
    "title": "“Cher Qing”, avec Thibaut Vallette",
    "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE42Wm5VcVZRcW9NZEF4Y21uVDlfX0xwbmlaZVB6MTlfZk9Dc2NYdDM4UnRocmZGLW5oalNGczRJSVlENHJDTm5wSlFiUllsd21idUFlaFNXQno2Wk9PWWV3WWktWHBjQlMwcmF2ODN5dXJwZmM?oc=5",
    "date": 1778828400000,
    "source": "grandprix"
   },
   {
-   "title": "Championnat Pro Elite : sur un hard rock, Julien Epaillard et son ‘Queen’",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPa01MVzdtbHdWWVpMazVlb0laMkRjQzduMWMwOEVpSVpzUG44UWZaSWU2M0ZCVXg4WHFjcDdhbWh1dVc5cnM0M1h3cDBUdGVDckxnTnZHNGJxdkwxZHBEZDZfTC1nSzNVWnkwLWg4enBHRXkyRngzWWJVS1doVF9VLVBRSVVhTUpISjJLRlZHZjFCbFFlZU9n?oc=5",
-   "date": 1777100400000,
-   "source": "eperon"
-  },
-  {
-   "title": "David Melin, une double vie ‘Autrot’",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE4yZngwNUxYQVVER0JXMXlSNGpmZ2thNWNqRTF4dE1zeGhlYno2bS1TejktcVRzY3ZrazFtdWpXcHhSNnNibHhjcnM5NlZmM2drZEZVNmw1amxIMFJCWjFUQUF3T01tOHdJ?oc=5",
-   "date": 1776927600000,
-   "source": "eperon"
-  },
-  {
-   "title": "Expertise étalons Z : seulement 8 élus",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBnaFlLdW1xWVJsU0F2dkNUZUhEWE5uMFVjWGNaejJCWVUzdkJQc1I3TWliRTEwMmpxVzlJMVN0ZU8wcWl5UVZHWWNkeTNrczdtMDdDUy1SMlMzekxwZW1NZ1d1aDFoNWFrWXV1VQ?oc=5",
-   "date": 1773558000000,
-   "source": "eperon"
-  },
-  {
-   "title": "Référencement Etalons 2026 : le listing complet",
-   "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KQ1E2M19mOTBGcmJWWjhNckdnQ0RqS2dsR2c1Z04ySXNUcWc4UG9HSk1QVzhJMHRySTRsb0x5ckVDREFscGFpT1RfUWlmcHlOMTlUeWZLdVlXeDFWa0I1dk85d1dsSVN5NU50VmliWnAyU1o4QjZwcg?oc=5",
-   "date": 1771315200000,
-   "source": "eperon"
-  },
-  {
-   "title": "Salon des Etalons : votre guide du 20e anniversaire !",
-   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE12SXZROWpzTkVmd3lEY3RXSFhLbTRFdG1pOEtRaDJ0Y2ZSd05BeERiUzJ1eDN3TVNRZmtsbHh3M0VCSk9GamNYVWlUb2dvRXM0bHhpNWhCNVhudm43em9KQ01pV285enBBNF9KZzVnWlBTdmxzbG9pT1lYbi1sZw?oc=5",
-   "date": 1771228800000,
-   "source": "eperon"
-  },
-  {
-   "title": "Coupe du Monde de Bordeaux : la bonne étoile de Jessica Burke",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbEhDQ1ZhaXdGdnpEWlpvX1BRZU1tTTVVdmNQcjZFanF5a0w3aWRzU3RzWWFjQzA1YS0tT2RhdjBVeUVYaEl3YWpyeGNJdnF0YllWdjltNmNLcU9WbkMzMFpVVk1wSnAxTUxPdVp2SHVIelQ4cGpjQXctVjdKU2ZDdkVuZlI4RVNMYWMw?oc=5",
-   "date": 1770451200000,
-   "source": "eperon"
-  },
-  {
-   "title": "Gestion des prairies pour optimiser les surfaces",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZWRqYjN4U29KVzVkTHpMY3diaWhYSGs0bGtRX1pzNmZUVVlzUjBiRWtqaTdGNGYxUV8zb0MwOV9pTHpCaFJpNEFKbmx2X3lWdTNxaWlmeWdRQUM4eFRuRml6YlNpOHpsZkZGWndMcERVT1NWSTdBVTZTTFlpZjVFZXREY0ZHUDVGUTBpZnk4ZzI2b1pHT2p0aTRwYVQzX04yazc2dE84TVJjb2ZaSHZGdms0YjE2MFYtZFBjWE1adzdneWxHajdhTw?oc=5",
-   "date": 1770364800000,
-   "source": "ifce"
-  },
-  {
-   "title": "Quatre vidéos de Medical Training disponibles sur Youtube",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeDlwMlJ6NUJnV2VlM3JjRUgtcGo0OElhbWhJczlWX1VfSlVBYi1xaVBwRDQwT2hqVlY0U0FtTHNmeVR2dkwwWU1wMlBqWTVtc20wbVNuZi1lWEF4eXJwbDh6dk9xTmptaTJMZ1VURzVYYXJYb2lkTF92Q29oX2pVSHU0bzg?oc=5",
-   "date": 1768291200000,
-   "source": "ifce"
-  },
-  {
-   "title": "Championnat Anglo-arabe 3 ans : nette domination des pouliches",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQNTcxa0VWQ0Y1RW50MTBDS0tvLWdZQkF4LTNoSDRvYUdmdGRoeXBQSS1GZXFuTTM0dVRVVVpjRU1oUmloZFRKNVBQa3J0elA3SmJpOGhGRUNiSzNCMW5OWmRJNzVfdHlHUGUxdEpzcW44d2poZTk5Ukh3U0JROWVvWHoxcnRaNzdIdV9yOQ?oc=5",
-   "date": 1763193600000,
-   "source": "eperon"
-  },
-  {
-   "title": "Championnat Anglo-arabe 2 ans : peu de candidats mais un renouveau génétique",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPWEc3WkROSDdfbTV5UFdEOVRUZnlfcGNGdVFjcnBWNkx3bWpkbGhfMUtLN2FENTBWQzVJV0NmT1RtSUVwZkgwRzdZdXZyZGtkWXg2WV92NnJmTmJrRXBEZkZUVE9vS1h4c0ZEZDJyYTU2cU9IMllVRlFXVHQ4ZE5rRE5lSE8tWlVZTFkzTFMzZGtmWmdRRXpGMGZfZnpHWUk?oc=5",
-   "date": 1763193600000,
-   "source": "eperon"
-  },
-  {
-   "title": "Dermatose nodulaire : et les chevaux dans tout ça ?",
-   "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBJUjVXcW9aZkxHNEVwcksxMUZReVBJSkh0TDRnTWlBX2tVLVc1ei1uUGhURXB2Snc4SnNXNGMtMDRjdkNxcmExVkdlWnhQcjEtQ2RvLWowUmJEUGozOW4wLVRZSGlXNnozeXdtQloyMXgyZ3JLSG1OZEVfdw?oc=5",
-   "date": 1762329600000,
-   "source": "eperon"
-  },
-  {
-   "title": "Equita Lyon sur son 31 !",
-   "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE4xSzlBM0l2UXZ4TXVlcVhHdGxOU0JYYWVGcGVlcHJMYU5fMzFjdTBxSnFRTEh4T2FHZEJGcUtMQk9XVjUyZGZiQkhFeTIxRVY2bTZqZFhQQURWQQ?oc=5",
-   "date": 1761634800000,
-   "source": "eperon"
-  },
-  {
-   "title": "Abonnez-vous",
-   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE40OVRBLThiT25BbWdIcE1ZNmpFaHVuUnV6ZU1LSC00TjVuUWVXLXZ3RVR0ZlA1WnJENTUwWFI3dGhvRWdyT3VJSE9GWDI?oc=5",
-   "date": 1761116400000,
-   "source": "eperon"
-  },
-  {
-   "title": "La Grande Semaine de Dressage 2025 : Portrait de Céline Jousson",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQU1hnY0E4VE5sNzdSM0s1UVRDcVg2VFZBRGVJcnVTRHBQWXN3U3NhVVMta2hfNElyQWpoWTBjS0FTRFBBNW1VUXFXdWc0bVJmVnZzQndNR0VGY2d4U2FUOXl3cjlRdi1CcG5nOTlrUzJlYUdVektvMm1PM0xPcTVYOHJqMHFsNTc0VkhJTTBR?oc=5",
-   "date": 1757746800000,
-   "source": "eperon"
-  },
-  {
    "title": "NEWS GRANDPRIX EVENTS",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjd3dxUFVQWXVxejFVOVJKU1NaaTNCY25Gbm45aWVqb3BKa1ZUTGs5bDhwUC0tYXgwTEJPekJwVVNON2UwRnNGLU80RWRUb2FYVUdScHM2OWJRWTdCVWZidG9ja0RVaGkwU05BVXNR?oc=5",
    "date": 1756324169000,
    "source": "grandprix"
-  },
-  {
-   "title": "Identificateur IFCE – Loire Atlantique",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONVR4dFJ6dEZYRUc0elBqYkliNnB5SDBsSUNFYWJwSUtlU1o4Ukh2RlVQS0JPdTZvVzlpbnFPZWFhbkFlWmNLa3pELVl2ZlBSRlRPZE5QekVqZ1hpWmxwMlVfZFFZTjlndGFjejl5N1FoT1RPdUZYWlV0ZDJtVldmbV9YVU5KVWtyVjVEcmRYQ2k4czRuTTdDNm9BYmNwbktzcDVaQy1fSjZsTUpPRWFIbG45MFNoYmx1MTJv?oc=5",
-   "date": 1712388125000,
-   "source": "ifce"
-  },
-  {
-   "title": "Equitation - Nombre de licenciés",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NZzJEM1poLW9rQVFsOVlqN1hhbGVuWUlvWktfczRJdDA0aXBQMVhWdXdhUllZX1h0bjdTOUpWU09jejdFY0RnWHNFYkNsN1FEemwxQjF2bnJqM2FJU3JocEoxaXh2cG1nTUp0QzNXX2JzaWtLMDdWZV9oZTJmeGs?oc=5",
-   "date": 1711787098000,
-   "source": "ifce"
-  },
-  {
-   "title": "Le Pôle de formation IFCE – Cadre noir de Saumur",
-   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbDIteExjZlN6VlRnajBaT09mb3RFY0E4ZXFfbWxZY092Ql94Z1BFVGRBd0hSRXk3OXpoYU1FeXUwZ2JvUkJDMThCODF0aTNfYUFUZUk4NllEQmJ6UHkzbW9BMzFVZDhjYjJTMXg0UENENGQxZUJoMDhSZGc1S2pmWXBWLS01RDVrcEpxTHA4bkpqYng5U0FEX3NPMlFTMjJqZGxEUU5ZUEJFSG9ZZnJkRkdB?oc=5",
-   "date": 1702917740000,
-   "source": "ifce"
-  },
-  {
-   "title": "Magazine Archives",
-   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9uRmtPRDJaMmZmcF9XTHV0ZmVsc2pLZ1hJaUhGcnhSNFFQOHFSWkVoWkFzUXE3TTZlRXJlZzVHaGtxMkJKUGJTYkpIOFEtMGRoTTE2TjVzYjUxQUh1YTdj?oc=5",
-   "date": 1696060343000,
-   "source": "eperon"
-  },
-  {
-   "title": "OSM Map | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9Sc3dVcVZqbnp1NzZlOVpBWWZ2eG42amd3aXl2WEFCblYtaS1nTWxpTEQ2elhaTVhuWnUzd2o5WnFpQmFaRG9tSEF0bw?oc=5",
-   "date": 1693400294000,
-   "source": "ffe"
-  },
-  {
-   "title": "Conditions générales de vente",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9HaFdPNTd3bnlJa3E1MEVQT0o4bHFDTVB1STVrUDVVSFhDNjAtT2xKS29OMGFYckZweFlSUnplYV9FYkdUS1cwaGNYQWJfWE9PZURlMDk1WQ?oc=5",
-   "date": 1693384210000,
-   "source": "eperon"
-  },
-  {
-   "title": "Mentions légales",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9rSlVtbXdDaE1NZFUxVWJha2hsOGV2aG95RmxkNU5oZ0ZnaVQ2UmNscUJNNHlTcVpXNXhUN0Q0NVFpZE1VTlctZ1g4U0FrV2R3V2c?oc=5",
-   "date": 1693384204000,
-   "source": "eperon"
-  },
-  {
-   "title": "Articles",
-   "link": "https://news.google.com/rss/articles/CBMiR0FVX3lxTFB6bllRbGMxSUd4WUNTNWQycFoxT1RNQndYUFc2VTgxOFY0aldLdS0ta3dZdzdOdTM0S1k4WXgyRzM2M0N5aDVV?oc=5",
-   "date": 1693384190000,
-   "source": "eperon"
   },
   {
    "title": "CSIO 5* La Baule : Julien Épaillard file en tête dans l’épreuve GRANDPRIX",
@@ -315,15 +233,33 @@
    "source": "grandprix"
   },
   {
-   "title": "Pourquoi et comment souscrire une licence FFE ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBaRWcxamJ5TE16b05iTjVyZzFabjhOdnJSSEd6WEdiVERxeVlLcTlqMFJ2NXNUZVNqM1hMZnJfckNHMFlrY2ZJQlZCZ3hCd0NTVWMtS1NqVEVDSkNRelFlUWoycXRUdw?oc=5",
-   "date": 1673362864000,
+   "title": "Une reconnaissance du Conseil de l’Europe pour le Tourisme Équestre",
+   "link": "https://www.ffe.com/actualites/une-reconnaissance-du-conseil-de-l-europe-pour-le-tourisme-equestre",
+   "date": 1655993851000,
    "source": "ffe"
   },
   {
-   "title": "Les Galops® de cavalier",
-   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAtZFN5Z1RjRlVXajFHOFBrckJYWE5KSlVLX2VIaG9Ba2hxY2gyQnJuNFF5b3pmLU94dmpaT1pvci12Z1hjM05JckZPUk9qMzVqNHo1U3p6bVkwM3VjaU9pVVRJWXROQjhLa2U5UVFvdHE4U1RRMFl2WEcyT3o?oc=5",
-   "date": 1666949703000,
+   "title": "Grand Prix CDIO 5* à Rotterdam, la France 4e au provisoire",
+   "link": "https://www.ffe.com/actualites/grand-prix-cdio-5-a-rotterdam-la-france-4e-au-provisoire",
+   "date": 1655990647000,
+   "source": "ffe"
+  },
+  {
+   "title": "Les champions de France Majors de dressage couronnés",
+   "link": "https://www.ffe.com/actualites/les-champions-de-france-majors-de-dressage-couronnes",
+   "date": 1655975928000,
+   "source": "ffe"
+  },
+  {
+   "title": "Grand National FFE - AC Print de saut d’obstacles : Septième étape à Cluny (71) ce week-end !",
+   "link": "https://www.ffe.com/actualites/grand-national-ffe-ac-print-de-saut-d-obstacles-septieme-etape-a-cluny-71-ce-week-end",
+   "date": 1655971483000,
+   "source": "ffe"
+  },
+  {
+   "title": "Sélection CSIO 5* Sopot Coupe des nations FEI",
+   "link": "https://www.ffe.com/actualites/selection-csio-5-sopot-coupe-des-nations-fei",
+   "date": 1654007218000,
    "source": "ffe"
   },
   {
@@ -333,147 +269,15 @@
    "source": "grandprix"
   },
   {
-   "title": "Recherche ancêtre Cadre noir / Haras nationaux",
-   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CMTRablF4bjZsb2FZNFEwZnhkQ2hlXzZjWkZkVkpnejZyeEhvQ0dHN0c3T1c4WllNZnJzaThLYkJXR1Y1VVhNRVNNVHBGbE1jdzF6UXJlQXRjNlhoWU85VFdiM1ExcjFyclJZS0NLMG00SGxvMUgwR1ZmZV9XcUU?oc=5",
-   "date": 1644388468000,
-   "source": "ifce"
-  },
-  {
-   "title": "Qu’est-ce que la CNIL ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE5TRHE2ZjVVbC1CM2NreVQyR0x5QjFmSkY4cjJGdld6R0Z1TkoyZ29GTm1SVTlDQkUyeEtlQQ?oc=5",
-   "date": 1638462081000,
-   "source": "ffe"
-  },
-  {
-   "title": "Qu'est-ce que le CCE ou Concours Complet d'Équitation ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JQndXbVpsdXQ0Tk1McnRMbnhqaE05THduaDdOQWZPdkx3UzRwRlNVYUR2c0ZHX1dUTV9wZjNuVzVET2lMd3lQVmZ5bGY4Ql9GU1VNN19tbU0?oc=5",
-   "date": 1638267804000,
-   "source": "ffe"
-  },
-  {
-   "title": "FAQ",
-   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTFBLSFhyNVZWdHMxb1NtZUtsUk5uQU9rU1pMem40X19VVHBIdzZxVGktN0VvWWhobUgtb1BR?oc=5",
-   "date": 1638265442000,
-   "source": "ffe"
-  },
-  {
-   "title": "Débuter ou reprendre l'équitation",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAtQVFLWF9TTFBYOXRsZzdUS3U5S2dNNEdCUzVLRThlakhhd0J3anRoYS1XZlNodk5hVnJhU1l2RWFtU051b0hvcVlDWQ?oc=5",
-   "date": 1638264706000,
-   "source": "ffe"
-  },
-  {
-   "title": "DOLLAR DU ROUET",
-   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc01xTm5xcmY1UDBRMWVsNjVaOG5fcEw0NWdfbGtVQ1FOVzlXaUtlSlVNQ3BZMHl2RG0yMXpIdG93amVCTEpMZTE0TkFOeldyUG9jNGJ2WXZvX2ZwYm5nVnNuRldUREtiNFdaXzUtejk2cVpZTGktU3E1NWNBemRIY0hLY0FZRkJJRV9tcTV3?oc=5",
-   "date": 1638219444000,
-   "source": "ifce"
-  },
-  {
    "title": "[PARTIE 1] Le meilleur des soldes par GRANDPRIX",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaFhic0F4NVpBV2RLbFZseVZERHpZdm5qQVItc253OFh4dkcxczJWV29OZjJXYjBTYk5IYU9nSkkwOVV4SGhLa3pFcTI3U3gtbWtUaG5YQmY0MHRYa1YwODRtQmc5eUF3a3RnendtMHlRUjR6RWh5bGJKTHg4Rmp2RFBuelk?oc=5",
    "date": 1596697200000,
    "source": "grandprix"
   },
   {
-   "title": "Alimentation du cheval",
-   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84VEdLTkhjaF9yRk8wb3VYcXFLelFSeTlDcUtlT3NFc0w5MVUybUt4UDNSbGNJWDJKOWppbGk3QzlhOWdZZTQ3aUE3b21fZ3dvRGZoT2sta3VJc0hna3hoMlp6WnVwa1lXSmo0?oc=5",
-   "date": 1594339134000,
-   "source": "ifce"
-  },
-  {
-   "title": "La vente d'équidés",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQM040QVdtZTc3aTZQbHR1SWRfdzhpU2oxRUJwNkF5azJadzhFdlM5Y3JDTF9tb1FmUi1GNkpGckFNdUVvMm9XM2FMM0RSVmE2QW5sOHo2Y3FEbnpraHhsUk90Wk9iYXRDWHY1WFB1dlNfeWVOM1ktNHB0N29uZ2tRVA?oc=5",
-   "date": 1594300346000,
-   "source": "ifce"
-  },
-  {
-   "title": "DANDY",
-   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdkZ4ckNzR3NrRTBoRUNCamZaWG1FY0tYeW1NYlBFUXM5a0QwSVgtWlluU1laTHdZY1VJN3VqdjZKMmF6M3RHT3A4bVdqdkVxa1M2LVphVVNrZjJkUnBzS045aG5OdWs2bnhaN1l0SEdaM2hTODNZeWpteHRJX0xCNg?oc=5",
-   "date": 1588787187000,
-   "source": "ifce"
-  },
-  {
-   "title": "EUROCOMMERCE BERLIN (DEU) Alias BERLIN OU CASPAR",
-   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeW5TZ01DMjBOdld0dWFrdWZaY2ZXall1RGtfQ1owVTZSUUduRjY2LUhGd2ljUFFfNEhlSVNHVXVmYU9RTE5oSlRWYnM5Zlgwb3NKZEhDazlsallnNWRwMExtSXhYLUcwU3VPaDUyY0syVVhLNDBCVzBmelR1alU4T3lRVXMzYmpCUnpLWnRJTFhMOTQ?oc=5",
-   "date": 1575372072000,
-   "source": "ifce"
-  },
-  {
-   "title": "Clubs du département",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xLWNWblVyUS01N0FwaEh3NkE3eFpiWFNEeDgtbzZIeWdpWG9fcHhncW1mTVlHcmVKeXhiRjh0cno4VmtDUzZtdTl3bzNGblU1djBwbXdB?oc=5",
-   "date": 1569934436000,
-   "source": "ffe"
-  },
-  {
-   "title": "Rechercher un cheval",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9pSXpsSTRreHVYTENRQ3dIdU5iM3M0M0tIY0FqMmt0c2tfMHN1SnNZbTNpZTBLbWhveUZSOXB0YzhtX05yck9scFd1eFd6S1RWckZVUkJ3?oc=5",
-   "date": 1543322421000,
-   "source": "ifce"
-  },
-  {
-   "title": "Accueil - L'Eperon",
-   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1McVpPY3RfSEdCeHd0X0ZKb1NaRlBSTkQ2Q1JiSWhWNGVUQ2MwSEFSdXllSmROakxRMkRZ?oc=5",
-   "date": 1537209310000,
-   "source": "eperon"
-  },
-  {
-   "title": "Suivi du dossier de mon poulain",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9OZi1pMjN2T1ZXRzNHeE5CY216YkFXUU1NX1ZzR3hiN0R2YUptNWg3Mm44ZVpPSTNEZEd6c3Y0Qlp6TDg?oc=5",
-   "date": 1529748302000,
-   "source": "ifce"
-  },
-  {
-   "title": "Bienvenue au Haras des Villards",
-   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
-   "date": 1486920530000,
-   "source": "ffe"
-  },
-  {
-   "title": "Les Haras nationaux",
-   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5LVTdVS0JsNnZqajdBRXJyTkJrU1Z5MWtaNnRPYmlKMmZaNHVmekdTMmhacG1FblYyZS1VbElCV19tODBiMVBGeUZsTVE?oc=5",
-   "date": 1460980515000,
-   "source": "ifce"
-  },
-  {
-   "title": "Carte d’immatriculation & Propriété",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOVhVV0VqS3JVbHZOcUxCUUZubThLNnFpbkMtUDQ3UmswVGkzcjVYcUFXVktWUFFPbjQzeWxFQWxNYVJhdXY2eEdJRE90dlptalF4LTNLSE1XOGMzZ0pPSV9BaVBtM0ZTczk3WUV1N1dZWFdtR2FrNm55MHVWYUx1TzFyQUtEYVotdUhMT3EwbTVZOGRRWUE?oc=5",
-   "date": 1460888442000,
-   "source": "ifce"
-  },
-  {
-   "title": "IFCE - Institut français du cheval et de l'équitation",
-   "link": "https://news.google.com/rss/articles/CBMiN0FVX3lxTFBYYzZiSE01VVdVNjVxRVhmd2JraF9kalV2QTc3SDQzZGhkUzFGOG13akZlSUtNenc?oc=5",
-   "date": 1460879627000,
-   "source": "ifce"
-  },
-  {
-   "title": "Registre d'élevage chez les chevaux",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcjNFLUU3MDVJT0V4MVc4OFlQUlppT2tZTGdhaThHLWVQRmxkQkdBSEFZd3NjUDZmQjQtQW40Vl9Wd0RlcE5mSjNTWnZHV0xqMXEwRTlteU52VjFEWldlV2VOQjZJVlYtbWlPemVZSlZYTnlpeWt2TzFnUFRjMGR5QlhrRDE?oc=5",
-   "date": 1460876366000,
-   "source": "ifce"
-  },
-  {
-   "title": "Mon espace SIRE",
-   "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE41WEhIbl9vdVdSemphVkI4c3IyMmRkV1hhVTAyUmhzanEtSThoSlI5Y1ZaVjJIclJSRWhDdmFVZFM5RFBtRFE?oc=5",
-   "date": 1460836686000,
-   "source": "ifce"
-  },
-  {
-   "title": "Accueil Boutique FFE",
-   "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1kc0pnQU03dUhndkNWMDhEY2pvWTZtN1VWT09YamMyOFJSRm1XZnZJZkJJcm1MaHM3bFhmWXFB?oc=5",
-   "date": 1424919090000,
-   "source": "ffe"
-  },
-  {
-   "title": "Les Top annonces",
-   "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTFBRWlBYS0d1N0lKYllIeUFXMG0xMV9KQU50ckZEelFGUm9ydmJjeGtBR0hPczcwMTdWSVItZ3dn?oc=5",
-   "date": 1417528049000,
-   "source": "ffe"
-  },
-  {
-   "title": "FFE Compet",
-   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBNZnY2Ql90QTVtbDVrSWxwMTlSVlBGU2gwaVZCcnpyQ0djdjVJS0lmMHRReFZHMnFhYzNJdFBGbw?oc=5",
-   "date": 1341656329000,
+   "title": "Nature - Outils clubs - Trophée FFE du Développement Durable",
+   "link": "https://www.ffe.com/nature/outils-clubs/trophee-ffe-du-developpement-durable",
+   "date": 1575305961000,
    "source": "ffe"
   }
  ]
