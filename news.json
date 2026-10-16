@@ -1,11 +1,17 @@
 {
- "updated": "2026-10-15T20:47:40.762Z",
+ "updated": "2026-10-16T00:56:02.433Z",
  "failed": [],
  "items": [
   {
    "title": "AGT FFE – Forestier de CCE : une première Finale au cœur du Mondial du Lion Crédit Mutuel",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNX3NFaXc5TDV6YXE3azRLRUdrN0J0amVCMV9fQXl2Y0ZtVDIyYVZITUhmR1ZzLTBPRVBOUUl6cDkySmJRVGxBWGlyMGJ2aFQyMEhJWkp6OVNCRDk3cUZnQ1BLSzdydVJZaTYyZTB3Vm9ueFZqeHNPaWtmdG95anYxMkQ0OVppRFJuZmViNS0tdzJwWmtXOXh6OFRVR01TbFJrRnhQajZid3J2Z3RLTlhnUDhtc3I1VV9s?oc=5",
    "date": 1792088663000,
+   "source": "ffe"
+  },
+  {
+   "title": "Petites Annonces FFE",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1QM3FicG1UTEVab0NwRmwxR0k4ZUI0WkRyTVl6blFzdUgtR04wb1IyZUQzbWNHZllrSnBJTHJPNlBRcEl5V2hYSEVxWVMzcWFv?oc=5",
+   "date": 1792079103000,
    "source": "ffe"
   },
   {
@@ -24,12 +30,6 @@
    "title": "Franc succès pour le nouveau cycle de formation continue dédié aux juges Club de dressage et aux enseignants",
    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOZWQ3MkgtMkNUNFNhSG8yZTRNMllmQ0hKTzdXZmNjTmVKYjRGMTdYMTFfeVh1RERKempTdkdUdk0tSVFJVWN3Vkxlenl1VkdSMHpJVkhFZHVDZVVMamdqYjFGYXpGWkNWWjhhMjhfeGxhRHlMY09KU0FkbU5yNE5Lc2tGYkFMSWl5R01jaE42aVNtSnFUc2xxcmdWMkVpTy1ENnlyTTFib0R1SnNZZHUtVU9TXzIwUHZfam1tR0NvNTJwVVVTNHc?oc=5",
    "date": 1792054200000,
-   "source": "ffe"
-  },
-  {
-   "title": "Petites Annonces FFE",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9lZHhlZGZxQWtkT2VTLUlqNjd3S3lrM3F1cERSamJhbURqNVFRQlJlTWZUekM2RVJ4RjIyekRnRXZfRm4xb2Y2d2tYYUdsZFk?oc=5",
-   "date": 1792035902000,
    "source": "ffe"
   },
   {
@@ -57,12 +57,6 @@
    "source": "ifce"
   },
   {
-   "title": "Rencontres du pony-games 2026",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81MTlPVzFMT2hpeFk1ZlFCaTJtRUYwU3RkalhHaFNDSGtkRHFNZERwSkQ3bEFIYzJobGYyX1l2d3ZkTHBRUExYUGFiNzctQklGV0djOVhvUEM2YlZVREZMei1LRTFfRnJjNEJRYg?oc=5",
-   "date": 1791764363000,
-   "source": "ffe"
-  },
-  {
    "title": "Himalaya du Temple, aux portes du très haut niveau",
    "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1ERTItMkpyMXZaQ1J0ZjMtRzRXb3NOZ3RhQTZqZlVlT25zallvb2FHYXIwZmQ1VHJxY2dLU216QnJ1UnFfVE9MZG5iT0xhZ1JSUVM1b3BzYUluZEUwbVRYM1laREpiYXdjYXFRWmo0TzkwaUhXUmRVMHBlN1FhZw?oc=5",
    "date": 1791622301000,
@@ -72,12 +66,6 @@
    "title": "CSIO 4*-W Rabat : Alix Ragot et Serafina DBH continuent sur leur lancée",
    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNa0QweDBXdUZ5TXdKZFpQT183X1BnRWxkcmxuSTlXcXVkcmNyMml4MHNDbHNqY1U4ZEJWZ3dwVWR6LUVoQy1LSlZNRUZKeW45Z3ZIOTBjWmtLVUtRcGxmbzlEWWRUU2ZsMllBMjc4cnZwMWlDMGNNQ2xRZkJuaFNHZnBHQlo4S1pLc1pvQk9CdFR6c3ZBeDNac1NFdm14V1J6c05RNGJvSFpGVkU?oc=5",
    "date": 1791537747000,
-   "source": "grandprix"
-  },
-  {
-   "title": "En Ukraine, les chevaux soignent les traumatismes de guerre",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMVlzcGFtcUJXTmlUSWktdk1Ka0JTUXV3c3dhVDFHbjJvVm53aHEwUUNfNGNvNWtZam5GSktZNFdUajRHMjhGMGxkTGFCaUFORGhCMDBhNklLSXZmaThCV0ltTWF2NG9UR3FNZUFoWjlqZ2ZuQlViaHFYQ0dTZ2ZWck1EXy1PUlo4eWxNQm5DTG5uck14Z1A4?oc=5",
-   "date": 1791356400000,
    "source": "grandprix"
   },
   {
@@ -219,6 +207,12 @@
    "source": "eperon"
   },
   {
+   "title": "Formations & stages - Stages CRE",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FaGhYZmh4VWVCNGxiYzFmZjR4SzRBamRjdncycXVQTEExcXprZzYyWmtMdWl1MjBRanBUc0dGOFR0MWRkX3h5QXhkbjNPcWF4RTdTTW9Va094LVE5WGZYZGRjUzZLODBoZ0YwYmR3?oc=5",
+   "date": 1763041853000,
+   "source": "ffe"
+  },
+  {
    "title": "Dermatose nodulaire : et les chevaux dans tout ça ?",
    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBJUjVXcW9aZkxHNEVwcksxMUZReVBJSkh0TDRnTWlBX2tVLVc1ei1uUGhURXB2Snc4SnNXNGMtMDRjdkNxcmExVkdlWnhQcjEtQ2RvLWowUmJEUGozOW4wLVRZSGlXNnozeXdtQloyMXgyZ3JLSG1OZEVfdw?oc=5",
    "date": 1762329600000,
@@ -246,6 +240,12 @@
    "title": "NEWS GRANDPRIX EVENTS",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjd3dxUFVQWXVxejFVOVJKU1NaaTNCY25Gbm45aWVqb3BKa1ZUTGs5bDhwUC0tYXgwTEJPekJwVVNON2UwRnNGLU80RWRUb2FYVUdScHM2OWJRWTdCVWZidG9ja0RVaGkwU05BVXNR?oc=5",
    "date": 1756324169000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Jordan Molga M, le cheval de tête de Nicolas Delmotte, vendu aux États-Unis",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSThBeWQ2WUgwOExVOG4yejk4WnV6Mm1wcEFsSUFXRWh5LS1tSGFIcnZDaHo3OFp1OS1vWTJmSnpNM0pIeXRQa3pkYkZjSTd3dGFPQlNKRTdQQTgwaGZCWEVPSXROY1ZJQml3NzRQUzhiejIzYUt5TVYteUp5bUJ1T19GajBXSWduVEVYSFdqNzR5VG5iOWl2R01OY1J0T09YbEd2QWJoZFpDdw?oc=5",
+   "date": 1756278000000,
    "source": "grandprix"
   },
   {
@@ -297,12 +297,6 @@
    "source": "eperon"
   },
   {
-   "title": "CSIO 5* La Baule : Julien Épaillard file en tête dans l’épreuve GRANDPRIX",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWUI1TFZ2T0c5UXlMeFViSXhwSTNQSWY3U0RrS3pXTV9JdlM3QUw3UldJajFEMExsbDdxU0Z5YUkzX0w2RGk0N0F0VDZqOFhyNW50eHdDZXQ5LUV5MGZLQ2xmWjhtc05oRFpQc1dIYW5nNGpjSnJpNENHSmpXZjBBcUgxZ21wa2w2c3hhQ3VhYlNkS2tqMU5ESDBrajJFYzNEbUJxX3hPb05LM3Ri?oc=5",
-   "date": 1686466800000,
-   "source": "grandprix"
-  },
-  {
    "title": "GRANDPRIX recherche un.e graphiste print et digital en CDI",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNDFqZk94WjdkVzA0RUFwcU9Oc2lHNlVMT2lKMWhmQXZWM1ZzclNhTjlwZld3bjVIQnZCZUp3RnhhZlB1ME40ZGlUREh2ME5pc3J0bG1CVGFzQ0FtS3BNNzNzMV9qT29GYnJVLW9DV3pzTGpRamxSVXJRM2FQZnc0ckIyRzRET0l0WHpGbVdEYnpuSS1NQUE?oc=5",
    "date": 1679900400000,
@@ -319,6 +313,12 @@
    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAtZFN5Z1RjRlVXajFHOFBrckJYWE5KSlVLX2VIaG9Ba2hxY2gyQnJuNFF5b3pmLU94dmpaT1pvci12Z1hjM05JckZPUk9qMzVqNHo1U3p6bVkwM3VjaU9pVVRJWXROQjhLa2U5UVFvdHE4U1RRMFl2WEcyT3o?oc=5",
    "date": 1666949703000,
    "source": "ffe"
+  },
+  {
+   "title": "Libre IFCE RF",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1RSGpSSlVpNm5FcW5VZ0Nma2V0SFpseU9Lc1NRa0YyTHVFUWo4Y19zSkUtRUdHZFJGWTJWMW1YaHh4ZnRpaFpJbUlUM2w2NE4zcW56Z01EUzFWT3FxTDF6V0lGX2hwSEU?oc=5",
+   "date": 1660680608000,
+   "source": "ifce"
   },
   {
    "title": "News",
@@ -369,15 +369,15 @@
    "source": "ifce"
   },
   {
+   "title": "[PARTIE 1] Le meilleur des soldes par GRANDPRIX",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaFhic0F4NVpBV2RLbFZseVZERHpZdm5qQVItc253OFh4dkcxczJWV29OZjJXYjBTYk5IYU9nSkkwOVV4SGhLa3pFcTI3U3gtbWtUaG5YQmY0MHRYa1YwODRtQmc5eUF3a3RnendtMHlRUjR6RWh5bGJKTHg4Rmp2RFBuelk?oc=5",
+   "date": 1596697200000,
+   "source": "grandprix"
+  },
+  {
    "title": "Alimentation du cheval",
    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84VEdLTkhjaF9yRk8wb3VYcXFLelFSeTlDcUtlT3NFc0w5MVUybUt4UDNSbGNJWDJKOWppbGk3QzlhOWdZZTQ3aUE3b21fZ3dvRGZoT2sta3VJc0hna3hoMlp6WnVwa1lXSmo0?oc=5",
    "date": 1594339134000,
-   "source": "ifce"
-  },
-  {
-   "title": "Conception des lices des aires d'évolution extérieures",
-   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOOUU1RnF4YllJM0NSVVFLMk1aNVc3M1N1VVVJNFdBdlJ5VXFWbzJfd2xUbUVuajdvSHBvNnhGMy1qaUdFY2R3VVhsMGtYcXBSeWJMcHRLb2NJLWNRVFlMQi1RTkJpQkljN3ZJRTc1cXNqRS1iTFJFTXZtTVB6Yzl2bV8tYTAwUGZTQmcxcFNvTlJEcnFzaVZ0S3VHRDdkSUJvenhaRUVJa3l6SFgwaHViZER3MTVON1dnalpwU2VyRTBVeXBxYWVOWWhR?oc=5",
-   "date": 1594300542000,
    "source": "ifce"
   },
   {
@@ -426,6 +426,12 @@
    "title": "Bienvenue au Haras des Villards",
    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
    "date": 1486920530000,
+   "source": "ffe"
+  },
+  {
+   "title": "- Edito",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTDJFR0FwTUxFbm1ZRFgyMzVOemYxVWNBWWRJWE96aFR2dGZTRkFtR0kyNHRuUTd6enNEbmMzdHVXbkdUaXdVNjVmWQ?oc=5",
+   "date": 1486710910000,
    "source": "ffe"
   },
   {
