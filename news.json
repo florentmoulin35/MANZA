@@ -1,7 +1,13 @@
 {
- "updated": "2026-10-16T00:56:02.433Z",
+ "updated": "2026-10-16T04:48:18.413Z",
  "failed": [],
  "items": [
+  {
+   "title": "Petites Annonces FFE",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Wem54WU1wWUdhN3NoQzdEeFVKU0p6Z0U1NmltVFRpNlRiQ2RLRWRDa01MZElvdUo2bXhYUjk0UUcydnJmN3RNZ3V3V0lGZllF?oc=5",
+   "date": 1792122306000,
+   "source": "ffe"
+  },
   {
    "title": "AGT FFE – Forestier de CCE : une première Finale au cœur du Mondial du Lion Crédit Mutuel",
    "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNX3NFaXc5TDV6YXE3azRLRUdrN0J0amVCMV9fQXl2Y0ZtVDIyYVZITUhmR1ZzLTBPRVBOUUl6cDkySmJRVGxBWGlyMGJ2aFQyMEhJWkp6OVNCRDk3cUZnQ1BLSzdydVJZaTYyZTB3Vm9ueFZqeHNPaWtmdG95anYxMkQ0OVppRFJuZmViNS0tdzJwWmtXOXh6OFRVR01TbFJrRnhQajZid3J2Z3RLTlhnUDhtc3I1VV9s?oc=5",
@@ -9,15 +15,9 @@
    "source": "ffe"
   },
   {
-   "title": "Petites Annonces FFE",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1QM3FicG1UTEVab0NwRmwxR0k4ZUI0WkRyTVl6blFzdUgtR04wb1IyZUQzbWNHZllrSnBJTHJPNlBRcEl5V2hYSEVxWVMzcWFv?oc=5",
-   "date": 1792079103000,
-   "source": "ffe"
-  },
-  {
    "title": "Les Equidays s'invitent au Pôle international du cheval de Deauville",
    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZ3dERGJyclR6WG9HbmlETmNGWnZXSjEtQVJIc05oLUpPTmtYUUN4ZlFhM0xOd2hoMG94TXBQMXRtLVRGX3lnX3l6VlJrSTdNd3lRQzJvLUl2WXVKa1pZSE81bHp6QkJiNlRXOFVzeE93YWx5SWlOaXMwdUhaTTJ3R0R2alJBaksyc3FqLVBOSG9uckJRVEZEOHhuTVFGOVY4SEZyUWYzNEQ3dw?oc=5",
-   "date": 1792075189000,
+   "date": 1792075139000,
    "source": "grandprix"
   },
   {
@@ -42,12 +42,6 @@
    "title": "Le prolifique Balou du Rouet s’est éteint",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9Tdmt6OTR5a2k2UGJ0ZTBhYVBMR2FGWllzVl9BMVZTT0gwQ2E1ZUxJaUlhYUtlRDh1Yi03aXE1QTFMdzl0S0hzQmVTdGc4MFE1YkEwUTFNOU93MFBjTFVVQXVuazliYVNYV0llZ1NVYVlPZHgwZ2EyWEtNUGJtQXM?oc=5",
    "date": 1791980337000,
-   "source": "grandprix"
-  },
-  {
-   "title": "La FEI ouvre les candidatures pour les championnats du monde de 2030",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNUERLcXJnRksyR2RxUFEtWmtLVEsxdTg4b0R2WXFCeEJxakdOaTIwTzNBOFhtTXVLejREX2k2ZmVRb1YyQzVSaUZRZWZRZ2ZDQ29zMmhqbXpRbUtRR2gxQlU5aXJVT01jZ1loeTMtdmV6QWlQY0pybGF1YVZDcjAyTjE1cldpbUwyZVBxYXFrT3Z1X1F6Umx4YzEyRmsxdjhZWjVVck43T2cyYnc?oc=5",
-   "date": 1791840725000,
    "source": "grandprix"
   },
   {
@@ -93,6 +87,12 @@
    "source": "grandprix"
   },
   {
+   "title": "Polo Chantilly : l’équipe “Kazak” prend sa revanche",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOYUtjQno0enBQdjRldnY3eThBbEFGUTdvTWlZUTVMeTB5U01LSmpzREhkUmQxSDllSHFTX3MtUFIydVpPRXQ1UmtlOUExNW9Hdng5LTgteUV5YS1xWlZ1S0lHVEM5dmJkamNQcUtCc09ZWmpNZ0JkYlBxWERNdHNxcnhNbXpkRGxSQS00S2tpMA?oc=5",
+   "date": 1789974000000,
+   "source": "grandprix"
+  },
+  {
    "title": "Suivez la Ligue des nations Longines de Gassin sur ClipMyHorse.tv",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPamtIQUlYZVhENTRrckZ1OGVJeTBHckNDVHpDMVNOSnJzb0tfNU5hRk5FVTJQVGFUaUJQTmdoRFZqNzR2MWU5bVRsal9hLUhUMF80RDkwWlFMZGFFQWRPSVlLMjdVY1pIdC1leUcwN2JHbHVfbVRtcG5DeVlHTW5LRm1ScVZHUTl2VjZPT1JKMEVlcXlldml6alhSTUpGNDd1?oc=5",
    "date": 1789628400000,
@@ -133,12 +133,6 @@
    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9LcVlCbElvWVVkbVBOV0pEc2RJU3diWm9vQmhqdE9TdDZqZXU0bVY0RjVaZUVsMkE1ZGVtVUFHRjEzZVhDbmZjSUdUWHkwdndBS2ljb0hOQThZRG9RNUwwNnpR?oc=5",
    "date": 1781852400000,
    "source": "eperon"
-  },
-  {
-   "title": "Suivez le Grand Chelem Rolex d’Aix-la-Chapelle sur GRANDPRIX.tv",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZXk0Vkl4NTFmcDM4WnJuX3AwWElianJPN2NtYm5YWlhtSGZIN2VVTWVlbW1qTWhKalVOR0R3R3ZaSUNVM1gzeDM3dk1IbW5YTnMyNVpSdHQ4aU9NWUNRYTA2cVZTRDJjOFpGcnpGMmdmcU5zVkh2aDRDMlFnUVd6OV9qSXFEbEJMaXJQUUxEUV9aUHFTR1VMd3NR?oc=5",
-   "date": 1779346800000,
-   "source": "grandprix"
   },
   {
    "title": "“Cher Qing”, avec Thibaut Vallette",
@@ -297,6 +291,12 @@
    "source": "eperon"
   },
   {
+   "title": "CSIO 5* La Baule : Julien Épaillard file en tête dans l’épreuve GRANDPRIX",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWUI1TFZ2T0c5UXlMeFViSXhwSTNQSWY3U0RrS3pXTV9JdlM3QUw3UldJajFEMExsbDdxU0Z5YUkzX0w2RGk0N0F0VDZqOFhyNW50eHdDZXQ5LUV5MGZLQ2xmWjhtc05oRFpQc1dIYW5nNGpjSnJpNENHSmpXZjBBcUgxZ21wa2w2c3hhQ3VhYlNkS2tqMU5ESDBrajJFYzNEbUJxX3hPb05LM3Ri?oc=5",
+   "date": 1686466800000,
+   "source": "grandprix"
+  },
+  {
    "title": "GRANDPRIX recherche un.e graphiste print et digital en CDI",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNDFqZk94WjdkVzA0RUFwcU9Oc2lHNlVMT2lKMWhmQXZWM1ZzclNhTjlwZld3bjVIQnZCZUp3RnhhZlB1ME40ZGlUREh2ME5pc3J0bG1CVGFzQ0FtS3BNNzNzMV9qT29GYnJVLW9DV3pzTGpRamxSVXJRM2FQZnc0ckIyRzRET0l0WHpGbVdEYnpuSS1NQUE?oc=5",
    "date": 1679900400000,
@@ -313,12 +313,6 @@
    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAtZFN5Z1RjRlVXajFHOFBrckJYWE5KSlVLX2VIaG9Ba2hxY2gyQnJuNFF5b3pmLU94dmpaT1pvci12Z1hjM05JckZPUk9qMzVqNHo1U3p6bVkwM3VjaU9pVVRJWXROQjhLa2U5UVFvdHE4U1RRMFl2WEcyT3o?oc=5",
    "date": 1666949703000,
    "source": "ffe"
-  },
-  {
-   "title": "Libre IFCE RF",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1RSGpSSlVpNm5FcW5VZ0Nma2V0SFpseU9Lc1NRa0YyTHVFUWo4Y19zSkUtRUdHZFJGWTJWMW1YaHh4ZnRpaFpJbUlUM2w2NE4zcW56Z01EUzFWT3FxTDF6V0lGX2hwSEU?oc=5",
-   "date": 1660680608000,
-   "source": "ifce"
   },
   {
    "title": "News",
@@ -426,12 +420,6 @@
    "title": "Bienvenue au Haras des Villards",
    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
    "date": 1486920530000,
-   "source": "ffe"
-  },
-  {
-   "title": "- Edito",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTDJFR0FwTUxFbm1ZRFgyMzVOemYxVWNBWWRJWE96aFR2dGZTRkFtR0kyNHRuUTd6enNEbmMzdHVXbkdUaXdVNjVmWQ?oc=5",
-   "date": 1486710910000,
    "source": "ffe"
   },
   {
