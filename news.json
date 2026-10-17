@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17T16:43:50.701Z",
+ "updated": "2026-10-17T20:42:00.098Z",
  "failed": [],
  "items": [
   {
@@ -57,10 +57,10 @@
    "source": "ifce"
   },
   {
-   "title": "Auteur M. Jensen",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wWS14TzdJcURTZlRhR0RWRHNpeEdKZ1ZFQ1Z0Z09sV043cFM5MDVORVdEUTZHU254ZHYwb19IMm9nUl9aU2tRbjdQZHpXemRyS01GdkRId0FYSk5jWEVIOVJfVU5MSDZ5ZzVjTWtR?oc=5",
-   "date": 1791795376000,
-   "source": "ifce"
+   "title": "La France décroche huit médailles aux Européens d’équitation de travail",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRGJfeWx5MWNIbmN3OFZhcmZhYTNuWmVabDE0YXh3Rmg3TVdEZEN2SXp4NTd6ZURwY0FVLXpXOVJuRTlYZnY3S2FhaWxzQ09WblV5b3ZyRTY5VmlIQ0huSVlCYl9VZFU4eVgtUHp6REd2b1RIb0Z1aTlXMGh6Vm5lVl90V0NYQlhRbk5wSEYxS2VHS1hGbzlJWVloWTFjdTVhVmEwajcyamdQamxSYXc?oc=5",
+   "date": 1791270000000,
+   "source": "grandprix"
   },
   {
    "title": "Nouvelles offres d’abonnement : Magazine GRANDPRIX x Veredus et GRANDPRIX.tv x Laboratoire LPC",
@@ -115,6 +115,12 @@
    "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5qOGJYRGVoNGJSZURQMllCSTRnYzZFM0E2NV9xWXZmbFJ4SVhRekdIYXJkLW84ODV4Z2lTQ3YzS0JBWGRocldoU2hjM1JYLWhOSm9kRXM0OHRHWms3dWhvX3JwR01aQWtOQkVYUWN3ZWYtUFNnYlE?oc=5",
    "date": 1784530800000,
    "source": "grandprix"
+  },
+  {
+   "title": "EQUITA LYON 2026",
+   "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9yTUtqN2RDTlpMMFFnMnBMcEpFR05oaHRlM0UtQTNwQ0Nka2pNVHNINVM3bFFTVF9Kd2JJUlJJZWZSNUhGMWxtbV9VSGdIQjh1VGNucHJBaW5uYlU?oc=5",
+   "date": 1783523962000,
+   "source": "ffe"
   },
   {
    "title": "Offres d’été : 20% de réduction sur tous nos abonnements annuels GRANDPRIX !",
@@ -297,6 +303,12 @@
    "source": "grandprix"
   },
   {
+   "title": "Avantages licence FFE",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WekxIRWVyX19QMkVONHl4S09qY3gxNnBNV0dtcVp6REpFRGNQWUxzc21zU3AzMXRDZWlCWVg5OS1EVzE5V3MxdS1IN2xZbTdZZDhWSnVmMEZNbGIxdUNGbW92YXlzcVJh?oc=5",
+   "date": 1673608043000,
+   "source": "ffe"
+  },
+  {
    "title": "Pourquoi et comment souscrire une licence FFE ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBaRWcxamJ5TE16b05iTjVyZzFabjhOdnJSSEd6WEdiVERxeVlLcTlqMFJ2NXNUZVNqM1hMZnJfckNHMFlrY2ZJQlZCZ3hCd0NTVWMtS1NqVEVDSkNRelFlUWoycXRUdw?oc=5",
    "date": 1673362864000,
@@ -333,28 +345,10 @@
    "source": "ffe"
   },
   {
-   "title": "Qu'est-ce que le Concours de Saut d'Obstacles - CSO ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8zSzdGOFN6N2FoYU1BQUlDUUJkME1mazlBNk9MOE95OXM0M0UzWEhfdTVsZGxDUERxa3J3QTBBVWdfaDhMcjhJV0hhLVk2R0I2T1RlX1EybFI?oc=5",
-   "date": 1638264549000,
-   "source": "ffe"
-  },
-  {
    "title": "DOLLAR DU ROUET",
    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc01xTm5xcmY1UDBRMWVsNjVaOG5fcEw0NWdfbGtVQ1FOVzlXaUtlSlVNQ3BZMHl2RG0yMXpIdG93amVCTEpMZTE0TkFOeldyUG9jNGJ2WXZvX2ZwYm5nVnNuRldUREtiNFdaXzUtejk2cVpZTGktU3E1NWNBemRIY0hLY0FZRkJJRV9tcTV3?oc=5",
    "date": 1638219444000,
    "source": "ifce"
-  },
-  {
-   "title": "Nos concours",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE10RnZwWk8wajhIT0J6Z2FKdjdGU3dId1k4Y0c5Y19KRzNUVFd5bGxjd2plamhZWVY0Y3pKaTdzUEk4ZlhCbm1xNlNaVUk2QVpCZ2FBS2JyVkcwS0FBMkVFQ2xqVmh4V2JZZzNJQg?oc=5",
-   "date": 1600263159000,
-   "source": "ffe"
-  },
-  {
-   "title": "[PARTIE 1] Le meilleur des soldes par GRANDPRIX",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaFhic0F4NVpBV2RLbFZseVZERHpZdm5qQVItc253OFh4dkcxczJWV29OZjJXYjBTYk5IYU9nSkkwOVV4SGhLa3pFcTI3U3gtbWtUaG5YQmY0MHRYa1YwODRtQmc5eUF3a3RnendtMHlRUjR6RWh5bGJKTHg4Rmp2RFBuelk?oc=5",
-   "date": 1596697200000,
-   "source": "grandprix"
   },
   {
    "title": "Alimentation du cheval",
@@ -427,6 +421,12 @@
    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTDJFR0FwTUxFbm1ZRFgyMzVOemYxVWNBWWRJWE96aFR2dGZTRkFtR0kyNHRuUTd6enNEbmMzdHVXbkdUaXdVNjVmWQ?oc=5",
    "date": 1486710910000,
    "source": "ffe"
+  },
+  {
+   "title": "Les Haras nationaux",
+   "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5LVTdVS0JsNnZqajdBRXJyTkJrU1Z5MWtaNnRPYmlKMmZaNHVmekdTMmhacG1FblYyZS1VbElCV19tODBiMVBGeUZsTVE?oc=5",
+   "date": 1460980515000,
+   "source": "ifce"
   },
   {
    "title": "Vérification d’une attestation de propriété",
