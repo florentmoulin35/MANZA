@@ -1,13 +1,7 @@
 {
- "updated": "2026-10-16T20:46:47.518Z",
+ "updated": "2026-10-17T00:57:39.130Z",
  "failed": [],
  "items": [
-  {
-   "title": "Petites Annonces FFE",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1Wem54WU1wWUdhN3NoQzdEeFVKU0p6Z0U1NmltVFRpNlRiQ2RLRWRDa01MZElvdUo2bXhYUjk0UUcydnJmN3RNZ3V3V0lGZllF?oc=5",
-   "date": 1792122306000,
-   "source": "ffe"
-  },
   {
    "title": "CSI 5* El Jadida : Olivier Perreau sixième, il se prépare à une nouvelle razzia",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOaThEU3VWMFExZnFiejlxRU5vM3ROZWZhbnZNcUxPbGFKZXVTWWZoVWRFU25JQW9JaVBmNk1mbmgwMFpHbXo5cHNyRnhVanBrcWE1ZllxR0FTbTRFakRuWVlFN3hrS3VmOWFpalExMENET3lfSXRkTVJNaHZxcG5EaU91OHV4cVdVMHpxZXNjcW1VeFF4MFFobUowV2F5NWNmdFR5RGZsdHFobnRFa05QYkI3eEtPdw?oc=5",
@@ -69,12 +63,6 @@
    "source": "eperon"
   },
   {
-   "title": "Qu'est-ce que le TREC ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE9fejkyRW1fUThMdjljUEFwN01hUnRQeWRhR0FuYXlvaGVqbUdVc0pMbGtlc1RCQ0JHR1VwamVwTQ?oc=5",
-   "date": 1791450266000,
-   "source": "ffe"
-  },
-  {
    "title": "La France décroche huit médailles aux Européens d’équitation de travail",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRGJfeWx5MWNIbmN3OFZhcmZhYTNuWmVabDE0YXh3Rmg3TVdEZEN2SXp4NTd6ZURwY0FVLXpXOVJuRTlYZnY3S2FhaWxzQ09WblV5b3ZyRTY5VmlIQ0huSVlCYl9VZFU4eVgtUHp6REd2b1RIb0Z1aTlXMGh6Vm5lVl90V0NYQlhRbk5wSEYxS2VHS1hGbzlJWVloWTFjdTVhVmEwajcyamdQamxSYXc?oc=5",
    "date": 1791298286000,
@@ -85,6 +73,12 @@
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS2UxeVhMemtGQlBYR0VtVlJXeDlPS0RzM3lsSVFCN2ZqaTdfRHhwNVdHX21NT3lpa0t5b3l6cHhGcnY4QXh5aHdtSktYMzhSVjB6RGphVnBfWDRsYVFYWExTYllwellWUWFxaU0xUVhWa3FvUjNsRXNlU0k5bmEtYUZSTkRDQlV1YktWcHpETk53V0ZsczFMcDE4N3RCVjhjd2o4NjB6Y1JVNXFEUi15aGRnQWNZcGJ0WnJWYlZwcl9HcXFN?oc=5",
    "date": 1791223444000,
    "source": "grandprix"
+  },
+  {
+   "title": "Petites Annonces FFE",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9pUGlzd0VBdUN5b1BhVlJYUjhfNFhPLXpGdUFGakhRMkVGLTFBODBUSzlTdnJDNi1IVFQ1clJiYkh6NHpJbWxGVUhEVDZ2ellN?oc=5",
+   "date": 1791183600000,
+   "source": "ffe"
   },
   {
    "title": "Suivez le CSI 2* de Barbaste et le championnat des Foals du stud-book Selle Français sur GRANDPRIX.tv",
@@ -279,12 +273,6 @@
    "source": "eperon"
   },
   {
-   "title": "OSM Map | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9Sc3dVcVZqbnp1NzZlOVpBWWZ2eG42amd3aXl2WEFCblYtaS1nTWxpTEQ2elhaTVhuWnUzd2o5WnFpQmFaRG9tSEF0bw?oc=5",
-   "date": 1693400294000,
-   "source": "ffe"
-  },
-  {
    "title": "Conditions générales de vente",
    "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9HaFdPNTd3bnlJa3E1MEVQT0o4bHFDTVB1STVrUDVVSFhDNjAtT2xKS29OMGFYckZweFlSUnplYV9FYkdUS1cwaGNYQWJfWE9PZURlMDk1WQ?oc=5",
    "date": 1693384210000,
@@ -357,6 +345,12 @@
    "source": "ifce"
   },
   {
+   "title": "Nos concours",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE10RnZwWk8wajhIT0J6Z2FKdjdGU3dId1k4Y0c5Y19KRzNUVFd5bGxjd2plamhZWVY0Y3pKaTdzUEk4ZlhCbm1xNlNaVUk2QVpCZ2FBS2JyVkcwS0FBMkVFQ2xqVmh4V2JZZzNJQg?oc=5",
+   "date": 1600263159000,
+   "source": "ffe"
+  },
+  {
    "title": "[PARTIE 1] Le meilleur des soldes par GRANDPRIX",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaFhic0F4NVpBV2RLbFZseVZERHpZdm5qQVItc253OFh4dkcxczJWV29OZjJXYjBTYk5IYU9nSkkwOVV4SGhLa3pFcTI3U3gtbWtUaG5YQmY0MHRYa1YwODRtQmc5eUF3a3RnendtMHlRUjR6RWh5bGJKTHg4Rmp2RFBuelk?oc=5",
    "date": 1596697200000,
@@ -393,6 +387,12 @@
    "source": "ffe"
   },
   {
+   "title": ". - Règlement intérieur",
+   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE53dDNNclFLY1dVUVZ1ci0wYmlVeWdBQ0tVVzNIdmo5XzR3YVhCOEQ2ZVBXY0hxT0ZSa183OVotbHF1UVVDa3hrYXV3R3p6WHZpWEhSak5fR3FHM3FFdGZ2RE9MMTNBcFUwSVZGVw?oc=5",
+   "date": 1560801374000,
+   "source": "ffe"
+  },
+  {
    "title": "Concours - Comité Départemental d'Equitation de la Manche - FFE",
    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPcnh2SEtZYXllVDhUTWk1ZFh5Sk04NTZ5QkYxanloTC0tenBwUDJqRTBiWEhQaml2RWdINnltNHh1UEdBajZxeUdfblN2TWRuOU5OS1I1NnY2b1dE?oc=5",
    "date": 1559509813000,
@@ -414,6 +414,12 @@
    "title": "Bienvenue au Haras des Villards",
    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
    "date": 1486920530000,
+   "source": "ffe"
+  },
+  {
+   "title": "- Edito",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTDJFR0FwTUxFbm1ZRFgyMzVOemYxVWNBWWRJWE96aFR2dGZTRkFtR0kyNHRuUTd6enNEbmMzdHVXbkdUaXdVNjVmWQ?oc=5",
+   "date": 1486710910000,
    "source": "ffe"
   },
   {
@@ -456,12 +462,6 @@
    "title": "Les Top annonces",
    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTFBRWlBYS0d1N0lKYllIeUFXMG0xMV9KQU50ckZEelFGUm9ydmJjeGtBR0hPczcwMTdWSVItZ3dn?oc=5",
    "date": 1417528049000,
-   "source": "ffe"
-  },
-  {
-   "title": "Recherche Concours - FFE Compet",
-   "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1ad1JqTEw0YkdrejNic3NwRmtIV0tQQVdVdWpJbjI5S1N5Nl9aeUhjNE9GWFliY2x5NUxtOEVubUk2Z2hEdGhWVzhn?oc=5",
-   "date": 1341662671000,
    "source": "ffe"
   },
   {
