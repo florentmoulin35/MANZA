@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19T12:59:46.328Z",
+ "updated": "2026-10-19T16:50:59.576Z",
  "failed": [],
  "items": [
   {
@@ -18,12 +18,6 @@
    "title": "Dans le championnat du monde des sept ans, Lara de Liedekerke-Meier désormais seule en tête",
    "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbk1rNmNxXzh6bW9uYTdnZWJENDBIWjJhclI3MldkUF9TY0JQckZWaTlfa1djQWFCOXBqblZURzlwdmlKbWt0RmZoUGs4bE1NOVdoZ0hWNWFxMjRpYWYzTWFlX05LZTc4UndDNzUtU1hFejhjRXpjZ1BUc3BrQ0FBZExFQjR5YjhWSGZzRzdvQlpoN2lzVjFaRGNfbU9WUjFpX2x2RDdLRmVDZDNtOV9jTFhhc2lMcG5UcnhNRjlRNVI?oc=5",
    "date": 1792272682000,
-   "source": "grandprix"
-  },
-  {
-   "title": "François Saint-André, pour le complet son cœur galope",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQM3NqcTFUNjBXaEo2dURxODF6TFRwU1dGRlFPRlNzTVhuckdLWXdWSWFpLVktTFBkQm1jNHRsdFRvdE0tZGFvY2F2b2ZGMmNFNXhVNTVTejdLVk1ZNzVwRDRRYWFhZHctemlpX3RIRnZQZXhpRU9WWDQyOThtbXIwcDRzVXpKSXFsOW10Zw?oc=5",
-   "date": 1792245861000,
    "source": "grandprix"
   },
   {
@@ -67,6 +61,18 @@
    "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWGtycHNxaE50Z3RYU1B6bzYydS1PbTZMd194aGhIYkFoOXh1LUdzanJvMWplSHBWeXI1dXZYSnJxZm1WUEczdU4waEFLVTRTYkNaZW5vVXVlTkYtMTBYWUQ4b1I5YmZJV1FnYnBGNnNJTFN2bm9Xc3RzU1ZMc0hLTzhJakt5eTIzRUR3UnhQbVBNX3ZSMmhVOHdhdUwwd21mb3ZDRWtkZG1YWThMTUpuSTExUlpyUF9xcVhGeG8zV0pTMDNnajJWM1pR?oc=5",
    "date": 1791984928000,
    "source": "grandprix"
+  },
+  {
+   "title": "Podcast - Parlons cheval , 87 - Tout savoir sur les maladies : la fièvre de West Nile",
+   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVeVFweEtURDRqM0ZyNk1aT0dvV3ZQb0oyakdreEsydlB2Y3A3NUJlZ1pKQmN3cXdlUjhQTDRJeU04cVBPbVIyTDhGbWlXZFh5TVhnNUNEeWxwOE1GN1Y3QzF2eTFaMHVVRkFsLUFma3M4bEpCQ2c?oc=5",
+   "date": 1791802718000,
+   "source": "ifce"
+  },
+  {
+   "title": "Auteur M. Jensen",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9wWS14TzdJcURTZlRhR0RWRHNpeEdKZ1ZFQ1Z0Z09sV043cFM5MDVORVdEUTZHU254ZHYwb19IMm9nUl9aU2tRbjdQZHpXemRyS01GdkRId0FYSk5jWEVIOVJfVU5MSDZ5ZzVjTWtR?oc=5",
+   "date": 1791795376000,
+   "source": "ifce"
   },
   {
    "title": "Suivez le CSI 5*-W d’Oslo sur ClipMyHorse.tv, avec les commentaires de Kamel Boudra et Fabienne Daigneux",
@@ -213,15 +219,21 @@
    "source": "eperon"
   },
   {
+   "title": "Gestion des prairies pour optimiser les surfaces",
+   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZWRqYjN4U29KVzVkTHpMY3diaWhYSGs0bGtRX1pzNmZUVVlzUjBiRWtqaTdGNGYxUV8zb0MwOV9pTHpCaFJpNEFKbmx2X3lWdTNxaWlmeWdRQUM4eFRuRml6YlNpOHpsZkZGWndMcERVT1NWSTdBVTZTTFlpZjVFZXREY0ZHUDVGUTBpZnk4ZzI2b1pHT2p0aTRwYVQzX04yazc2dE84TVJjb2ZaSHZGdms0YjE2MFYtZFBjWE1adzdneWxHajdhTw?oc=5",
+   "date": 1770364800000,
+   "source": "ifce"
+  },
+  {
    "title": "Nicolas Blondeau, dernier pied à terre",
    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5FT1drNXROZjFkMm4zekl4QWJ4ams3d25mbUgzOXdfWUw4VlhrYVk2S0RzWlNfYjAxUFVTeTdZZnRmb2RsLWxTY1Z0RDVXdjY3NDN1c3VhTWpHZkZYMVpxSHVVc3VsUTUzUHR1OWZn?oc=5",
    "date": 1769068800000,
    "source": "eperon"
   },
   {
-   "title": "Nomination des équidés : règles et exceptions",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQSHQyc1lEMjB1VXpwcHBiclhVSW4zeW1KZl9mQWNRZUgyOHpLQ20zLVpGa0pFOUVVaW5hYm5hbXNRSVlaQWJocTZSbXVsSzVVcDFjXzQ1R2w5bC1Xa2NyQnZMeFdxWFprU204elFHM1lQdXlJem1xNUhOSGtNX2JrM256UEhnMG5pM3R0R1FJMjFMVThlZEYyeVlqMnJwUXJQckpLMXFUR3VrNF9IbjBvcWFWcTAzZ1A1?oc=5",
-   "date": 1768346637000,
+   "title": "Quatre vidéos de Medical Training disponibles sur Youtube",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOeDlwMlJ6NUJnV2VlM3JjRUgtcGo0OElhbWhJczlWX1VfSlVBYi1xaVBwRDQwT2hqVlY0U0FtTHNmeVR2dkwwWU1wMlBqWTVtc20wbVNuZi1lWEF4eXJwbDh6dk9xTmptaTJMZ1VURzVYYXJYb2lkTF92Q29oX2pVSHU0bzg?oc=5",
+   "date": 1768291200000,
    "source": "ifce"
   },
   {
@@ -273,9 +285,27 @@
    "source": "eperon"
   },
   {
-   "title": "Le Pôle de formation IFCE – Site du Pin-au-Haras",
-   "link": "https://news.google.com/rss/articles/CBMiowJBVV95cUxPc2tLRlhPd0pLMGNoRUdVdFNhRFNaREVxYUlfeVkzaFNKbndKR3NiQ1dwWjZXSGFhaFZRd0xkVjc2NVpqaThocmVPa3Z2bmx5RVprMzI3UjJhSmp5VkNjX0VsQnhaQnN6ZTBQZk9HUkJyRDZRM2h4bFBJUHdzVFFQZGRKZE1GNEl4Vy15eVVzUFVlMTg0UVVlNWFjS2hNS2E4bmtMNGpyTkIydUlkN0hUSXlZUGJYNWhwWFhkc29xOWR4TnVHVDBKZ3hmRjRfaVlmancxUVVlS3FuRGpvaTZPLUhSVThMX25TZzg3eFQxU1JXUGRPWklpZG1tbzcxU1FBVXpPT2xCUVNQeGFLaDlRQTY0Vjh6TWk3X2pYUldlcEtiQ1k?oc=5",
-   "date": 1754301285000,
+   "title": "NEWS GRANDPRIX EVENTS",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjd3dxUFVQWXVxejFVOVJKU1NaaTNCY25Gbm45aWVqb3BKa1ZUTGs5bDhwUC0tYXgwTEJPekJwVVNON2UwRnNGLU80RWRUb2FYVUdScHM2OWJRWTdCVWZidG9ja0RVaGkwU05BVXNR?oc=5",
+   "date": 1756324169000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Identificateur IFCE – Loire Atlantique",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONVR4dFJ6dEZYRUc0elBqYkliNnB5SDBsSUNFYWJwSUtlU1o4Ukh2RlVQS0JPdTZvVzlpbnFPZWFhbkFlWmNLa3pELVl2ZlBSRlRPZE5QekVqZ1hpWmxwMlVfZFFZTjlndGFjejl5N1FoT1RPdUZYWlV0ZDJtVldmbV9YVU5KVWtyVjVEcmRYQ2k4czRuTTdDNm9BYmNwbktzcDVaQy1fSjZsTUpPRWFIbG45MFNoYmx1MTJv?oc=5",
+   "date": 1712388125000,
+   "source": "ifce"
+  },
+  {
+   "title": "Equitation - Nombre de licenciés",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NZzJEM1poLW9rQVFsOVlqN1hhbGVuWUlvWktfczRJdDA0aXBQMVhWdXdhUllZX1h0bjdTOUpWU09jejdFY0RnWHNFYkNsN1FEemwxQjF2bnJqM2FJU3JocEoxaXh2cG1nTUp0QzNXX2JzaWtLMDdWZV9oZTJmeGs?oc=5",
+   "date": 1711787098000,
+   "source": "ifce"
+  },
+  {
+   "title": "Le Pôle de formation IFCE – Cadre noir de Saumur",
+   "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbDIteExjZlN6VlRnajBaT09mb3RFY0E4ZXFfbWxZY092Ql94Z1BFVGRBd0hSRXk3OXpoYU1FeXUwZ2JvUkJDMThCODF0aTNfYUFUZUk4NllEQmJ6UHkzbW9BMzFVZDhjYjJTMXg0UENENGQxZUJoMDhSZGc1S2pmWXBWLS01RDVrcEpxTHA4bkpqYng5U0FEX3NPMlFTMjJqZGxEUU5ZUEJFSG9ZZnJkRkdB?oc=5",
+   "date": 1702917740000,
    "source": "ifce"
   },
   {
@@ -297,10 +327,10 @@
    "source": "eperon"
   },
   {
-   "title": "Accueil - Stats et cartes",
-   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE5yZUZ5LXlPY1RSQjhGa2V1YzhqZHVLdzRTeFdjZmY1RmVaM3lpVDBGSGppT3FlRmtiYzdFM1dSWGdtdw?oc=5",
-   "date": 1688477968000,
-   "source": "ifce"
+   "title": "GRANDPRIX recherche un.e graphiste print et digital en CDI",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNDFqZk94WjdkVzA0RUFwcU9Oc2lHNlVMT2lKMWhmQXZWM1ZzclNhTjlwZld3bjVIQnZCZUp3RnhhZlB1ME40ZGlUREh2ME5pc3J0bG1CVGFzQ0FtS3BNNzNzMV9qT29GYnJVLW9DV3pzTGpRamxSVXJRM2FQZnc0ckIyRzRET0l0WHpGbVdEYnpuSS1NQUE?oc=5",
+   "date": 1679900400000,
+   "source": "grandprix"
   },
   {
    "title": "Pourquoi et comment souscrire une licence FFE ? | Fédération Française d'Équitation",
@@ -309,10 +339,22 @@
    "source": "ffe"
   },
   {
-   "title": "News",
-   "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFB5NFdobjh5RzQ1a1lIWG82SHJ1UVVFNXlEZTJyU1J6SjZzeWRncFdnWUM1dnptdzRRVGo0YW9qZFZ3Sk1xeW94ckp6d3I5d0U?oc=5",
-   "date": 1646842972000,
-   "source": "grandprix"
+   "title": "Libre IFCE RF",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1RSGpSSlVpNm5FcW5VZ0Nma2V0SFpseU9Lc1NRa0YyTHVFUWo4Y19zSkUtRUdHZFJGWTJWMW1YaHh4ZnRpaFpJbUlUM2w2NE4zcW56Z01EUzFWT3FxTDF6V0lGX2hwSEU?oc=5",
+   "date": 1660680608000,
+   "source": "ifce"
+  },
+  {
+   "title": "KAPUCHE DEL RANCHO",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNeXlHSVhOTDZwRVMzODJMU0pBRXFlR2xwS1pzYzdPNlBPUHlTVklEcTNNVHpUTU13bDlrY1FWMkUyenU4RWt5elFRd2JmU0kzU05LbVhFbHBCYXZ2STd1Z21hY1Z4cnRVWW4tNHVyQlhubGhyV0xTcEJTLXZBR2IwQVUzalZzcGVzS2dPaHNFWUU2QQ?oc=5",
+   "date": 1654497742000,
+   "source": "ifce"
+  },
+  {
+   "title": "Recherche ancêtre Cadre noir / Haras nationaux",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CMTRablF4bjZsb2FZNFEwZnhkQ2hlXzZjWkZkVkpnejZyeEhvQ0dHN0c3T1c4WllNZnJzaThLYkJXR1Y1VVhNRVNNVHBGbE1jdzF6UXJlQXRjNlhoWU85VFdiM1ExcjFyclJZS0NLMG00SGxvMUgwR1ZmZV9XcUU?oc=5",
+   "date": 1644388468000,
+   "source": "ifce"
   },
   {
    "title": "Qu’est-ce que la CNIL ? | Fédération Française d'Équitation",
@@ -345,22 +387,40 @@
    "source": "ffe"
   },
   {
+   "title": "DOLLAR DU ROUET",
+   "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNc01xTm5xcmY1UDBRMWVsNjVaOG5fcEw0NWdfbGtVQ1FOVzlXaUtlSlVNQ3BZMHl2RG0yMXpIdG93amVCTEpMZTE0TkFOeldyUG9jNGJ2WXZvX2ZwYm5nVnNuRldUREtiNFdaXzUtejk2cVpZTGktU3E1NWNBemRIY0hLY0FZRkJJRV9tcTV3?oc=5",
+   "date": 1638219444000,
+   "source": "ifce"
+  },
+  {
+   "title": "Alimentation du cheval",
+   "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE84VEdLTkhjaF9yRk8wb3VYcXFLelFSeTlDcUtlT3NFc0w5MVUybUt4UDNSbGNJWDJKOWppbGk3QzlhOWdZZTQ3aUE3b21fZ3dvRGZoT2sta3VJc0hna3hoMlp6WnVwa1lXSmo0?oc=5",
+   "date": 1594339134000,
+   "source": "ifce"
+  },
+  {
+   "title": "La vente d'équidés",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQM040QVdtZTc3aTZQbHR1SWRfdzhpU2oxRUJwNkF5azJadzhFdlM5Y3JDTF9tb1FmUi1GNkpGckFNdUVvMm9XM2FMM0RSVmE2QW5sOHo2Y3FEbnpraHhsUk90Wk9iYXRDWHY1WFB1dlNfeWVOM1ktNHB0N29uZ2tRVA?oc=5",
+   "date": 1594300346000,
+   "source": "ifce"
+  },
+  {
+   "title": "DANDY",
+   "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPdkZ4ckNzR3NrRTBoRUNCamZaWG1FY0tYeW1NYlBFUXM5a0QwSVgtWlluU1laTHdZY1VJN3VqdjZKMmF6M3RHT3A4bVdqdkVxa1M2LVphVVNrZjJkUnBzS045aG5OdWs2bnhaN1l0SEdaM2hTODNZeWpteHRJX0xCNg?oc=5",
+   "date": 1588787187000,
+   "source": "ifce"
+  },
+  {
+   "title": "EUROCOMMERCE BERLIN (DEU) Alias BERLIN OU CASPAR",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPeW5TZ01DMjBOdld0dWFrdWZaY2ZXall1RGtfQ1owVTZSUUduRjY2LUhGd2ljUFFfNEhlSVNHVXVmYU9RTE5oSlRWYnM5Zlgwb3NKZEhDazlsallnNWRwMExtSXhYLUcwU3VPaDUyY0syVVhLNDBCVzBmelR1alU4T3lRVXMzYmpCUnpLWnRJTFhMOTQ?oc=5",
+   "date": 1575372072000,
+   "source": "ifce"
+  },
+  {
    "title": "Clubs du département",
    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xLWNWblVyUS01N0FwaEh3NkE3eFpiWFNEeDgtbzZIeWdpWG9fcHhncW1mTVlHcmVKeXhiRjh0cno4VmtDUzZtdTl3bzNGblU1djBwbXdB?oc=5",
    "date": 1569934436000,
    "source": "ffe"
-  },
-  {
-   "title": "Enregistrer un cheval à votre nom suite à un achat",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWmUweU5hMU9RNkpoT0xrSTlVM0U5Y1ctcF9EUjZvRHVlRFlncTQ0ank5elVxdFRyb0NaVTgtWk1xbHFyd2hkeFZNRmhTYXBXZW5HRnowMTc4YW91WGdPNFk2Tk1ZaU5VaHFsR01CYTdHZGV2RnU5a0R6WWcxTHZmZ3JIaHR6d0xlY2xZcTdyWUZhR2ZmOFNZMkdManRqU1RZb1Z2TGw2em80VzVDb0NlampHaVI0VThLZ2hxSVFEbmlXWVp0WTkxVEFLRnNyeTg?oc=5",
-   "date": 1560881568000,
-   "source": "ifce"
-  },
-  {
-   "title": "Suivi sanitaire de mon reproducteur",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeDlEcnprZ25WTjVKX1diWDd5TW1GX1RBeWZ2c3I0R0hPYi1NZFMtRjM4YTFmZ2p3SC1PNXZkMnRLUGtCRDdvZ1NDNEhtU1BBa2tQaFZIZU5kNTB2ejlRWlVhUjlkRnNKcDVXQnh1b0FtYkxpd1cxTndNald0T2RnYnVzM3o4YnhvMDJyOEN6MXJBS3pBcmFRNDJRRXdfSjQwOHE2eUd3NkVKeU1EM3gyVmZxZk1LU1k4Q3VSeg?oc=5",
-   "date": 1555326586000,
-   "source": "ifce"
   },
   {
    "title": "Accueil - L'Eperon",
@@ -381,69 +441,15 @@
    "source": "ffe"
   },
   {
-   "title": "Vérification d’une attestation de propriété",
-   "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNYVAxZkVXMG0yQXJBQTNTa05pbkxMX1ZfSU5EYTFGazc1b0FybmpGdlFoeTktamdfT0V6SjRkZnVOQ2hNMVpmd213cmV4bUVia0RPRlVQQU9oTkpjYzBCNHNFV0lTSWtEZndYdmZiRGRKR0ZJc1V5eWMzdjZaaWNRc2pQbXBabzh3a202Z0pRVGJaZElkcTBObkE5WTlfcy1Uc2pYaFcwUQ?oc=5",
-   "date": 1460894378000,
-   "source": "ifce"
-  },
-  {
-   "title": "Validation ou certification d’identité",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWkZ3OXJMWlh3ZUtXbERPMTh2VkpRRXNkU2NRemluRzZaU3VrVTNUWno5Nmp6cGxTSEZtYl9uWmJnRE51R0xRTXpkNEtzdW90czRNOGZnVkZsa043TklPWV8xMjNmSTFvVzBWUjAzRThqYUcwcUdQeEZoV0FIcDdjVWctcEFxb1ZuOG12UzVORjNrSjVXZkt1MXpB?oc=5",
-   "date": 1460888620000,
-   "source": "ifce"
-  },
-  {
    "title": "Carte d’immatriculation & Propriété",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOVhVV0VqS3JVbHZOcUxCUUZubThLNnFpbkMtUDQ3UmswVGkzcjVYcUFXVktWUFFPbjQzeWxFQWxNYVJhdXY2eEdJRE90dlptalF4LTNLSE1XOGMzZ0pPSV9BaVBtM0ZTczk3WUV1N1dZWFdtR2FrNm55MHVWYUx1TzFyQUtEYVotdUhMT3EwbTVZOGRRWUE?oc=5",
    "date": 1460888442000,
    "source": "ifce"
   },
   {
-   "title": "Lieu de détention",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQeEotRE1mMlJmbkVOYTluZ3JGcENweHVnOHVlY0o1RTE1ZG5YOER3alJURHRPZlJRSkRoaGJTVHRMbW9adjJHM2t2VWxlc3Boem0zQzJ0dGRKbEd4YjZsSVVkdGt1M3lzVVg0RW9Zd0d1QktKcmlWX1l1QjItWDJDNUNwbVg?oc=5",
-   "date": 1460886137000,
-   "source": "ifce"
-  },
-  {
-   "title": "Sanitaire & détention pour les équidés",
-   "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBKS1N2NWpxTzFiZk43VTI0M01wbFZLdUpTQ0Z5b29NeDhvZFFzLXUyTUd2eE9JS2pXYjFjWVZRUnRkNjRzOTl2QWdEYkdNaEhNcVRDRDlieURLOTJYR08tTHp1X3p1MWVNQVFJbw?oc=5",
-   "date": 1460885198000,
-   "source": "ifce"
-  },
-  {
-   "title": "Fin de vie des équidés",
-   "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9iNHV2R3F3MThiREw2S25uRmlMbFRMbDNjT1F3RUVtdmliNGtVWUl6SzYwYXktNTVDOUdqWDljZDFXSmpxMDRhRkxjX3c0Yjk5dEhRUktqbWVVaU8yR203dg?oc=5",
-   "date": 1460884737000,
-   "source": "ifce"
-  },
-  {
-   "title": "SIRE & Démarches",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9GUFNPWjU1UmpkYUJScEdxbnBoN3BURE40bFVVY1hDT1hXMl9YRG11YjhQVVpfMy1fbHhaVHZNTnNUM201VDhsRHFDeXhyeE9ZZEE?oc=5",
-   "date": 1460884131000,
-   "source": "ifce"
-  },
-  {
    "title": "IFCE - Institut français du cheval et de l'équitation",
    "link": "https://news.google.com/rss/articles/CBMiN0FVX3lxTFBYYzZiSE01VVdVNjVxRVhmd2JraF9kalV2QTc3SDQzZGhkUzFGOG13akZlSUtNenc?oc=5",
    "date": 1460879627000,
-   "source": "ifce"
-  },
-  {
-   "title": "Registre des transports",
-   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOGQ2TmxJYW00Nlk0T1JGUEJvYmU3Q2VFZGgzdHFQSm5VYmF3SDU1MUJWaGdWc19Cd3l2a0hhTWhEd1kxR2dKS2xTQ2JNSW9jdWs5SGY4MVY5MnBvRm83UHNaZGljQjQxQ2VXWWlrWFo4S3M5VUsxUThKZURfMXhjUV9talVacjh5YjRaRA?oc=5",
-   "date": 1460877888000,
-   "source": "ifce"
-  },
-  {
-   "title": "Gestion des saillies",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUXVWeHFncC1iUGtuUHdEazFEeXNLMUhacUEyOTQ1WUtUTjYxTFJDZURoRGtPcWtESGNxb2pTd29jekxHaTJ4UFJEYW1JUWMwNnNGMkdnYlgtQjZkZFRHcWc4NXViMVQwZzRrRWpjVnZYOXlEVFdyUlFYeDlpQkYtQnEtcEtkRXNaNDZ3?oc=5",
-   "date": 1460876636000,
-   "source": "ifce"
-  },
-  {
-   "title": "Mort d’un équidé & Équarrissage",
-   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE80NFJRN3BJdldIdFBTTG1DOU9kRWh4VTE3TkQ5bVV5cEgzNWtQbDYyODlxWXdFRUFuUkphcGxBRWFqZjlXUzhESHFKRkI1bXZSSlhWN2laeUZaZHlzMVI0WDY4WFVSQTQ?oc=5",
-   "date": 1460876458000,
    "source": "ifce"
   },
   {
