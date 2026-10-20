@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T01:01:01.991Z",
+ "updated": "2026-10-20T04:46:50.582Z",
  "failed": [],
  "items": [
   {
@@ -273,6 +273,12 @@
    "source": "ifce"
   },
   {
+   "title": "Equitation - Nombre de licenciés",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NZzJEM1poLW9rQVFsOVlqN1hhbGVuWUlvWktfczRJdDA0aXBQMVhWdXdhUllZX1h0bjdTOUpWU09jejdFY0RnWHNFYkNsN1FEemwxQjF2bnJqM2FJU3JocEoxaXh2cG1nTUp0QzNXX2JzaWtLMDdWZV9oZTJmeGs?oc=5",
+   "date": 1711787098000,
+   "source": "ifce"
+  },
+  {
    "title": "Le Pôle de formation IFCE – Cadre noir de Saumur",
    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbDIteExjZlN6VlRnajBaT09mb3RFY0E4ZXFfbWxZY092Ql94Z1BFVGRBd0hSRXk3OXpoYU1FeXUwZ2JvUkJDMThCODF0aTNfYUFUZUk4NllEQmJ6UHkzbW9BMzFVZDhjYjJTMXg0UENENGQxZUJoMDhSZGc1S2pmWXBWLS01RDVrcEpxTHA4bkpqYng5U0FEX3NPMlFTMjJqZGxEUU5ZUEJFSG9ZZnJkRkdB?oc=5",
    "date": 1702917740000,
@@ -399,18 +405,6 @@
    "source": "eperon"
   },
   {
-   "title": "Suivi du dossier de mon poulain",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9OZi1pMjN2T1ZXRzNHeE5CY216YkFXUU1NX1ZzR3hiN0R2YUptNWg3Mm44ZVpPSTNEZEd6c3Y0Qlp6TDg?oc=5",
-   "date": 1529748302000,
-   "source": "ifce"
-  },
-  {
-   "title": "Domaine de la forge - Edito",
-   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFA1anZ4S1BGZkNLaEpQSHFCVUUyYTBkRlk4MFBLS0V1bkFiX1VmUGc0WnI5dFZ1ZURKb2xOSnZLZ0FObDdubEltbg?oc=5",
-   "date": 1487069180000,
-   "source": "ffe"
-  },
-  {
    "title": "Bienvenue au Haras des Villards",
    "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
    "date": 1486920530000,
@@ -426,6 +420,12 @@
    "title": "- Edito",
    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTDJFR0FwTUxFbm1ZRFgyMzVOemYxVWNBWWRJWE96aFR2dGZTRkFtR0kyNHRuUTd6enNEbmMzdHVXbkdUaXdVNjVmWQ?oc=5",
    "date": 1486710910000,
+   "source": "ffe"
+  },
+  {
+   "title": "La FFE",
+   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1IN3BYYnZWZ1A4MlFjNkZpcFg1NTViWnZ5dW1BQnFidFFLSnhXa0RpMlM4UW1aS2FqS0pR?oc=5",
+   "date": 1481379795000,
    "source": "ffe"
   },
   {
