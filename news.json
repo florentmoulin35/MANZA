@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-22T04:47:32.879Z",
+ "updated": "2026-10-22T08:53:54.133Z",
  "failed": [],
  "items": [
   {
@@ -18,12 +18,6 @@
    "title": "Suivez le CSI 4* de Liège sur ClipMyHorse.tv",
    "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNZ0hucnJnU3ZhQWtsLWNjcGJLOEVKOWotdGlLTTRFRUJzRF81YXlXVzUyU3dlWVBRUk8zTDg5M040NXFweWtwdW5Jd0Y1XzZDd1pQMXpYVDBBcklhS0NaWkhjU19hRzNlWXRJNWsxTXNIOTVNUjQ5U0RNejJncE93UU5GZw?oc=5",
    "date": 1792598114000,
-   "source": "grandprix"
-  },
-  {
-   "title": "Un mois de suspension pour l’Irlandais Max Wachman",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOMkZNdS1MR0REcGxSWXc4OXM4cFM3Z1hCQ2lsRVAwa1V5dTdOUEhFaE5sakhkc0oyUnRqd1NWUTJsTWoyUldaYk4yTzlqcWpodzFNRHBuc0VRaUZ2UTlpUEtQaGtGa3V3ZXJYejcxSTRYdld2STI0dzBWWXNtSUlvQTdJS1g2a1hoaTBkQW9paUxSUQ?oc=5",
-   "date": 1792573510000,
    "source": "grandprix"
   },
   {
@@ -99,15 +93,21 @@
    "source": "ifce"
   },
   {
+   "title": "Suivez le CSI 5*-W d’Oslo sur ClipMyHorse.tv, avec les commentaires de Kamel Boudra et Fabienne Daigneux",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNQl90VG9UQkVPSTNTck5GQjhJVFVjM3ZzanpzOVlKaWFGRXdtVDNaVFdoZVhsYnE4WE1zS3hnWnpPRHVoVTZFd3ZZak5SYXdWblhDRGJJZkEzSlBjcHVQU0JXcmFyRGZOMDJzR05sT0liWXNuY0RiOWxWTWJmQ1dBOTJhWmFadjNEUWlXekpPQU90OXpRcDZSb19pSEdDNU9Xc3pCTjBSUURDLVZGWnk1ZWhWTTVDRUdodkV3dEROSkttNnVZM292UWN0aWNLWVk?oc=5",
+   "date": 1791442800000,
+   "source": "grandprix"
+  },
+  {
    "title": "Le CHI de Genève prépare cinq jours de compétition pour son centenaire",
    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQdWNsaGI3anBYYW51RXlrU2xoX2JUZUg3dGh4TG1YNWVLa3lCald5N00xMExIX2hfdks0M0RsLUdGNk8yUUduX2dVcE12eWFyYzVmdWc2X0JyS29mZkJzX0RiZDVyclVUc29yelBmQWtBWnV0YUxKMERRMk9iV1FLbzVQcnJTWnFxcVNfT2JHNDctUjFubUd0RF9vTElXVHJ6b2V4X21YMA?oc=5",
    "date": 1791356400000,
    "source": "grandprix"
   },
   {
-   "title": "En Ukraine, les chevaux soignent les traumatismes de guerre",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPMVlzcGFtcUJXTmlUSWktdk1Ka0JTUXV3c3dhVDFHbjJvVm53aHEwUUNfNGNvNWtZam5GSktZNFdUajRHMjhGMGxkTGFCaUFORGhCMDBhNklLSXZmaThCV0ltTWF2NG9UR3FNZUFoWjlqZ2ZuQlViaHFYQ0dTZ2ZWck1EXy1PUlo4eWxNQm5DTG5uck14Z1A4?oc=5",
-   "date": 1791356400000,
+   "title": "La France décroche huit médailles aux Européens d’équitation de travail",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQRGJfeWx5MWNIbmN3OFZhcmZhYTNuWmVabDE0YXh3Rmg3TVdEZEN2SXp4NTd6ZURwY0FVLXpXOVJuRTlYZnY3S2FhaWxzQ09WblV5b3ZyRTY5VmlIQ0huSVlCYl9VZFU4eVgtUHp6REd2b1RIb0Z1aTlXMGh6Vm5lVl90V0NYQlhRbk5wSEYxS2VHS1hGbzlJWVloWTFjdTVhVmEwajcyamdQamxSYXc?oc=5",
+   "date": 1791270000000,
    "source": "grandprix"
   },
   {
@@ -121,6 +121,12 @@
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS2UxeVhMemtGQlBYR0VtVlJXeDlPS0RzM3lsSVFCN2ZqaTdfRHhwNVdHX21NT3lpa0t5b3l6cHhGcnY4QXh5aHdtSktYMzhSVjB6RGphVnBfWDRsYVFYWExTYllwellWUWFxaU0xUVhWa3FvUjNsRXNlU0k5bmEtYUZSTkRDQlV1YktWcHpETk53V0ZsczFMcDE4N3RCVjhjd2o4NjB6Y1JVNXFEUi15aGRnQWNZcGJ0WnJWYlZwcl9HcXFN?oc=5",
    "date": 1791223444000,
    "source": "grandprix"
+  },
+  {
+   "title": "ENDURANCE : CEI**/* LE PERTRE (35) - concours N° 202635005",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVUdHVmExWnc4UzZkTGxEX1BOMlJwbkZtd29PRXBDYmFrdlo0RGp5bE5vZ19ydFRxWGRLd2tTb0d4VC05ci1Nc0hyeThrT3VfYnhqT2ctN3RNMDJ1U09YODVHZkduYmczcTdMNEJqb3psRnEwc21mZWJRazduRkVxdC1SazZqdWJVRGtpV3B3OA?oc=5",
+   "date": 1791097200000,
+   "source": "ffe"
   },
   {
    "title": "Libre IFCE RF",
@@ -144,12 +150,6 @@
    "title": "Formation Boost accueil 2026",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBRZ2dHY3hJMUhtMXA0WGZwT0hMU0JhcEttQXpNX1lVQlpBWlp4YU5Na1RkUGhERFhrMGZGWmI2UVpTX3pxU3AzYnBXZDlLLTVIb2ZfSGh1NjBwRHNRMmFZMzR0d1ZzckpIWXJrSGxLVm02QQ?oc=5",
    "date": 1790611926000,
-   "source": "ffe"
-  },
-  {
-   "title": "ENDURANCE : CEI**/* LE PERTRE (35) - concours N° 202635005",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVUdHVmExWnc4UzZkTGxEX1BOMlJwbkZtd29PRXBDYmFrdlo0RGp5bE5vZ19ydFRxWGRLd2tTb0d4VC05ci1Nc0hyeThrT3VfYnhqT2ctN3RNMDJ1U09YODVHZkduYmczcTdMNEJqb3psRnEwc21mZWJRazduRkVxdC1SazZqdWJVRGtpV3B3OA?oc=5",
-   "date": 1790611924000,
    "source": "ffe"
   },
   {
@@ -327,12 +327,6 @@
    "source": "ifce"
   },
   {
-   "title": "Centre d'Ogotaï - Édito",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE05NER1NW85U2FWYXRCMUdFNWd4LUVZQ29LM0hOeF9jWDE2UDBJZkFEZmdVQkNMaWR5UXpBNnpuY05KY2M?oc=5",
-   "date": 1651942587000,
-   "source": "ffe"
-  },
-  {
    "title": "Qu’est-ce que la CNIL ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE5TRHE2ZjVVbC1CM2NreVQyR0x5QjFmSkY4cjJGdld6R0Z1TkoyZ29GTm1SVTlDQkUyeEtlQQ?oc=5",
    "date": 1638462081000,
@@ -402,6 +396,12 @@
    "title": "Clubs du département",
    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xLWNWblVyUS01N0FwaEh3NkE3eFpiWFNEeDgtbzZIeWdpWG9fcHhncW1mTVlHcmVKeXhiRjh0cno4VmtDUzZtdTl3bzNGblU1djBwbXdB?oc=5",
    "date": 1569934436000,
+   "source": "ffe"
+  },
+  {
+   "title": "Concours - Comité Départemental d'Equitation de la Manche - FFE",
+   "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBPcnh2SEtZYXllVDhUTWk1ZFh5Sk04NTZ5QkYxanloTC0tenBwUDJqRTBiWEhQaml2RWdINnltNHh1UEdBajZxeUdfblN2TWRuOU5OS1I1NnY2b1dE?oc=5",
+   "date": 1559509813000,
    "source": "ffe"
   },
   {
