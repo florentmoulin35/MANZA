@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24T16:46:05.707Z",
+ "updated": "2026-10-24T20:42:04.541Z",
  "failed": [],
  "items": [
   {
@@ -10,8 +10,8 @@
   },
   {
    "title": "Le horse-ball français endeuillé par la disparition de Roxanne Dubois",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQXzZKMmYtWTJoSEN4cDJTRWFzcG93dFJCVmg5MTQ2QjZ0bWMxN1BFZTJfQXJxVHZJM1FkdzJYMF9PNk0yX0FSYzJhTTJ2azlxNDFWb3N5UTc1S3pLVlJEXzhOaTVEMW80WE5lWFM1RHhlaG9SS3pzakcwSkZKRmVJUTNqOWVHTDE2VDhwaVZMRTd2eENvalJTOTlHSUE1Snl0STFSOA?oc=5",
-   "date": 1792777309000,
+   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQaWJCWTk1d2VRLUxEVFhCbmtFalZoQTlZQjlvcmRjSm5hQWFhOXk2V3lEcWNld1dYN2ZBOHk5RXpZeWFNWUdmNlRKMGFoZ1lmNFJTMGgxWkN6TmF5TGZ6MG51YUVaN2ZMM2lZeHRINHJGX29RdzdvU2JnY1ZXVnFNRmx6T0FSMTNtM3pyRi1IMVJRbG1tMHJQUEZHYkRuT3VjTDdxV2hvelhMeW8?oc=5",
+   "date": 1792764488000,
    "source": "grandprix"
   },
   {
@@ -51,6 +51,12 @@
    "source": "grandprix"
   },
   {
+   "title": "Nouvelles offres d’abonnement : Magazine GRANDPRIX x Veredus et GRANDPRIX.tv x Laboratoire LPC",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS2UxeVhMemtGQlBYR0VtVlJXeDlPS0RzM3lsSVFCN2ZqaTdfRHhwNVdHX21NT3lpa0t5b3l6cHhGcnY4QXh5aHdtSktYMzhSVjB6RGphVnBfWDRsYVFYWExTYllwellWUWFxaU0xUVhWa3FvUjNsRXNlU0k5bmEtYUZSTkRDQlV1YktWcHpETk53V0ZsczFMcDE4N3RCVjhjd2o4NjB6Y1JVNXFEUi15aGRnQWNZcGJ0WnJWYlZwcl9HcXFN?oc=5",
+   "date": 1792393200000,
+   "source": "grandprix"
+  },
+  {
    "title": "Lara et Tara réalisent le doublé au Lion-d’Angers!",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNSGRxZElBc3Nxb0d3QmJQRV9vR19RR0JVUm95RmF5UEtUSm1GaVVmRG1jNlpnNGRaLTM1ODlQZERLX0k4dU5FZ1ItOHRUTkhOYWhJSjFRTFFnQmNiMXNwbkpkcTl4eExFUHhfaFVCc2ZzTUtQVHEzYzJFNUhWS0pxQTNvY0RiZkZE?oc=5",
    "date": 1792370612000,
@@ -60,12 +66,6 @@
    "title": "CSI5*-W à El Jadida (MAR) : Simon Delestre troisième, deux autres Français dans le Top 8",
    "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPTlNCOTRFM2o1ME9TbXlUVDJaN1B3X01TQklocm8yWjZhdmUxZ2I1N1BoaUUyX1R5ODBuOHUxVkhDeFgwSEVDVDhHQTlIQzlfTnhjYml6ZUdqS2lIUGFtNndMQ0JKQWI2c0RMRGhsNXBycmtBVnNPbHNsakNxdEF5UkwxeHphc0dYWEE2bWFYWmZzTkNMdlFJMVNiNlhwVkdZR2pHNDZQa3hrQWZ5STVsa2xkVQ?oc=5",
    "date": 1792355224000,
-   "source": "ffe"
-  },
-  {
-   "title": "Alexis Goury et Jeroboam Wal en bronze au Mondial du Lion",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQUEhHYXBiNmJVWTl1emhXNXRvNXR1cFMydnVYTFFRZHJza1pfOFpURC1seGhGSWR5V2xjcWM4QTFVYzZFS0syY1JmM0ItcmVEWFc1TWotcG9xcldtRGV2MlF1NHAxXzROQmd4Smdxd2hTZmVNMWdmWUN0QUZ2UjJnRUVrLW5KUjNTbUREZGZnaTJSZw?oc=5",
-   "date": 1792341725000,
    "source": "ffe"
   },
   {
@@ -85,12 +85,6 @@
    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNSFE1em5seDN1aHBRMzZoV0gwOERncUc0Z2hLdWpQSk9KOXRzQk1HRXNrbzhlNEtXQnpTOG1YWEVlcUE5VHpRQlNvcUFQSWY3eGpjc2htcEdEWXdHZVN2QU1uSkFtYjhVcVBaZWtlMW1qb09Rd1JXdXIxN0o5cTBnLTV2dlZ3bXBvWFBSZHgyaHlyRkt3NUN4V3VkVQ?oc=5",
    "date": 1792055282000,
    "source": "grandprix"
-  },
-  {
-   "title": "Podcast - Parlons cheval , 87 - Tout savoir sur les maladies : la fièvre de West Nile",
-   "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBVeVFweEtURDRqM0ZyNk1aT0dvV3ZQb0oyakdreEsydlB2Y3A3NUJlZ1pKQmN3cXdlUjhQTDRJeU04cVBPbVIyTDhGbWlXZFh5TVhnNUNEeWxwOE1GN1Y3QzF2eTFaMHVVRkFsLUFma3M4bEpCQ2c?oc=5",
-   "date": 1791802718000,
-   "source": "ifce"
   },
   {
    "title": "Suivez le CSI 5*-W d’Oslo sur ClipMyHorse.tv, avec les commentaires de Kamel Boudra et Fabienne Daigneux",
@@ -115,12 +109,6 @@
    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkOW9QcmZ4VTBNX2R5X3Zzbnc3alZwSURwNlNqTWNzbFE2RnVPWG9OMXNvTjh5VzVyZFhfX18zc3ZDNjdmangyU2VFTHhobndOaWxYWWZmMXMzOGNROFE?oc=5",
    "date": 1791225409000,
    "source": "ffe"
-  },
-  {
-   "title": "Nouvelles offres d’abonnement : Magazine GRANDPRIX x Veredus et GRANDPRIX.tv x Laboratoire LPC",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPS2UxeVhMemtGQlBYR0VtVlJXeDlPS0RzM3lsSVFCN2ZqaTdfRHhwNVdHX21NT3lpa0t5b3l6cHhGcnY4QXh5aHdtSktYMzhSVjB6RGphVnBfWDRsYVFYWExTYllwellWUWFxaU0xUVhWa3FvUjNsRXNlU0k5bmEtYUZSTkRDQlV1YktWcHpETk53V0ZsczFMcDE4N3RCVjhjd2o4NjB6Y1JVNXFEUi15aGRnQWNZcGJ0WnJWYlZwcl9HcXFN?oc=5",
-   "date": 1791223444000,
-   "source": "grandprix"
   },
   {
    "title": "ENDURANCE : CEI**/* LE PERTRE (35) - concours N° 202635005",
@@ -273,12 +261,6 @@
    "source": "grandprix"
   },
   {
-   "title": "Identificateur IFCE – Loire Atlantique",
-   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONVR4dFJ6dEZYRUc0elBqYkliNnB5SDBsSUNFYWJwSUtlU1o4Ukh2RlVQS0JPdTZvVzlpbnFPZWFhbkFlWmNLa3pELVl2ZlBSRlRPZE5QekVqZ1hpWmxwMlVfZFFZTjlndGFjejl5N1FoT1RPdUZYWlV0ZDJtVldmbV9YVU5KVWtyVjVEcmRYQ2k4czRuTTdDNm9BYmNwbktzcDVaQy1fSjZsTUpPRWFIbG45MFNoYmx1MTJv?oc=5",
-   "date": 1712388125000,
-   "source": "ifce"
-  },
-  {
    "title": "Equitation - Nombre de licenciés",
    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NZzJEM1poLW9rQVFsOVlqN1hhbGVuWUlvWktfczRJdDA0aXBQMVhWdXdhUllZX1h0bjdTOUpWU09jejdFY0RnWHNFYkNsN1FEemwxQjF2bnJqM2FJU3JocEoxaXh2cG1nTUp0QzNXX2JzaWtLMDdWZV9oZTJmeGs?oc=5",
    "date": 1711787098000,
@@ -343,6 +325,12 @@
    "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE05NER1NW85U2FWYXRCMUdFNWd4LUVZQ29LM0hOeF9jWDE2UDBJZkFEZmdVQkNMaWR5UXpBNnpuY05KY2M?oc=5",
    "date": 1651942587000,
    "source": "ffe"
+  },
+  {
+   "title": "Recherche ancêtre Cadre noir / Haras nationaux",
+   "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9CMTRablF4bjZsb2FZNFEwZnhkQ2hlXzZjWkZkVkpnejZyeEhvQ0dHN0c3T1c4WllNZnJzaThLYkJXR1Y1VVhNRVNNVHBGbE1jdzF6UXJlQXRjNlhoWU85VFdiM1ExcjFyclJZS0NLMG00SGxvMUgwR1ZmZV9XcUU?oc=5",
+   "date": 1644388468000,
+   "source": "ifce"
   },
   {
    "title": "Qu'est-ce que le CCE ou Concours Complet d'Équitation ? | Fédération Française d'Équitation",
@@ -462,6 +450,12 @@
    "title": "Les Top annonces",
    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTFBRWlBYS0d1N0lKYllIeUFXMG0xMV9KQU50ckZEelFGUm9ydmJjeGtBR0hPczcwMTdWSVItZ3dn?oc=5",
    "date": 1417528049000,
+   "source": "ffe"
+  },
+  {
+   "title": "Recherche Concours - FFE Compet",
+   "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE1ad1JqTEw0YkdrejNic3NwRmtIV0tQQVdVdWpJbjI5S1N5Nl9aeUhjNE9GWFliY2x5NUxtOEVubUk2Z2hEdGhWVzhn?oc=5",
+   "date": 1341662671000,
    "source": "ffe"
   },
   {
