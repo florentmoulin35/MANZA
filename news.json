@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01T16:50:05.452Z",
+ "updated": "2026-11-01T20:49:39.139Z",
  "failed": [],
  "items": [
   {
@@ -39,24 +39,6 @@
    "source": "grandprix"
   },
   {
-   "title": "Qu'est-ce que le Circuit Mountain Trail",
-   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE1weVdrSWp0N2RhVTJLSFpDam04NXVRVDNmUGVJTlpuUnBZYTFFSzZNbHBwakIySElGcjllbTNzb3B4ZG9JYTJNdTlIWlZGZDV6VnVJejZZWHg0bjBBeDI1VkQySXc4b1l4eGNGcldFQQ?oc=5",
-   "date": 1793361337000,
-   "source": "ffe"
-  },
-  {
-   "title": "Qu'est-ce que le Challenge Royal Horse Club CCE",
-   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxONWJyQ2xRZlI1LUJZYXc2TjJBamwxWjUtNTFBUENkbnJLaDlvZEVLekppS21HakRzTVNiOEtDNEFfWi1yZVY2Z3IycTg4eHI4MzNxZDRDcnlxRS1tY3pOUkNhaVhUbWFubjRrN19wRzI0ZG9CTDc5R1pHQks0R29PcThqM2c?oc=5",
-   "date": 1793361333000,
-   "source": "ffe"
-  },
-  {
-   "title": "Podium Breton Championnat de France Amateur de CCE",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNS2JmdUxVVldsM0R3aENSVjZsT3VSaVhVNzdxczRxaFBWNG9QSlpjZVlia3MyelVIYkg0RjhOU1ZCQTQwZnBmUUN6ZmNYOVJKQm1BYmRXU3Jwd3M4NlRLLXF3MzVDd1lKeFF3ckg1RVZuVVFNODk4ejBlWDhxel9vbTRDU1A1UEFHS2Z2S1lKOA?oc=5",
-   "date": 1793357302000,
-   "source": "ffe"
-  },
-  {
    "title": "Benoit Cernin dynamite la concurrence dans l’étape lyonnaise du Grand National",
    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQUk5WS2lvREl0bndCc2l4Nnc5QklHNGxQMW9tUXB4d0NjVy14M3hmT0lwNEI1YUdqLXJPRTJCT2l3T2R2Mnpna0tBQVJLVmhyNURiU1BRZm1rSGZaMzhzMEZfSjNIN2t5RkNrVkJjLVJJbzNUei0ySU5DMEFNUjdTNl9JZzhGcTNxT2NBRFNKV1o4SzBuUU5RZVRYYVdEcUxQRklMbER0X0MxTEhhd2N3dg?oc=5",
    "date": 1793291674000,
@@ -69,22 +51,34 @@
    "source": "grandprix"
   },
   {
+   "title": "Qu'est-ce que le hunter ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE91UDhGelhrZldiT05uNklJdHBnTzh0MktEdklRSUFYajdYNkRoX1RpT0VadVNyOGNmMmVpTmRlOGFZUQ?oc=5",
+   "date": 1793120565000,
+   "source": "ffe"
+  },
+  {
+   "title": "Qu'est-ce que l'equifeel ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1SMW5SRG9XQWpFeXVrWkw4bWR4dmx0ZmZpLUVqZUltbnBHa3FCekU0MURxSF9tWEdLanAzWlRpMEV0RnZ1?oc=5",
+   "date": 1793113987000,
+   "source": "ffe"
+  },
+  {
    "title": "“La fidélité de certains très grands cavaliers est une source précieuse de motivation”, Sylvie Robert",
    "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQU2RGWDB0emZxYy1pai11MzNxV0c0aEtENlZzMlphNDloa1ZqMXR4WGl2LXIyZy1GZ1Q1LXpCa0UyNU43R0puUWN6RlBHWl9LdzgxQWJldk0wMnNxYk1ZTEdsYmhqZXVOS2F2RVV6T0NWQW1ubjZRbE41b1FJV1JyY3BUeWd6YnFXOTR2TEZ1eDRrNlRPT0F4TUw5SHpoT1pmR1ZLQVV2aGRkQ29aZjhWajhCaXluR3JTUFRDR2FycTlRcG9wckNNYXF2ZDU?oc=5",
    "date": 1793111208000,
    "source": "grandprix"
   },
   {
+   "title": "Qu'est-ce que la voltige ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1QcjhtOEpXdUlsak9adGtrNHBrdnZFeDJWZmJ2ZnB1cVBBd1Nkdm8yOFlvTW9ZMGNqeGI4NFN5TXNrM1k?oc=5",
+   "date": 1793110405000,
+   "source": "ffe"
+  },
+  {
    "title": "GRANDPRIX recherche trois stagiaires pour rejoindre sa saison événementielle 2027",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ2pwTW5COTFFNHItSy1LTXdWb29fMlFhdndLNmUyaEpnQUwzUXo2amN3RHNMYS1IczhTNnNQVWw1Y3RtT210cEszZ295emUtTnRKck1MVWhBMWFvVDhqRkF6Ums4X2VwdFMxZzhQWG9yRFA4VmI1UVZsSk9MR09mdzJlazQtZ1lhQTRSdElfcE5UR2tRWVVXU0JoYWZ0TUxieG80R2trSFhiY1Vqel83eXdYUWdnZw?oc=5",
    "date": 1793035959000,
    "source": "grandprix"
-  },
-  {
-   "title": "Calendrier provisoire des concours 2027 en Bretagne",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWFdlLS1TazVrc2dDUVg3dlBkN1F3YlBqQXR3WXRpQXRoeUx0dFV6NTRZMmNQOTUtdGZNQnF5VE5pT0F4OWNRS3lZdi1venNhUUs2Smw4a3hVUzNvS0h5UFVrTFpiMVdoeVV5b1l0ei0wV3M3a3RVRzVQVEQ1ekZHMHgtclllMTFSTjdsV1dvRFo?oc=5",
-   "date": 1793001989000,
-   "source": "ffe"
   },
   {
    "title": "Nouvelles offres d’abonnement : Magazine GRANDPRIX x Veredus et GRANDPRIX.tv x Laboratoire LPC",
@@ -95,7 +89,7 @@
   {
    "title": "À la suite d’un accident, Ego des Cabanes a dû être euthanasié",
    "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOaHhWOUpLQjFJVUNBblh4dEpnU3hPcENpeV91aHZCWmd6cXJrV3pyRGZlWG1wb0gzaGV0djR3Q24wdUMxdEJ5VGNHMDVwRWlhYzRVVkdtTllwb2NraUpnY05tNHZmOVdoS1duZjlqb3l0SEl0TG45Ym45dW9YX3pZRzBrS29QRzhFeVNjYXNBZnpCN2hLQ0xTYXM5RDZVWXBw?oc=5",
-   "date": 1792864164000,
+   "date": 1792825200000,
    "source": "grandprix"
   },
   {
@@ -105,46 +99,16 @@
    "source": "ffe"
   },
   {
-   "title": "CSO : Club Prépa LOUDEAC (22) - concours N° 2727574",
-   "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOOXJsMGdJZE5nSW80VXFJa2hLWXdVeVBDY3AwWkJyQmFYRTVhU0wwY2NabUhHeVdtSmJpWVdOYlJ3ZlFNVVNMdWZoTExmN0hhUzhvYWNtMl9Bd2h6V3lGMkRWemVXa3pPZkMwTUtMNkQ5UldCX2lfMzRYY2MtWmd1ZVB3QmVtWExRRXo0?oc=5",
-   "date": 1791791586000,
-   "source": "ffe"
-  },
-  {
-   "title": "Podium Breton Championnat de France Enseignants de CCE",
-   "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQZy1VNWtGdDNLZWJDN20zcmxWdm5lNGtiMVZSeFIyamEwWE1HMnR3bmMyUi1mZk5tUlQxZkVZQS1VMm9icVZVa2VLRFVKU1haSFhfN3ZRcGo2N2RUQW8wNGpCcEhWSU9GVkNQOS1KMDlUTExpSk45V20zZWM2WUR3OFBPd1I0RWlMMmpqYXY1MklfRkQx?oc=5",
-   "date": 1791790667000,
-   "source": "ffe"
-  },
-  {
    "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0xyZXEwazdoX3VuOEg5UWlQRlp3NUNMMmtEc2RURm5USUxGTVZNWXhpdDVudTNVWXh3b0o0MU1VOEdTcEIzUVNmNjRZY0h3bUpMRU1YZW1MaU04ZHlNbjluRjhnRnBYbTREUXNiZDE3Q2ZPU0gwREQ2X3ZkRU0zQy11aGE5YUQ1ZkF3blNYSjNzYXpGTWtEYWNLaG9QQVhHWUFQUDFkMGc0TTZnZ3NGaTd0eWxObWxiTUlhVkJDbkVQSF93?oc=5",
    "date": 1791788400000,
    "source": "grandprix"
   },
   {
-   "title": "CSO : Club TREGASTEL (22) - concours N° 2723393",
-   "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNMzAzZDRyd1lyVE1QNUdERmI5a1hPNzlyamxKQUVrSmx5cEV5Z3EzeDVyWjhLZXhXNDdwRkJSRDI0M3Z5Q1pqcnNyb0ZPTEp5RjFFZnBnVnpsU2tWSlV4VmphazhwaFJ5YmJ4V1lhY2xqZUJOTkJmc01uY3hwcTN6emY5LXAtdw?oc=5",
-   "date": 1791702000000,
-   "source": "ffe"
-  },
-  {
-   "title": "Licence F.F.E 2027",
-   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBkOW9QcmZ4VTBNX2R5X3Zzbnc3alZwSURwNlNqTWNzbFE2RnVPWG9OMXNvTjh5VzVyZFhfX18zc3ZDNjdmangyU2VFTHhobndOaWxYWWZmMXMzOGNROFE?oc=5",
-   "date": 1791225409000,
-   "source": "ffe"
-  },
-  {
    "title": "Championnat de France des Foals SF : la Finistérienne Quiesa Rose D Chaumes intraitable !",
    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQN1VJZHNHNV9PNmZZTUlXZmowRy1jWEQ3TGJPdnFsLVQ5RXdXZkVjcDgxUVpGeFVmMW96Qjl6TGt1ZXhWdy1KM1AxSXA4ZVRYV0JRVjh4R2FpOXVTTHA4TEUwdC0xNjdhM21rRVh2MXc0UGxCWGRzOVA3OTFCNHVrcGx5aFlNZThqZ1NDWnY1MHRjWEtlRVhpbHdKZXhHLWE2YWVoWGtjdW01QTNoUVE?oc=5",
    "date": 1790492400000,
    "source": "eperon"
-  },
-  {
-   "title": "Etape du Grand Régional de Tourisme équestre (56) 2026 | CRE Bretagne",
-   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNMTBIM1liemh0Z0lTajRfeXRIZU1mTmc2TDVuVHk4NVNOWWthdUdsUk5GS3FuTUhzSUYzWTRLV25YWUlwdFhyVE1wNWo3U2lCbUR0YXhCWHc5UjZud2hfYks2NlhKMjZhbDlkZ0R6Q3ZoU194Mm1heE1Td3pxcDlic29FazBXWVo0YWVtZmZJR2JJQQ?oc=5",
-   "date": 1790060400000,
-   "source": "ffe"
   },
   {
    "title": "Aachen 2026 – Saut d’obstacles : les 25 finalistes acceptés à l’inspection",
@@ -157,12 +121,6 @@
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUMxM1lWSk4wNnBlN0tXdEdMcUJnb3plZ0lVUi0zVmlGejFBaFpVUGpuTmVqb0cyakhKdU8zdVVqaFJTN252VnUtTHllY3VWTWhtYnFIOGVqZzFUVEMzY1RGcVAwWGR1RUFZVUlnel9xdFBIVnJuRVQzdzlKc0VSQ1hOS1VmSFo1MDBibHRPU0RPVVJtVTdJ?oc=5",
    "date": 1785913200000,
    "source": "grandprix"
-  },
-  {
-   "title": "Meeting d'Automne 2026",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE00NnlleGJMQ1VRS0x0TW9zMFZyTzNFaXV0a3IyYmFfZTVwOUc1dllyTGhNN3N0NHhRbGhLOUxTeGRLdlNGb3k4VUtXemI1dUdBNWh0X2pCeUFDenQ0amtLXzJBYzFYYXAyWjFMclFR?oc=5",
-   "date": 1784032118000,
-   "source": "ffe"
   },
   {
    "title": "Offres d’été : 20% de réduction sur tous nos abonnements annuels GRANDPRIX !",
@@ -291,6 +249,12 @@
    "source": "ifce"
   },
   {
+   "title": "OSM Map | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9Sc3dVcVZqbnp1NzZlOVpBWWZ2eG42amd3aXl2WEFCblYtaS1nTWxpTEQ2elhaTVhuWnUzd2o5WnFpQmFaRG9tSEF0bw?oc=5",
+   "date": 1693400294000,
+   "source": "ffe"
+  },
+  {
    "title": "Abonnement 1 an",
    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBuTXcyaFFiNHQ4THVUVFBZX2NkTkMwZ3pETHFNa01Kc29CY3FPTWZubHhvV1RIbXpvWmFmeC0zanNJMnN4eXVvalpsUkRHdU1ydFlLQXVaeHB6S2xF?oc=5",
    "date": 1693385148000,
@@ -315,21 +279,51 @@
    "source": "eperon"
   },
   {
+   "title": "Avantages licence FFE",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WekxIRWVyX19QMkVONHl4S09qY3gxNnBNV0dtcVp6REpFRGNQWUxzc21zU3AzMXRDZWlCWVg5OS1EVzE5V3MxdS1IN2xZbTdZZDhWSnVmMEZNbGIxdUNGbW92YXlzcVJh?oc=5",
+   "date": 1673608043000,
+   "source": "ffe"
+  },
+  {
    "title": "Pourquoi et comment souscrire une licence FFE ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBaRWcxamJ5TE16b05iTjVyZzFabjhOdnJSSEd6WEdiVERxeVlLcTlqMFJ2NXNUZVNqM1hMZnJfckNHMFlrY2ZJQlZCZ3hCd0NTVWMtS1NqVEVDSkNRelFlUWoycXRUdw?oc=5",
    "date": 1673362864000,
    "source": "ffe"
   },
   {
-   "title": "Centre d'Ogotaï - Édito",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE05NER1NW85U2FWYXRCMUdFNWd4LUVZQ29LM0hOeF9jWDE2UDBJZkFEZmdVQkNMaWR5UXpBNnpuY05KY2M?oc=5",
-   "date": 1651942587000,
+   "title": "L'équicoaching : le cheval, partenaire de développement personnel au service du collectif, une offre évolutive pour les centres équestres",
+   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZ3IzTGRMT0tUWUxjZW1UVWE0UkUwWlhoMFNuUkk2RF9xMnd1dGxQcjZ1S3ZYWkhaaUxWZkIxTC00WXVYc2kyTjltd0VVSzF0Q2dJV3ZncDVSZHdOd0NRRFNlSUJjcjllRmF0QVNLZnp4a3BsNE1uam4yZWkycVVobE0wVTNWS0ZpLVhlZ3VObXJpSXkzVGFrYnpja2hUYUtCMTQ3YTFSd0VDZ0tnUHZkNlBzeWEzVzdNMHJBUVhNNlhWZnBhWkE?oc=5",
+   "date": 1641196800000,
+   "source": "ffe"
+  },
+  {
+   "title": "Découvrez comment et pourquoi adhérer à la FFE | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MSFA4djRwVlBncU1ON3J3UGRCWWwxdlhuZU9fdlZoVVNuME10QXlvX3VfS0psczRtVkw5YnBaUFgxcXFiNUUtZ2tjRVdVWWU4UTln?oc=5",
+   "date": 1638347410000,
+   "source": "ffe"
+  },
+  {
+   "title": "Qu'est-ce que la discipline equifun ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9MMGw4ci0wcVA5dkQxM19xb1NFOW9KM01VZXg5bFY2VkV6UzRtTVZXVFM2X05wSG53M1hNaU9JNjJDbmVDdklxRmluSGo1cTNpVmhYb2FTQ1Y1cWQ0NUE?oc=5",
+   "date": 1638288146000,
    "source": "ffe"
   },
   {
    "title": "Qu'est-ce que le CCE ou Concours Complet d'Équitation ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JQndXbVpsdXQ0Tk1McnRMbnhqaE05THduaDdOQWZPdkx3UzRwRlNVYUR2c0ZHX1dUTV9wZjNuVzVET2lMd3lQVmZ5bGY4Ql9GU1VNN19tbU0?oc=5",
    "date": 1638267804000,
+   "source": "ffe"
+  },
+  {
+   "title": "Qu'est-ce que le dressage ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBiMTM3ZDBkUkQxUTZuZTVmNzhfc1ppd3NCZEhSanM4cHBXMExWeVhyNWt5RmlieEFGVkF3aVo5eDR5RUdIT3pnb2pNR0dhU3FJZ0NyUjdWWWtrYm9ZRGdZ?oc=5",
+   "date": 1638267720000,
+   "source": "ffe"
+  },
+  {
+   "title": "L'Hôtel Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTFBjQ3lJWTVLUzR4V19UdzFrWFA3cWdNOWs2SExyQnpXcVduQTMwclkwY1dCU1UwRTFCM3E1bXZnT2FKVGxsYWNyNw?oc=5",
+   "date": 1638265461000,
    "source": "ffe"
   },
   {
@@ -351,15 +345,9 @@
    "source": "ifce"
   },
   {
-   "title": "Préparer les Galops de cavalier",
-   "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1WeS1pUVRuNXhWVFQwOE43NnB1WERPX1lOV0FSNXl3R09LS24zUU1nRUtGYWZMM0RjVmpLWmx5LU5YcUljTElhbXlnMzdPLURUblV1Yl9ZVTlsWjVkajZtWEU2dw?oc=5",
-   "date": 1574235384000,
-   "source": "ffe"
-  },
-  {
-   "title": "Clubs du département",
-   "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xLWNWblVyUS01N0FwaEh3NkE3eFpiWFNEeDgtbzZIeWdpWG9fcHhncW1mTVlHcmVKeXhiRjh0cno4VmtDUzZtdTl3bzNGblU1djBwbXdB?oc=5",
-   "date": 1569934436000,
+   "title": "Accueil | Campus FFE",
+   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9jSldkVGUtb2xNVTNlNVFxaE1oQ2lkcTN4RUIwYXRwdW9lTlp5Rm41dEZoQTFSNUtmMVdJ?oc=5",
+   "date": 1574075379000,
    "source": "ffe"
   },
   {
@@ -375,9 +363,15 @@
    "source": "eperon"
   },
   {
-   "title": "Bienvenue au Haras des Villards",
-   "link": "https://news.google.com/rss/articles/CBMiSEFVX3lxTE9VNXB6VXpqcHAwcFplSFZHd1lLSExIVFZ0ZUQ5djgxTVNmclZvYXBsMzdfWU5Kalp6dVUyTUdWWGNNUzJLYzhjeA?oc=5",
-   "date": 1486920530000,
+   "title": "ACCUEIL -",
+   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE80ZjJGbnVXcGJVTEFXSXZiZ29yY2hReURLczdDbHhWcVN2NHRhbTdzQmxpVllrRjl5c1R6di1Ccw?oc=5",
+   "date": 1487285614000,
+   "source": "ffe"
+  },
+  {
+   "title": "Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBacUlLN3d0MFVBdGF3djVHZUpzWWNEQ1pPYzZubXhfdlFpWkR4VUtaUkN5UGg0LUFQNE9oOHdBMEVHZw?oc=5",
+   "date": 1481252240000,
    "source": "ffe"
   },
   {
@@ -463,6 +457,12 @@
    "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE41WEhIbl9vdVdSemphVkI4c3IyMmRkV1hhVTAyUmhzanEtSThoSlI5Y1ZaVjJIclJSRWhDdmFVZFM5RFBtRFE?oc=5",
    "date": 1460836686000,
    "source": "ifce"
+  },
+  {
+   "title": "Accueil Boutique FFE",
+   "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1kc0pnQU03dUhndkNWMDhEY2pvWTZtN1VWT09YamMyOFJSRm1XZnZJZkJJcm1MaHM3bFhmWXFB?oc=5",
+   "date": 1424919090000,
+   "source": "ffe"
   },
   {
    "title": "Les Top annonces",
