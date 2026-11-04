@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T17:08:59.611Z",
+ "updated": "2026-11-04T21:03:55.187Z",
  "failed": [],
  "items": [
   {
@@ -48,6 +48,12 @@
    "title": "Nouvelles offres d’abonnement : Magazine GRANDPRIX x Butet et GRANDPRIX.tv x Veredus",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQekRvUW1yWEtLcWEzWUFjSlUwbHd3M1NXNEl2cEU5VTI1cXhROFBtMlNFR0t1UVZaZ0ItUGFaOXl6X0IyR3JEdHJpTzFfQlBSX0p6WFlicFUtUEFZaWJkVUk5Z2txTURWLTJjTkQzTlMyT0p4N0VKVWpZcU4tOVVtRTltVXNuQWt0cE1wNnNGdlJleEtXWTJCY1RPeEJvOUFrbGxlVmh1OE9JUjJGNjVJaUs0ZG10NVk?oc=5",
    "date": 1793619020000,
+   "source": "grandprix"
+  },
+  {
+   "title": "À Lyon, Le Coultre de Muze décroche enfin les honneurs qu'il mérite grâce à la fusée Épaillard",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQNnBHN1ZVTFMwWktwUjhPYnExdTRQN3VKdHN0VDE3TFdLOU0wU3FSaDdRYkRaN01PSzk5RmRDUkJ1QmxyZF96NFJpNXdkMjRYeUJLSGhPUzdFa2c1MGZUNHl3ejMwWEY3bnpnQWlJbW9MZ1FuSTRjQmIydVZlX09zalFwOWk0SjhHdi0tdUdZcWx5c3lTZU5XV0FDTUJfbUVRczM4MWxSRFk4MDJfeXdmRTBXS2VtWGw1emNKZExjVWZmVGQ4?oc=5",
+   "date": 1793564382000,
    "source": "grandprix"
   },
   {
@@ -213,12 +219,6 @@
    "source": "eperon"
   },
   {
-   "title": "Janou Lefebvre s’est envolée comme elle a fini sa vie, en toute discrétion…",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNSUV6aThDSGVtdmE1c3FDdGhDTVM2TEFjWnZfdWdneVBrVl9neU5SZ0J0RjI1djB1alcyV1luRkFFTDdxVm5OTHBoU1NxWmhMcFdDUy1rR0ZiZ3RiOHNENTNpT2hGNnZEdEl0ZWdKWUFEQ0RZUnFpSFM5OXBvenJLcE1rY1pubnE0MjR1T0Y3ZDUweEMzS3JnV252WXVKYWctMEFyWGlrNUsydw?oc=5",
-   "date": 1744700400000,
-   "source": "grandprix"
-  },
-  {
    "title": "Réglementation générale du transport d'équidés",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYmdudnFkUmhLRWw0em0wNU1xbEx0M2hRYWxQYzRJLUF1bzRZX05xbjY4ZkhOMVpSaWdMY1I3TkNWMlEyR2hnM2lzZFB6LUo5bUoxTWZBSUliRFA5T2xyMGJ5Si1PeEdVTEtKNnVDWC05WFRSNmdvckxyNnQ5b0dVUzZlUmFnc2VwWDhNZE81SHRRMG1lZG0zMHQwdnZTWVRoU2xkZ19yYkh6WkJxWTY3NjJodm10Nms?oc=5",
    "date": 1742567012000,
@@ -339,7 +339,7 @@
    "source": "ffe"
   },
   {
-   "title": "Site de la Fédération Française d'Équitation",
+   "title": "Débuter ou reprendre l'équitation",
    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAtQVFLWF9TTFBYOXRsZzdUS3U5S2dNNEdCUzVLRThlakhhd0J3anRoYS1XZlNodk5hVnJhU1l2RWFtU051b0hvcVlDWQ?oc=5",
    "date": 1638264706000,
    "source": "ffe"
