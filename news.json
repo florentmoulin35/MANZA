@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04T21:03:55.187Z",
+ "updated": "2026-11-05T01:24:12.947Z",
  "failed": [],
  "items": [
   {
@@ -12,12 +12,6 @@
    "title": "Julien Épaillard se réinvente, Sébastien Cavaillon se relève et les jeunes chevaux brillent dans le nouveau GRANDPRIX",
    "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQRkJUSWx6ODdSYmhib1NlNTNkTEhCU1AzbE5LX2w0OG90NTRXclhLLThIOU1JQlpiNkVtUTMwaHJSSFBiVk1wYkhoZXUtTDJEOGdjMW5iMmlUbEtJRGdMQVMtZWhrLVlrSmhuNkQzTUNXM0JmeXh0TUJQemN3dGRMd2ptMWhQdXB2UHFqeHdxSlZiSXRpME5PRVFhSHlTdzFab1ZsMi02c0FmOGZJc0VtYmNfWlhKZWdrYnZhaHFNN1hDdlI2dlo2NUtRMFAySmdMZkxtdW5XclNGS1cySGxfZlBFeno?oc=5",
    "date": 1793725896000,
-   "source": "grandprix"
-  },
-  {
-   "title": "Dix champions de France d’attelage sacrés à Lignières",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWDRPdG5WNWt5LVVlbjJMT0JSdzQzUGR6Y3FKeFhaWkpHel9JUGRyVVd2NkRKSHJId2VJaWhxdVhycVY4VmR0RVk1UmtMdjFwZmN1ZUw5OURtQ2NIdUZITjk3RXNRckpIMGllQmc1WUNnSlNzWVFEV2V2bFN3bmZFak5NYzBxOGJHZTNXbWFZZU1fVDZjR0E?oc=5",
-   "date": 1793725798000,
    "source": "grandprix"
   },
   {
@@ -101,7 +95,7 @@
   {
    "title": "GRANDPRIX recherche trois stagiaires pour rejoindre sa saison événementielle 2027",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ2pwTW5COTFFNHItSy1LTXdWb29fMlFhdndLNmUyaEpnQUwzUXo2amN3RHNMYS1IczhTNnNQVWw1Y3RtT210cEszZ295emUtTnRKck1MVWhBMWFvVDhqRkF6Ums4X2VwdFMxZzhQWG9yRFA4VmI1UVZsSk9MR09mdzJlazQtZ1lhQTRSdElfcE5UR2tRWVVXU0JoYWZ0TUxieG80R2trSFhiY1Vqel83eXdYUWdnZw?oc=5",
-   "date": 1793035959000,
+   "date": 1792998000000,
    "source": "grandprix"
   },
   {
@@ -207,6 +201,12 @@
    "source": "grandprix"
   },
   {
+   "title": "NEWS GRANDPRIX EVENTS",
+   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjd3dxUFVQWXVxejFVOVJKU1NaaTNCY25Gbm45aWVqb3BKa1ZUTGs5bDhwUC0tYXgwTEJPekJwVVNON2UwRnNGLU80RWRUb2FYVUdScHM2OWJRWTdCVWZidG9ja0RVaGkwU05BVXNR?oc=5",
+   "date": 1756324169000,
+   "source": "grandprix"
+  },
+  {
    "title": "Nouvelle offre GRANDPRIX.tv : 1€ le premier mois !",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSzBneklNd2laSjJoeUlTakZWaUNScS1NLWdtRlZmbU1zckNNQUM0NmxIejhqb09zQ1ZhMEItRy1jQ0l4Z2hiMWVxek1qVjlnQjVCa216ZWtlVFVOMXF1VnRzdlkzdXRvZnp2VTVWX0VwVGtTSElXQ0k2ZUo4REpHLUprTlBZVmlZ?oc=5",
    "date": 1753945200000,
@@ -219,13 +219,19 @@
    "source": "eperon"
   },
   {
+   "title": "JAMES : Charpentier-bâtisseur du Haras du Trèfle Blanc",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONXd3R2tkWHExczhtR0NZdUF6WVJtS2o0NEpPNlRmQm9SRXVGNDNiSWdMVE9uc0lrZExMc3JibnNtcm43RHgwNXNwNF8weDhaTmNpclJEZWhtN0pJUXVIVDIyV2s5aHlud0RRdkc2aktDcmQtSzYyR3FXajhFZzQwYko5RHZwTEEyTGxZRWs5MFpqYTZqQldsRQ?oc=5",
+   "date": 1752044400000,
+   "source": "grandprix"
+  },
+  {
    "title": "Réglementation générale du transport d'équidés",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYmdudnFkUmhLRWw0em0wNU1xbEx0M2hRYWxQYzRJLUF1bzRZX05xbjY4ZkhOMVpSaWdMY1I3TkNWMlEyR2hnM2lzZFB6LUo5bUoxTWZBSUliRFA5T2xyMGJ5Si1PeEdVTEtKNnVDWC05WFRSNmdvckxyNnQ5b0dVUzZlUmFnc2VwWDhNZE81SHRRMG1lZG0zMHQwdnZTWVRoU2xkZ19yYkh6WkJxWTY3NjJodm10Nms?oc=5",
    "date": 1742567012000,
    "source": "ifce"
   },
   {
-   "title": "Système FFE Compet Coupure Nocturne",
+   "title": "Site de la Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiTEFVX3lxTFBWVHZNQWFiNE83YmtqREt2SXM0UlpLcnE5alY3LS13SVV6WG96dksxOGo3N0NseGsyVkhiQUF1dzhkbUdJTU1vVy00LWY?oc=5",
    "date": 1740564084000,
    "source": "ffe"
@@ -235,12 +241,6 @@
    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBOOGpQVVlCNUJiSVAyVUpjaDNYRDg0Uy1vaDZ2YlhPZmpWQ0d4Z1I0aEZmMklJYmJWUXVzU1FtNE1fRkhzTUdMdmw4TG40cE53?oc=5",
    "date": 1734508800000,
    "source": "eperon"
-  },
-  {
-   "title": "OFFRE ANNUELLE GRANDPRIX.TV ESSENTIELLE + OFFRE ANNUELLE GRANDPRIX PAPIER + NUMÉRIQUE",
-   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE15T0FwdkhnQkNXQXFmdkdKakM4a2M5NWkyOHpCWTBHYmlUbDhQV3FmZ3BRYVM3UzFmR3BTVzI2T09wLTQ0LUFvNGVrUVJ4cHAzcmIyamlRVQ?oc=5",
-   "date": 1715211651000,
-   "source": "grandprix"
   },
   {
    "title": "Le Pôle de formation IFCE – Cadre noir de Saumur",
