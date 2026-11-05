@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05T17:25:40.416Z",
+ "updated": "2026-11-05T21:01:40.980Z",
  "failed": [],
  "items": [
   {
@@ -9,9 +9,21 @@
    "source": "grandprix"
   },
   {
+   "title": "La course à l'organisation des JO 2036 est lancée et se fera à sept",
+   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMVFybmxJU1FWQzhHTFZmVUhHZVpfRmtVQnh0QnJtM0piTGphdHJfd21WWUZOdUNhRC00d3pIN09MQmtic3p4bV9GQlBtbUhtdWRpZUFGVWNYMnVHeUcwYmVQWExMdkh3U2xpd0JwV0ZPeUhtV1lvQzJwQzZHOXVlWkhROWVyY3dDSlBLZnBRYnpoanlWQndOMlpLRlNfUF8tb1E?oc=5",
+   "date": 1793875681000,
+   "source": "grandprix"
+  },
+  {
    "title": "GRANDPRIX dévoile des extraits du livre de Grégory Cottard",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUJMblRlSXJWcUtPNE5Wa3JPcGtCZ2UtTVptd25zZ3hrd2ZWWGRLRF90MTdYSWc3cWltV2FYbkF3Tk9sODVxOTQ5eEJzb2tmNWZTWEtfellaN0FWLUtjTWp6QXNhRUxacXNpTkxTcUNSLUJhd2VzTW11NVp5RkkxLWhWUmF6MjY5b1pfaWN6aWNJQTNWeW9B?oc=5",
    "date": 1793728203000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Dix champions de France d’attelage sacrés à Lignières",
+   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWDRPdG5WNWt5LVVlbjJMT0JSdzQzUGR6Y3FKeFhaWkpHel9JUGRyVVd2NkRKSHJId2VJaWhxdVhycVY4VmR0RVk1UmtMdjFwZmN1ZUw5OURtQ2NIdUZITjk3RXNRckpIMGllQmc1WUNnSlNzWVFEV2V2bFN3bmZFak5NYzBxOGJHZTNXbWFZZU1fVDZjR0E?oc=5",
+   "date": 1793725798000,
    "source": "grandprix"
   },
   {
@@ -111,12 +123,6 @@
    "source": "ffe"
   },
   {
-   "title": "Qu'est-ce que l'equifeel ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1SMW5SRG9XQWpFeXVrWkw4bWR4dmx0ZmZpLUVqZUltbnBHa3FCekU0MURxSF9tWEdLanAzWlRpMEV0RnZ1?oc=5",
-   "date": 1793113987000,
-   "source": "ffe"
-  },
-  {
    "title": "Qu'est-ce que la voltige ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1QcjhtOEpXdUlsak9adGtrNHBrdnZFeDJWZmJ2ZnB1cVBBd1Nkdm8yOFlvTW9ZMGNqeGI4NFN5TXNrM1k?oc=5",
    "date": 1793110405000,
@@ -126,12 +132,6 @@
    "title": "GRANDPRIX recherche trois stagiaires pour rejoindre sa saison événementielle 2027",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ2pwTW5COTFFNHItSy1LTXdWb29fMlFhdndLNmUyaEpnQUwzUXo2amN3RHNMYS1IczhTNnNQVWw1Y3RtT210cEszZ295emUtTnRKck1MVWhBMWFvVDhqRkF6Ums4X2VwdFMxZzhQWG9yRFA4VmI1UVZsSk9MR09mdzJlazQtZ1lhQTRSdElfcE5UR2tRWVVXU0JoYWZ0TUxieG80R2trSFhiY1Vqel83eXdYUWdnZw?oc=5",
    "date": 1792998000000,
-   "source": "grandprix"
-  },
-  {
-   "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0xyZXEwazdoX3VuOEg5UWlQRlp3NUNMMmtEc2RURm5USUxGTVZNWXhpdDVudTNVWXh3b0o0MU1VOEdTcEIzUVNmNjRZY0h3bUpMRU1YZW1MaU04ZHlNbjluRjhnRnBYbTREUXNiZDE3Q2ZPU0gwREQ2X3ZkRU0zQy11aGE5YUQ1ZkF3blNYSjNzYXpGTWtEYWNLaG9QQVhHWUFQUDFkMGc0TTZnZ3NGaTd0eWxObWxiTUlhVkJDbkVQSF93?oc=5",
-   "date": 1791788400000,
    "source": "grandprix"
   },
   {
@@ -223,12 +223,6 @@
    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAteFNUdTQzc0xKblg0NVhodVZQVko5dHU3NU5ENEVmNHczRWhrZVQyN2k2Rk1DbWkyZFZQcGNZWG1MVFo5TE1FS3FIVXRTelBwUUw4STRtTmk4ZHdpejd1enVUb0E?oc=5",
    "date": 1752901909000,
    "source": "eperon"
-  },
-  {
-   "title": "JAMES : Charpentier-bâtisseur du Haras du Trèfle Blanc",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONXd3R2tkWHExczhtR0NZdUF6WVJtS2o0NEpPNlRmQm9SRXVGNDNiSWdMVE9uc0lrZExMc3JibnNtcm43RHgwNXNwNF8weDhaTmNpclJEZWhtN0pJUXVIVDIyV2s5aHlud0RRdkc2aktDcmQtSzYyR3FXajhFZzQwYko5RHZwTEEyTGxZRWs5MFpqYTZqQldsRQ?oc=5",
-   "date": 1752044400000,
-   "source": "grandprix"
   },
   {
    "title": "Réglementation générale du transport d'équidés",
@@ -378,6 +372,12 @@
    "title": "ACCUEIL -",
    "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE80ZjJGbnVXcGJVTEFXSXZiZ29yY2hReURLczdDbHhWcVN2NHRhbTdzQmxpVllrRjl5c1R6di1Ccw?oc=5",
    "date": 1487285614000,
+   "source": "ffe"
+  },
+  {
+   "title": "Actualités",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE5XNXFILVZoN0U0UnFSV2dSdTE1MEJDeXFueFkxRG80ckNxZ3ZDNXhtVkdIc2czbEE1UVZ1SExTMVpJdDcx?oc=5",
+   "date": 1484441891000,
    "source": "ffe"
   },
   {
