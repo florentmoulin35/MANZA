@@ -1,7 +1,19 @@
 {
- "updated": "2026-11-06T05:12:33.525Z",
+ "updated": "2026-11-06T09:11:01.421Z",
  "failed": [],
  "items": [
+  {
+   "title": "Ça se passe au centre équestre du Val d’Auron : « Noêl en fête »",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPWkdobzZZWGQwQmNTRWVLbTYzQUdVMi1vQUp3STNXc0ZTcHl6dUhKSkt5M21FTjMyTHpMb3VmRnBrV0JkWUtMY2JVek5OV1VxVUowRXlLWmxzcnFMbEFUbi0xN2U5aklUNXlIY3hkSnVSUnJzU2k3VzZHVWNCZHNkWW1naFNBZ2Fsc0FqQV9qdTVHT2s?oc=5",
+   "date": 1793948621000,
+   "source": "ffe"
+  },
+  {
+   "title": "Deux Français élus représentants des athlètes à la FEI",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxOTVRVR19pQkxvSmMybjZla3RDNlFxbl81Z1hiaV9xLV9oNDBCSDJhQUJ2ejRJdEVOZm5paEFGZGxrb3VGOEdKcFFuSkcyQmpoZVZHMkc2ZnlRbktQd0F6aFRKN0x0Z2tsOXR1T2JCbEh6Ui1xV1VFQUtNUXVWZ3NHczU5OTBGaGExUlJrTGNsSFBucUJlVnhhRg?oc=5",
+   "date": 1793900282000,
+   "source": "grandprix"
+  },
   {
    "title": "Suivez la Coupe du monde de Vérone sur ClipMyHorse.tv, avec les commentaires de Kamel Boudra et Edouard Chauvet",
    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQVpOZUUwVjZVb3NlYnhhdHM3dHhXNi0yeG80eFJnc2NNMUxyTUY0ZktBanJnX2NoUlF0ekg0WFF4UTZ2QlgwbkdaYThkT2hWSVBKU1pRVkNtSmFrR0hXQ3d5My1URzk0cFdsMnJtNWVrR05rWWg3cm1GQkh4NTVSSHJCT3p4WEdNNlo4WXVnSFUtbExtdGdSdVo3Zm5iMGN3bVpiRk5McnZnUnRNY0hxRktmdUFjS3FGT29JNVJFNjZsM1ZzQjZ4bjRXZFVCQmVIQ0xoODEwUGNHSWpS?oc=5",
@@ -18,12 +30,6 @@
    "title": "GRANDPRIX dévoile des extraits du livre de Grégory Cottard",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUJMblRlSXJWcUtPNE5Wa3JPcGtCZ2UtTVptd25zZ3hrd2ZWWGRLRF90MTdYSWc3cWltV2FYbkF3Tk9sODVxOTQ5eEJzb2tmNWZTWEtfellaN0FWLUtjTWp6QXNhRUxacXNpTkxTcUNSLUJhd2VzTW11NVp5RkkxLWhWUmF6MjY5b1pfaWN6aWNJQTNWeW9B?oc=5",
    "date": 1793728203000,
-   "source": "grandprix"
-  },
-  {
-   "title": "Dix champions de France d’attelage sacrés à Lignières",
-   "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOWDRPdG5WNWt5LVVlbjJMT0JSdzQzUGR6Y3FKeFhaWkpHel9JUGRyVVd2NkRKSHJId2VJaWhxdVhycVY4VmR0RVk1UmtMdjFwZmN1ZUw5OURtQ2NIdUZITjk3RXNRckpIMGllQmc1WUNnSlNzWVFEV2V2bFN3bmZFak5NYzBxOGJHZTNXbWFZZU1fVDZjR0E?oc=5",
-   "date": 1793725798000,
    "source": "grandprix"
   },
   {
@@ -111,12 +117,6 @@
    "source": "ffe"
   },
   {
-   "title": "Qu'est-ce que l'equifeel ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1SMW5SRG9XQWpFeXVrWkw4bWR4dmx0ZmZpLUVqZUltbnBHa3FCekU0MURxSF9tWEdLanAzWlRpMEV0RnZ1?oc=5",
-   "date": 1793113987000,
-   "source": "ffe"
-  },
-  {
    "title": "Qu'est-ce que la voltige ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1QcjhtOEpXdUlsak9adGtrNHBrdnZFeDJWZmJ2ZnB1cVBBd1Nkdm8yOFlvTW9ZMGNqeGI4NFN5TXNrM1k?oc=5",
    "date": 1793110405000,
@@ -127,6 +127,12 @@
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ2pwTW5COTFFNHItSy1LTXdWb29fMlFhdndLNmUyaEpnQUwzUXo2amN3RHNMYS1IczhTNnNQVWw1Y3RtT210cEszZ295emUtTnRKck1MVWhBMWFvVDhqRkF6Ums4X2VwdFMxZzhQWG9yRFA4VmI1UVZsSk9MR09mdzJlazQtZ1lhQTRSdElfcE5UR2tRWVVXU0JoYWZ0TUxieG80R2trSFhiY1Vqel83eXdYUWdnZw?oc=5",
    "date": 1792998000000,
    "source": "grandprix"
+  },
+  {
+   "title": "Succès et convivialité pour la 2e édition du championnat de France Amateur de saut d’obstacles",
+   "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOYTZHZ0pWcDhQTHVoU25UZTlVdGxpOGk4c3JtMk1fWExrQmViNW9ORDNKYlkzNzVMa0dLcWRrUnFmcldGdEY1VTh5MmxnUVhORGdxRlZURThpRmg1MmJYNDRQS05UcTJsdFY5S0FKa0dOQ2lwdmk0WVJXZGlpRzVfOUp0ckJRRnpRVDg5cmxra0l2dXlpeFdBbUFGUXAxOTF5RmZxRG9fdW51d19FSHZOWUlLclZ2Q2doaXdvSDlwU1VjWW8?oc=5",
+   "date": 1792738800000,
+   "source": "ffe"
   },
   {
    "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
@@ -336,12 +342,6 @@
    "title": "Débuter ou reprendre l'équitation",
    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFAtQVFLWF9TTFBYOXRsZzdUS3U5S2dNNEdCUzVLRThlakhhd0J3anRoYS1XZlNodk5hVnJhU1l2RWFtU051b0hvcVlDWQ?oc=5",
    "date": 1638264706000,
-   "source": "ffe"
-  },
-  {
-   "title": "Accueil | Campus FFE",
-   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9jSldkVGUtb2xNVTNlNVFxaE1oQ2lkcTN4RUIwYXRwdW9lTlp5Rm41dEZoQTFSNUtmMVdJ?oc=5",
-   "date": 1574075379000,
    "source": "ffe"
   },
   {
