@@ -1,13 +1,7 @@
 {
- "updated": "2026-11-05T21:01:40.980Z",
+ "updated": "2026-11-06T01:26:15.867Z",
  "failed": [],
  "items": [
-  {
-   "title": "Suivez la Coupe du monde de Vérone sur ClipMyHorse.tv, avec les commentaires de Kamel Boudra et Edouard Chauvet",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQVpOZUUwVjZVb3NlYnhhdHM3dHhXNi0yeG80eFJnc2NNMUxyTUY0ZktBanJnX2NoUlF0ekg0WFF4UTZ2QlgwbkdaYThkT2hWSVBKU1pRVkNtSmFrR0hXQ3d5My1URzk0cFdsMnJtNWVrR05rWWg3cm1GQkh4NTVSSHJCT3p4WEdNNlo4WXVnSFUtbExtdGdSdVo3Zm5iMGN3bVpiRk5McnZnUnRNY0hxRktmdUFjS3FGT29JNVJFNjZsM1ZzQjZ4bjRXZFVCQmVIQ0xoODEwUGNHSWpS?oc=5",
-   "date": 1793896459000,
-   "source": "grandprix"
-  },
   {
    "title": "La course à l'organisation des JO 2036 est lancée et se fera à sept",
    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMVFybmxJU1FWQzhHTFZmVUhHZVpfRmtVQnh0QnJtM0piTGphdHJfd21WWUZOdUNhRC00d3pIN09MQmtic3p4bV9GQlBtbUhtdWRpZUFGVWNYMnVHeUcwYmVQWExMdkh3U2xpd0JwV0ZPeUhtV1lvQzJwQzZHOXVlWkhROWVyY3dDSlBLZnBRYnpoanlWQndOMlpLRlNfUF8tb1E?oc=5",
@@ -93,22 +87,10 @@
    "source": "eperon"
   },
   {
-   "title": "“Nous sommes un pays riche en concours de grande qualité”, Edouard Coupérie",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONHZrOERMbWhnaFN3TEh3cEJQbHBTQWtMdHQyWlhYWE1Td3M4V3NISGJTRkJ4c1Jpc09KNWdib21tUG5zbFFCUDhrRlNlWEFXdlZMd0JLX1J1MUh1SXEtcE1MOUVGa3JzaUJhTkpVT1dxRG4tVW9zR1E1Wlc5ZUZVdlM0Sl95enlzcE1XZXk1a3g0QlExMTNYVnNOd1FHYnVxWVI5ZlpwcmhiUQ?oc=5",
-   "date": 1793363385000,
-   "source": "grandprix"
-  },
-  {
    "title": "François Monmarson, homme de cheval et de plume",
    "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTFAtVTgwaXhVcklhMjFEYTY3RjU0MTFybzkzVUhmenp1OW0xWUY1c1ZFbnY4T3NFTTJqR09PanNRTXBmM2hzcDZ2b0FCQ3N2aTBGajhWSzNZYXlZRWN2WlpXMGtaZGdXNHFaS2dJTVdwOWtsOU82bW1ab2xn?oc=5",
    "date": 1793352686000,
    "source": "eperon"
-  },
-  {
-   "title": "“J’ai essayé de comprendre l’homme qu’est Grégory Cottard derrière le cavalier” Liliane Trévisan (1/2)",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOWFdzdE5sQmRhd3kydDk5NC14NERIV0VsUXlGblhnLWg5QzQwVGRWaFdfcGFKLWJxTjhLT1puY19MREFHVzRkNGUyXzlaaGh5Z3dMQ2lOenBrZTlTNk1SV1lDX2Z3UG96aU1lVWVxUHBVUkF5WnVVVFJhamhmRi10RFBNQnlad1dYZndVQUx1b09kZDhzeldjaVMtcXRpdlpWZjR4ZngtSTd5T3pqQ2VfY0tGWW9Rc2NCX0E3cVpnQlRQOU11TXBN?oc=5",
-   "date": 1793344176000,
-   "source": "grandprix"
   },
   {
    "title": "Qu'est-ce que le dressage ? | Fédération Française d'Équitation",
@@ -120,6 +102,12 @@
    "title": "Qu'est-ce que le hunter ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE91UDhGelhrZldiT05uNklJdHBnTzh0MktEdklRSUFYajdYNkRoX1RpT0VadVNyOGNmMmVpTmRlOGFZUQ?oc=5",
    "date": 1793120565000,
+   "source": "ffe"
+  },
+  {
+   "title": "Qu'est-ce que l'equifeel ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE1SMW5SRG9XQWpFeXVrWkw4bWR4dmx0ZmZpLUVqZUltbnBHa3FCekU0MURxSF9tWEdLanAzWlRpMEV0RnZ1?oc=5",
+   "date": 1793113987000,
    "source": "ffe"
   },
   {
@@ -135,10 +123,22 @@
    "source": "grandprix"
   },
   {
+   "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
+   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0xyZXEwazdoX3VuOEg5UWlQRlp3NUNMMmtEc2RURm5USUxGTVZNWXhpdDVudTNVWXh3b0o0MU1VOEdTcEIzUVNmNjRZY0h3bUpMRU1YZW1MaU04ZHlNbjluRjhnRnBYbTREUXNiZDE3Q2ZPU0gwREQ2X3ZkRU0zQy11aGE5YUQ1ZkF3blNYSjNzYXpGTWtEYWNLaG9QQVhHWUFQUDFkMGc0TTZnZ3NGaTd0eWxObWxiTUlhVkJDbkVQSF93?oc=5",
+   "date": 1791788400000,
+   "source": "grandprix"
+  },
+  {
    "title": "Liliane Fromer : les Blés ont perdu leur naisseuse",
    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5IbWJxUTUxdzFwdGt4MHJ4SEJiT19FOUxGUmhGZDRGZW9pYXE4M01EOHJCbTJzbFc3X09vM1RnTkl6SVZjOTBUbzdJbXFvZVhBUU9pclRQalpLYTFscGY5RFIzdXJoMnFJNlJ6NjBaaFdhNDNCRFdyWGFQRl8?oc=5",
    "date": 1790838000000,
    "source": "eperon"
+  },
+  {
+   "title": "Suivez le Normandie Horse Show de Saint-Lô sur GRANDPRIX.tv",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQeUMxM1lWSk4wNnBlN0tXdEdMcUJnb3plZ0lVUi0zVmlGejFBaFpVUGpuTmVqb0cyakhKdU8zdVVqaFJTN252VnUtTHllY3VWTWhtYnFIOGVqZzFUVEMzY1RGcVAwWGR1RUFZVUlnel9xdFBIVnJuRVQzdzlKc0VSQ1hOS1VmSFo1MDBibHRPU0RPVVJtVTdJ?oc=5",
+   "date": 1785913200000,
+   "source": "grandprix"
   },
   {
    "title": "Offres d’été : 20% de réduction sur tous nos abonnements annuels GRANDPRIX !",
@@ -225,6 +225,12 @@
    "source": "eperon"
   },
   {
+   "title": "JAMES : Charpentier-bâtisseur du Haras du Trèfle Blanc",
+   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONXd3R2tkWHExczhtR0NZdUF6WVJtS2o0NEpPNlRmQm9SRXVGNDNiSWdMVE9uc0lrZExMc3JibnNtcm43RHgwNXNwNF8weDhaTmNpclJEZWhtN0pJUXVIVDIyV2s5aHlud0RRdkc2aktDcmQtSzYyR3FXajhFZzQwYko5RHZwTEEyTGxZRWs5MFpqYTZqQldsRQ?oc=5",
+   "date": 1752044400000,
+   "source": "grandprix"
+  },
+  {
    "title": "Réglementation générale du transport d'équidés",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYmdudnFkUmhLRWw0em0wNU1xbEx0M2hRYWxQYzRJLUF1bzRZX05xbjY4ZkhOMVpSaWdMY1I3TkNWMlEyR2hnM2lzZFB6LUo5bUoxTWZBSUliRFA5T2xyMGJ5Si1PeEdVTEtKNnVDWC05WFRSNmdvckxyNnQ5b0dVUzZlUmFnc2VwWDhNZE81SHRRMG1lZG0zMHQwdnZTWVRoU2xkZ19yYkh6WkJxWTY3NjJodm10Nms?oc=5",
    "date": 1742567012000,
@@ -300,12 +306,6 @@
    "title": "L'équicoaching : le cheval, partenaire de développement personnel au service du collectif, une offre évolutive pour les centres équestres",
    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQZ3IzTGRMT0tUWUxjZW1UVWE0UkUwWlhoMFNuUkk2RF9xMnd1dGxQcjZ1S3ZYWkhaaUxWZkIxTC00WXVYc2kyTjltd0VVSzF0Q2dJV3ZncDVSZHdOd0NRRFNlSUJjcjllRmF0QVNLZnp4a3BsNE1uam4yZWkycVVobE0wVTNWS0ZpLVhlZ3VObXJpSXkzVGFrYnpja2hUYUtCMTQ3YTFSd0VDZ0tnUHZkNlBzeWEzVzdNMHJBUVhNNlhWZnBhWkE?oc=5",
    "date": 1641196800000,
-   "source": "ffe"
-  },
-  {
-   "title": "Qu’est-ce que la CNIL ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE5TRHE2ZjVVbC1CM2NreVQyR0x5QjFmSkY4cjJGdld6R0Z1TkoyZ29GTm1SVTlDQkUyeEtlQQ?oc=5",
-   "date": 1638462081000,
    "source": "ffe"
   },
   {
