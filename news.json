@@ -1,12 +1,12 @@
 {
- "updated": "2026-11-07T13:07:25.673Z",
+ "updated": "2026-11-07T16:52:53.796Z",
  "failed": [],
  "items": [
   {
-   "title": "“Je traverse le meilleur moment de ma carrière”, Roberto Terán Tafur (2/2)",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQLXE0bDd6OVd0RVJDeU9hR2txblBFWFc2enJOOFhzQUMtQVAwQkMyWmg2c1Y2WWR6U3k2TUlDRWVreFNONTFGN0V2eC1iY3R3XzNpVmR6OU9vZF80V2tOd2VqeERTT0lyZENPSi1QWUVUX2VfMzNUT1M2TnZfUFlaaU12em5QTmZqRG5WdDFKbko4blhlWDJ5WHdWeW9jQUhlRFV3dw?oc=5",
-   "date": 1793959540000,
-   "source": "grandprix"
+   "title": "Barentin de Rampan, de Carentan à Dakar",
+   "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwcV9ocXEtanZyLXR4cndTTW5zUGNhSXA1TkhqN1VrdG9qcXY3LVoyeExOYWdzZkxoVjhqeWx1V01NS2YxanYwWEl0dUxYaDR4NGRzX2dvU3liblFPM1lBREJkYmpUVFg4OHdqcWZzNA?oc=5",
+   "date": 1794065841000,
+   "source": "eperon"
   },
   {
    "title": "GRANDPRIX recherche trois stagiaires pour rejoindre sa saison événementielle 2027",
@@ -18,6 +18,12 @@
    "title": "GRANDPRIX dévoile des extraits du livre de Grégory Cottard",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUJMblRlSXJWcUtPNE5Wa3JPcGtCZ2UtTVptd25zZ3hrd2ZWWGRLRF90MTdYSWc3cWltV2FYbkF3Tk9sODVxOTQ5eEJzb2tmNWZTWEtfellaN0FWLUtjTWp6QXNhRUxacXNpTkxTcUNSLUJhd2VzTW11NVp5RkkxLWhWUmF6MjY5b1pfaWN6aWNJQTNWeW9B?oc=5",
    "date": 1793728203000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Le Jura suisse durement touché par la myopathie atypique",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaHdPSzVrZ1l2Y05ocEdpUEF5NjVxeFRIVnBOTWxla2MyWWlyUDZjWjRvZWxmSl9yNFJSc1hRUTZYT0Q5dEFZMTZSYTlFZ0xQY2c3ZTNoY2JpN0ExVzJfUEtRZ0hfbDFGMWNXemlrOXgzSm5VREQ5UXJXdzI1a2tfTEdsb3ZOQUdBeHFQSEoxQ0VqNzRhV3JGRkM5OA?oc=5",
+   "date": 1793701147000,
    "source": "grandprix"
   },
   {
@@ -79,12 +85,6 @@
    "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE1QcjhtOEpXdUlsak9adGtrNHBrdnZFeDJWZmJ2ZnB1cVBBd1Nkdm8yOFlvTW9ZMGNqeGI4NFN5TXNrM1k?oc=5",
    "date": 1793110405000,
    "source": "ffe"
-  },
-  {
-   "title": "Endurance – Cycle Libre 6 ans : Kiestu de Sommant, la vitesse en héritage",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbWllajNfZ0NJcnJfenAxZkNiUGtQTDJwREJ2TzBQVGY1UDlnUkNVd3VFNy1vTXcxVFBaeV9aNGpRbG1jUmJmcnAtU1VydnRVRHNtc1BsZUxUMVFtbEFVSUxEc1cwY3NmUEZNTFZFOWF5RnZJeWVQdm9HOHpPakpqU3paU3JJOGExT2xpS1plMW5hMUp2OVBF?oc=5",
-   "date": 1791874800000,
-   "source": "eperon"
   },
   {
    "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
@@ -297,12 +297,6 @@
    "source": "ffe"
   },
   {
-   "title": "Découvrez comment et pourquoi adhérer à la FFE | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MSFA4djRwVlBncU1ON3J3UGRCWWwxdlhuZU9fdlZoVVNuME10QXlvX3VfS0psczRtVkw5YnBaUFgxcXFiNUUtZ2tjRVdVWWU4UTln?oc=5",
-   "date": 1638347410000,
-   "source": "ffe"
-  },
-  {
    "title": "Qu'est-ce que le CCE ou Concours Complet d'Équitation ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9JQndXbVpsdXQ0Tk1McnRMbnhqaE05THduaDdOQWZPdkx3UzRwRlNVYUR2c0ZHX1dUTV9wZjNuVzVET2lMd3lQVmZ5bGY4Ql9GU1VNN19tbU0?oc=5",
    "date": 1638267804000,
@@ -343,6 +337,12 @@
    "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9tY3hMOWhZUmIwc1NtNWc0MV9wU0tIdjBjMjZnTUFuYmFaazVfSkQtZ25MWFRmUW1adTlTRU5qdk5Ua281R3ZWTDhR?oc=5",
    "date": 1577877930000,
    "source": "grandprix"
+  },
+  {
+   "title": "Accueil | Campus FFE",
+   "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE9jSldkVGUtb2xNVTNlNVFxaE1oQ2lkcTN4RUIwYXRwdW9lTlp5Rm41dEZoQTFSNUtmMVdJ?oc=5",
+   "date": 1574075379000,
+   "source": "ffe"
   },
   {
    "title": "Achat, vente et gestion de la propriété",
