@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T05:04:19.032Z",
+ "updated": "2026-11-08T09:01:38.113Z",
  "failed": [],
  "items": [
   {
@@ -375,6 +375,12 @@
    "source": "ifce"
   },
   {
+   "title": "ACCUEIL -",
+   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE80ZjJGbnVXcGJVTEFXSXZiZ29yY2hReURLczdDbHhWcVN2NHRhbTdzQmxpVllrRjl5c1R6di1Ccw?oc=5",
+   "date": 1487285614000,
+   "source": "ffe"
+  },
+  {
    "title": "Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBacUlLN3d0MFVBdGF3djVHZUpzWWNEQ1pPYzZubXhfdlFpWkR4VUtaUkN5UGg0LUFQNE9oOHdBMEVHZw?oc=5",
    "date": 1481252240000,
@@ -468,12 +474,6 @@
    "title": "Accueil Boutique FFE",
    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1kc0pnQU03dUhndkNWMDhEY2pvWTZtN1VWT09YamMyOFJSRm1XZnZJZkJJcm1MaHM3bFhmWXFB?oc=5",
    "date": 1424919090000,
-   "source": "ffe"
-  },
-  {
-   "title": "Les Top annonces",
-   "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTFBRWlBYS0d1N0lKYllIeUFXMG0xMV9KQU50ckZEelFGUm9ydmJjeGtBR0hPczcwMTdWSVItZ3dn?oc=5",
-   "date": 1417528049000,
    "source": "ffe"
   }
  ]
