@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T09:01:38.113Z",
+ "updated": "2026-11-08T13:07:13.881Z",
  "failed": [],
  "items": [
   {
@@ -36,12 +36,6 @@
    "title": "GRANDPRIX dévoile des extraits du livre de Grégory Cottard",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUJMblRlSXJWcUtPNE5Wa3JPcGtCZ2UtTVptd25zZ3hrd2ZWWGRLRF90MTdYSWc3cWltV2FYbkF3Tk9sODVxOTQ5eEJzb2tmNWZTWEtfellaN0FWLUtjTWp6QXNhRUxacXNpTkxTcUNSLUJhd2VzTW11NVp5RkkxLWhWUmF6MjY5b1pfaWN6aWNJQTNWeW9B?oc=5",
    "date": 1793728203000,
-   "source": "grandprix"
-  },
-  {
-   "title": "Le Jura suisse durement touché par la myopathie atypique",
-   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaHdPSzVrZ1l2Y05ocEdpUEF5NjVxeFRIVnBOTWxla2MyWWlyUDZjWjRvZWxmSl9yNFJSc1hRUTZYT0Q5dEFZMTZSYTlFZ0xQY2c3ZTNoY2JpN0ExVzJfUEtRZ0hfbDFGMWNXemlrOXgzSm5VREQ5UXJXdzI1a2tfTEdsb3ZOQUdBeHFQSEoxQ0VqNzRhV3JGRkM5OA?oc=5",
-   "date": 1793701147000,
    "source": "grandprix"
   },
   {
@@ -237,6 +231,12 @@
    "source": "eperon"
   },
   {
+   "title": "OFFRE ANNUELLE GRANDPRIX.TV ESSENTIELLE + OFFRE ANNUELLE GRANDPRIX PAPIER + NUMÉRIQUE",
+   "link": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE15T0FwdkhnQkNXQXFmdkdKakM4a2M5NWkyOHpCWTBHYmlUbDhQV3FmZ3BRYVM3UzFmR3BTVzI2T09wLTQ0LUFvNGVrUVJ4cHAzcmIyamlRVQ?oc=5",
+   "date": 1715211651000,
+   "source": "grandprix"
+  },
+  {
    "title": "Le Pôle de formation IFCE – Cadre noir de Saumur",
    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbDIteExjZlN6VlRnajBaT09mb3RFY0E4ZXFfbWxZY092Ql94Z1BFVGRBd0hSRXk3OXpoYU1FeXUwZ2JvUkJDMThCODF0aTNfYUFUZUk4NllEQmJ6UHkzbW9BMzFVZDhjYjJTMXg0UENENGQxZUJoMDhSZGc1S2pmWXBWLS01RDVrcEpxTHA4bkpqYng5U0FEX3NPMlFTMjJqZGxEUU5ZUEJFSG9ZZnJkRkdB?oc=5",
    "date": 1702917740000,
@@ -357,6 +357,12 @@
    "source": "ffe"
   },
   {
+   "title": "Enregistrer un cheval à votre nom suite à un achat",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWmUweU5hMU9RNkpoT0xrSTlVM0U5Y1ctcF9EUjZvRHVlRFlncTQ0ank5elVxdFRyb0NaVTgtWk1xbHFyd2hkeFZNRmhTYXBXZW5HRnowMTc4YW91WGdPNFk2Tk1ZaU5VaHFsR01CYTdHZGV2RnU5a0R6WWcxTHZmZ3JIaHR6d0xlY2xZcTdyWUZhR2ZmOFNZMkdManRqU1RZb1Z2TGw2em80VzVDb0NlampHaVI0VThLZ2hxSVFEbmlXWVp0WTkxVEFLRnNyeTg?oc=5",
+   "date": 1560881568000,
+   "source": "ifce"
+  },
+  {
    "title": "Achat, vente et gestion de la propriété",
    "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQ2xWcjlKNlNyQ0FKSDMtcXVHRV9wYlk5aE41dVJ3OWhkMmU4X2NzZnQ4V3ZtVWdzbmV4ZHQzekxwUnR4VWpXLW9jbFFsdklXNm00WjBUZUhBcWRWMnNhYjR5a3RjVlZsZ3J4TXJsODNOaDRFODBjV0JfUk1zWXk3dXJLY0M3MC1hOU1VZFBmY3ZxamU2ZGZsbzZuQm0yQlhLbWFTOXRsZHRNRHpnbjJlSFFweXZoYnN2MUF4T0x3?oc=5",
    "date": 1557869734000,
@@ -367,12 +373,6 @@
    "link": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1McVpPY3RfSEdCeHd0X0ZKb1NaRlBSTkQ2Q1JiSWhWNGVUQ2MwSEFSdXllSmROakxRMkRZ?oc=5",
    "date": 1537209310000,
    "source": "eperon"
-  },
-  {
-   "title": "Rechercher un dossier",
-   "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9OZi1pMjN2T1ZXRzNHeE5CY216YkFXUU1NX1ZzR3hiN0R2YUptNWg3Mm44ZVpPSTNEZEd6c3Y0Qlp6TDg?oc=5",
-   "date": 1529748302000,
-   "source": "ifce"
   },
   {
    "title": "ACCUEIL -",
@@ -420,6 +420,12 @@
    "title": "Carte d’immatriculation & Propriété",
    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNOVhVV0VqS3JVbHZOcUxCUUZubThLNnFpbkMtUDQ3UmswVGkzcjVYcUFXVktWUFFPbjQzeWxFQWxNYVJhdXY2eEdJRE90dlptalF4LTNLSE1XOGMzZ0pPSV9BaVBtM0ZTczk3WUV1N1dZWFdtR2FrNm55MHVWYUx1TzFyQUtEYVotdUhMT3EwbTVZOGRRWUE?oc=5",
    "date": 1460888442000,
+   "source": "ifce"
+  },
+  {
+   "title": "Poulain OC – monte libre",
+   "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTktSWWhjT0ZsNkloSThpSjNvNGFadzI0Y3RfTnNBQUpfTFMtM2l3QXNQLS1lMFpzSWpiMVd6WnFvdV9NUUNBMGJNSU40TV9RVlNPSmphMVV6MV9udlJ4bkkwY3BqZV94OU1XWk96U2dCOHNXbHh4VTNzMTV4ZjdBdDgzMWdpN2laaXNlT1lsaXlYam8?oc=5",
+   "date": 1460888038000,
    "source": "ifce"
   },
   {
