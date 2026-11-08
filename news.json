@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08T16:51:36.678Z",
+ "updated": "2026-11-08T23:45:32.851Z",
  "failed": [],
  "items": [
   {
@@ -7,6 +7,12 @@
    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBwcV9ocXEtanZyLXR4cndTTW5zUGNhSXA1TkhqN1VrdG9qcXY3LVoyeExOYWdzZkxoVjhqeWx1V01NS2YxanYwWEl0dUxYaDR4NGRzX2dvU3liblFPM1lBREJkYmpUVFg4OHdqcWZzNA?oc=5",
    "date": 1794065841000,
    "source": "eperon"
+  },
+  {
+   "title": "Mike Smits sacré champion olympique de la jeunesse à Dakar",
+   "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTXptS1NleDV0OERubnJJc28wclJXT0ljcFZMOEhHUEtrYzByLWFPenV4ZWRQOTJWSHY1RTVFNHRHbHZ2VjNGZmxLcUhpeWlRUFNOLVZKaEJsNU5uTlRudkR4LWN4Y1ZOaFdtUkc4SFhIYnhRZTlEUTRyWVBVY3kwSVVmbUdWUExEbUl0ZDMza2dJTEl3MENFOXY2bE1idw?oc=5",
+   "date": 1793974823000,
+   "source": "grandprix"
   },
   {
    "title": "GN FFE-AC Print de DRE : Saint Lô (50) accueille la dernière étape de la saison 2026 !",
@@ -27,12 +33,6 @@
    "source": "ffe"
   },
   {
-   "title": "Élevé pour les balades, Brin d’Or des Sources a mené Julie Bilquez jusqu’en 5*",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYk9FdTZUOE1Mc3BJZFFyWGRsRDBfUkxFci12TnZiQ2FJMVQxVFk0OWl3RVdkMzhEVnhBU2p4NGFwMl9pRzg5MW1PQ2lra3E5amZOV3I1LVlWRjZUMC1VS3ZkS2NSRnNoUTFzaVRGTXBkVVdvWHNUSEhlNkFVV1dpaWRjVEhiMHpPSVBlVC1qVzFoQ2RsT2hfNTJBQlFfVEtiWmRaZnprVDlMYnFr?oc=5",
-   "date": 1793875641000,
-   "source": "grandprix"
-  },
-  {
    "title": "GRANDPRIX recherche trois stagiaires pour rejoindre sa saison événementielle 2027",
    "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ2pwTW5COTFFNHItSy1LTXdWb29fMlFhdndLNmUyaEpnQUwzUXo2amN3RHNMYS1IczhTNnNQVWw1Y3RtT210cEszZ295emUtTnRKck1MVWhBMWFvVDhqRkF6Ums4X2VwdFMxZzhQWG9yRFA4VmI1UVZsSk9MR09mdzJlazQtZ1lhQTRSdElfcE5UR2tRWVVXU0JoYWZ0TUxieG80R2trSFhiY1Vqel83eXdYUWdnZw?oc=5",
    "date": 1793865600000,
@@ -48,6 +48,12 @@
    "title": "GRANDPRIX dévoile des extraits du livre de Grégory Cottard",
    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOOUJMblRlSXJWcUtPNE5Wa3JPcGtCZ2UtTVptd25zZ3hrd2ZWWGRLRF90MTdYSWc3cWltV2FYbkF3Tk9sODVxOTQ5eEJzb2tmNWZTWEtfellaN0FWLUtjTWp6QXNhRUxacXNpTkxTcUNSLUJhd2VzTW11NVp5RkkxLWhWUmF6MjY5b1pfaWN6aWNJQTNWeW9B?oc=5",
    "date": 1793728203000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Le Jura suisse durement touché par la myopathie atypique",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPaHdPSzVrZ1l2Y05ocEdpUEF5NjVxeFRIVnBOTWxla2MyWWlyUDZjWjRvZWxmSl9yNFJSc1hRUTZYT0Q5dEFZMTZSYTlFZ0xQY2c3ZTNoY2JpN0ExVzJfUEtRZ0hfbDFGMWNXemlrOXgzSm5VREQ5UXJXdzI1a2tfTEdsb3ZOQUdBeHFQSEoxQ0VqNzRhV3JGRkM5OA?oc=5",
+   "date": 1793701147000,
    "source": "grandprix"
   },
   {
@@ -75,12 +81,6 @@
    "source": "grandprix"
   },
   {
-   "title": "Martin Fuchs grille la priorité à Pénélope Leprevost dans l’Equita Masters",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOdmtmbmZpd0Y0WHFOQ3BNLWxSZDB1Mlpzb2Y3MFE1a2FQeVFpdVp6S0ZCZjZvZy1PZC04WkdMeDN2d0psRWNZUjhJSkVfY1FuV3RPTXFwTThCYUpLcnlORWJLTzdnQUhfVjRpWEY0S2lIMjlJZ1U4X1VrdU9COGZhU0J0MzVqTjNGQXZvWHAzaHNDSzRGMFhEbEtPRW5tekszMjJHVlRRMzVLeGc?oc=5",
-   "date": 1793486886000,
-   "source": "grandprix"
-  },
-  {
    "title": "CDIW Equita Lyon : de bonnes choses côté français",
    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTFBvWC13dmhvc1pJRTZwV05ycmotNXphT21wejZOYzJycWJjOHRlU3FSRFk3U2NkYTRTeTFtNzNWZkxRc3FHRUVtcWpTLXJiaWowTjRQbUV0RHNFZjhMR1duQmpac2pndnhpRkp6bm9rMnBiRkI0ZVhMVW1aSQ?oc=5",
    "date": 1793385866000,
@@ -90,12 +90,6 @@
    "title": "Qu'est-ce que le dressage ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE05ZDU5ZDQzekw4M293ZFNRVTBZbWZhWTVONW5tRzVnaGVlSUs2V1dBVUppMjhTampidFhvemlhWFZ1Y3RC?oc=5",
    "date": 1793127174000,
-   "source": "ffe"
-  },
-  {
-   "title": "Qu'est-ce que le hunter ? | Fédération Française d'Équitation",
-   "link": "https://news.google.com/rss/articles/CBMiQkFVX3lxTE91UDhGelhrZldiT05uNklJdHBnTzh0MktEdklRSUFYajdYNkRoX1RpT0VadVNyOGNmMmVpTmRlOGFZUQ?oc=5",
-   "date": 1793120565000,
    "source": "ffe"
   },
   {
@@ -201,12 +195,6 @@
    "source": "grandprix"
   },
   {
-   "title": "NEWS GRANDPRIX EVENTS",
-   "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjd3dxUFVQWXVxejFVOVJKU1NaaTNCY25Gbm45aWVqb3BKa1ZUTGs5bDhwUC0tYXgwTEJPekJwVVNON2UwRnNGLU80RWRUb2FYVUdScHM2OWJRWTdCVWZidG9ja0RVaGkwU05BVXNR?oc=5",
-   "date": 1756324169000,
-   "source": "grandprix"
-  },
-  {
    "title": "Nouvelle offre GRANDPRIX.tv : 1€ le premier mois !",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSzBneklNd2laSjJoeUlTakZWaUNScS1NLWdtRlZmbU1zckNNQUM0NmxIejhqb09zQ1ZhMEItRy1jQ0l4Z2hiMWVxek1qVjlnQjVCa216ZWtlVFVOMXF1VnRzdlkzdXRvZnp2VTVWX0VwVGtTSElXQ0k2ZUo4REpHLUprTlBZVmlZ?oc=5",
    "date": 1753945200000,
@@ -289,6 +277,12 @@
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBaRWcxamJ5TE16b05iTjVyZzFabjhOdnJSSEd6WEdiVERxeVlLcTlqMFJ2NXNUZVNqM1hMZnJfckNHMFlrY2ZJQlZCZ3hCd0NTVWMtS1NqVEVDSkNRelFlUWoycXRUdw?oc=5",
    "date": 1673362864000,
    "source": "ffe"
+  },
+  {
+   "title": "Live",
+   "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE5PQTg0RXBtR0xhYzJUa1pERXR3XzFmbmpuZi1CWm90ZDFMbE1JVEpVN0dfTjkxdnBwdHRaWlZIcDBaTG85QlE?oc=5",
+   "date": 1644603342000,
+   "source": "grandprix"
   },
   {
    "title": "L'équicoaching : le cheval, partenaire de développement personnel au service du collectif, une offre évolutive pour les centres équestres",
@@ -480,6 +474,12 @@
    "title": "Accueil Boutique FFE",
    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE1kc0pnQU03dUhndkNWMDhEY2pvWTZtN1VWT09YamMyOFJSRm1XZnZJZkJJcm1MaHM3bFhmWXFB?oc=5",
    "date": 1424919090000,
+   "source": "ffe"
+  },
+  {
+   "title": "Les Top annonces",
+   "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTFBRWlBYS0d1N0lKYllIeUFXMG0xMV9KQU50ckZEelFGUm9ydmJjeGtBR0hPczcwMTdWSVItZ3dn?oc=5",
+   "date": 1417528049000,
    "source": "ffe"
   }
  ]
