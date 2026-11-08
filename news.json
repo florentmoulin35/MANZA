@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07T20:51:21.892Z",
+ "updated": "2026-11-08T01:22:53.642Z",
  "failed": [],
  "items": [
   {
@@ -12,6 +12,12 @@
    "title": "Gaspard Maksud : “Mon sport me tient à coeur”",
    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPaE9GWFFHWjVib3Zlb1NENG1GNXllQ2J6ZEhYMzIxUllabnYtdjAxUl8zTHdkR3l2M3JWWEozcTc5V1BtVldoUWh3TUhpV3lkV0lJVGVxVWw0aThJNUpreXc4N3JaclQ1YTRhbGY0NEFBei1sTlBIbUNGWDk2SlRkXzcwQnNtYTVR?oc=5",
    "date": 1793900583000,
+   "source": "grandprix"
+  },
+  {
+   "title": "Élevé pour les balades, Brin d’Or des Sources a mené Julie Bilquez jusqu’en 5*",
+   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQYk9FdTZUOE1Mc3BJZFFyWGRsRDBfUkxFci12TnZiQ2FJMVQxVFk0OWl3RVdkMzhEVnhBU2p4NGFwMl9pRzg5MW1PQ2lra3E5amZOV3I1LVlWRjZUMC1VS3ZkS2NSRnNoUTFzaVRGTXBkVVdvWHNUSEhlNkFVV1dpaWRjVEhiMHpPSVBlVC1qVzFoQ2RsT2hfNTJBQlFfVEtiWmRaZnprVDlMYnFr?oc=5",
+   "date": 1793875641000,
    "source": "grandprix"
   },
   {
@@ -81,16 +87,16 @@
    "source": "ffe"
   },
   {
-   "title": "Endurance – Cycle Libre 6 ans : Kiestu de Sommant, la vitesse en héritage",
-   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNbWllajNfZ0NJcnJfenAxZkNiUGtQTDJwREJ2TzBQVGY1UDlnUkNVd3VFNy1vTXcxVFBaeV9aNGpRbG1jUmJmcnAtU1VydnRVRHNtc1BsZUxUMVFtbEFVSUxEc1cwY3NmUEZNTFZFOWF5RnZJeWVQdm9HOHpPakpqU3paU3JJOGExT2xpS1plMW5hMUp2OVBF?oc=5",
-   "date": 1791874800000,
-   "source": "eperon"
-  },
-  {
    "title": "GRANDPRIX lance son sondage lectorat: donnez votre avis et tentez de gagner un an d'abonnement",
    "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZ0xyZXEwazdoX3VuOEg5UWlQRlp3NUNMMmtEc2RURm5USUxGTVZNWXhpdDVudTNVWXh3b0o0MU1VOEdTcEIzUVNmNjRZY0h3bUpMRU1YZW1MaU04ZHlNbjluRjhnRnBYbTREUXNiZDE3Q2ZPU0gwREQ2X3ZkRU0zQy11aGE5YUQ1ZkF3blNYSjNzYXpGTWtEYWNLaG9QQVhHWUFQUDFkMGc0TTZnZ3NGaTd0eWxObWxiTUlhVkJDbkVQSF93?oc=5",
    "date": 1791788400000,
    "source": "grandprix"
+  },
+  {
+   "title": "Le Maroc, l’atout ‘choc’ de Philippe Rozier",
+   "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE93NGd0aWxzTTNIb1FzcHFEWElSQUZVWE9DRGZzLUxwcXVYWHBNdmFERWx1UzlQNGhFbHZHaWVyajdOdUFkRk9lbkMyNzU5bU1SRl9qS2R3NzJvYWJGeWxvS3hBT0o4SmhHRFY2Z0FzRDI?oc=5",
+   "date": 1791702000000,
+   "source": "eperon"
   },
   {
    "title": "Liliane Fromer : les Blés ont perdu leur naisseuse",
@@ -127,6 +133,12 @@
    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQZXk0Vkl4NTFmcDM4WnJuX3AwWElianJPN2NtYm5YWlhtSGZIN2VVTWVlbW1qTWhKalVOR0R3R3ZaSUNVM1gzeDM3dk1IbW5YTnMyNVpSdHQ4aU9NWUNRYTA2cVZTRDJjOFpGcnpGMmdmcU5zVkh2aDRDMlFnUVd6OV9qSXFEbEJMaXJQUUxEUV9aUHFTR1VMd3NR?oc=5",
    "date": 1779346800000,
    "source": "grandprix"
+  },
+  {
+   "title": "Qu'est-ce que le Para-Equifun adapté ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9xai0zWFNEZ3BBUmFQSHJVT2V6SFBLU1ZhRmJyMUNPLW4xbTlvVDBKSkRFVl9aZ2lpemhjSTFVbDhuTFBRLTMtYnpFbTZOeDgteFp1SnIyaHUzMGE4OWpBVkRuRUhiNnFDRVZCQWtYSGtPODBhMjRyT0dlQTRMQQ?oc=5",
+   "date": 1776936219000,
+   "source": "ffe"
   },
   {
    "title": "Candy de Nantuel bientôt disponible en frais",
@@ -333,12 +345,6 @@
    "source": "ffe"
   },
   {
-   "title": "GRANDPRIX.info - L'actualité des sports équestres en continu: infos, vidéos, résultats en direct",
-   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE5nczJiam1MQW5JOXhjbWlPWlQtdUF3YTBwZlhJNjdfalJDUWhORnZyR0hrVmZWaU9xNmhqR2pmaw?oc=5",
-   "date": 1585599537000,
-   "source": "grandprix"
-  },
-  {
    "title": "CONTACTS",
    "link": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE9tY3hMOWhZUmIwc1NtNWc0MV9wU0tIdjBjMjZnTUFuYmFaazVfSkQtZ25MWFRmUW1adTlTRU5qdk5Ua281R3ZWTDhR?oc=5",
    "date": 1577877930000,
@@ -367,12 +373,6 @@
    "link": "https://news.google.com/rss/articles/CBMiQ0FVX3lxTE9OZi1pMjN2T1ZXRzNHeE5CY216YkFXUU1NX1ZzR3hiN0R2YUptNWg3Mm44ZVpPSTNEZEd6c3Y0Qlp6TDg?oc=5",
    "date": 1529748302000,
    "source": "ifce"
-  },
-  {
-   "title": "ACCUEIL -",
-   "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTE80ZjJGbnVXcGJVTEFXSXZiZ29yY2hReURLczdDbHhWcVN2NHRhbTdzQmxpVllrRjl5c1R6di1Ccw?oc=5",
-   "date": 1487285614000,
-   "source": "ffe"
   },
   {
    "title": "Fédération Française d'Équitation",
