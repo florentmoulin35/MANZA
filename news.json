@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11T22:43:59.359Z",
+ "updated": "2026-11-12T07:16:15.211Z",
  "failed": [],
  "items": [
   {
@@ -15,18 +15,6 @@
    "source": "ffe"
   },
   {
-   "title": "Module découverte \"Devenir Commissaire au Paddock\" 24 nov 26",
-   "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEwxdnpLNzh4bjYxQTlwNzBRZVZjbjRpQTlaajlxeC03Uzc5N3ktYWVFVnpMNTJFWFRHRkNfMkhLci16OHdlcnhQZkdtTHlfV3F4VjQ5ZmFxOWJMa0JfN3RLa0dkWU1mczAzRnVyc1U0MzlNQXpjeDEtYk9lcnFZTE04aTFPVjdpVDJOcjFvUjdMYjJfWUR3Z0hR?oc=5",
-   "date": 1794356225000,
-   "source": "ffe"
-  },
-  {
-   "title": "Module découverte \"Devenir Juge de Saut d'Obstacles\" 27 nov 26",
-   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNX2FBbUVZMzFsMTd4U1ZISWlxRXpEMXVlNHl5M1FLejZIWDZMeUZnR0ZWQjBZRm5qVlpWYW8xY1FTU0hEakljUmw5QVYyVzQwNlNQY3JDb1JhMElUYnJUOWtRdTd1aXpORmRuZmZqUW44b3AyTVZwVy1lRmczQVIwRzZWOHlsUm1sdXdjY3ZBMVkyV1pwYlRTOGxRQmo?oc=5",
-   "date": 1794356225000,
-   "source": "ffe"
-  },
-  {
    "title": "Hommage à Michèle Blanchard",
    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE96NV9tSjNwSUlyZl9WZWd6NEFVWnY2RGdlVkxLV1FkU3o4anpIczlDZV9ET2hFYVlrZ0FfOGdVVXd5SnF4QkNZdjhOWWVfU2R2M1ZHMWEtWHBKeFBRVGV6Y3dQc09VUW15SFE?oc=5",
    "date": 1794321488000,
@@ -36,12 +24,6 @@
    "title": "\"Cher Floridio\", avec Adeline Wirth-Negre",
    "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9LaFNBa040dmhfN0hLOG9pU1BkeFIzTWFGTzhTNFJfYjAwcHpZY0xLTWJ6Q2RFbUtUdC00VnZxTzF4NlZ3WDRVdWJkWFp2S2JnaklRSVFLM2E1UVBTNDVfT1c2U0lIVldERWdvOHdXaXZPZHROanE0eVp6bw?oc=5",
    "date": 1794320662000,
-   "source": "grandprix"
-  },
-  {
-   "title": "Nouvel épisode de SHOWTIME avec Olivier Perreau, présenté par Kamel Boudra",
-   "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOTlN4UXRoTGNubXdZbmNJQl9RWUFJUi1NOFFKUjFqYnRfS2RRXzhPZnhMSGptcVFYUnBuU3VCS1VhcjhPSzdNLW11THM3bmtxeE0xOVZkS2Y4NXNjbXFrYlo5NFpYTWlxVjRzcHd0Uk9TT1V3dndOS01TcE9kS2hES0RmRzBlRU1kaHlMS3FFVEp3V3dONlFtNEVXTUloWHlYZGlVOVhHWW1MLTg?oc=5",
-   "date": 1794237596000,
    "source": "grandprix"
   },
   {
@@ -139,6 +121,12 @@
    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1KQ1E2M19mOTBGcmJWWjhNckdnQ0RqS2dsR2c1Z04ySXNUcWc4UG9HSk1QVzhJMHRySTRsb0x5ckVDREFscGFpT1RfUWlmcHlOMTlUeWZLdVlXeDFWa0I1dk85d1dsSVN5NU50VmliWnAyU1o4QjZwcg?oc=5",
    "date": 1771315200000,
    "source": "eperon"
+  },
+  {
+   "title": "SHOWTIME : la nouvelle émission de GRANDPRIX.tv",
+   "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTVlGMThlS3ppb1hjQS1hNU1idkpOQkNMSUdUdG1wSXJ4Y1lOakhubUpnTmRvd0Fqd0lrdXVXSEM3dkN1WXJVMTA5dy1FNXRKZzQ2bzI1MkNlQkJDcWZuOXNnVTFCa0N0dl9GdDdpTHhCdzdyUllXNHdWVGdfV2tSSnk1QUtUbVE?oc=5",
+   "date": 1771315200000,
+   "source": "grandprix"
   },
   {
    "title": "Coupe du Monde de Bordeaux : la bonne étoile de Jessica Burke",
@@ -273,6 +261,12 @@
    "source": "grandprix"
   },
   {
+   "title": "Avantages licence FFE",
+   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1WekxIRWVyX19QMkVONHl4S09qY3gxNnBNV0dtcVp6REpFRGNQWUxzc21zU3AzMXRDZWlCWVg5OS1EVzE5V3MxdS1IN2xZbTdZZDhWSnVmMEZNbGIxdUNGbW92YXlzcVJh?oc=5",
+   "date": 1673608043000,
+   "source": "ffe"
+  },
+  {
    "title": "Pourquoi et comment souscrire une licence FFE ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBaRWcxamJ5TE16b05iTjVyZzFabjhOdnJSSEd6WEdiVERxeVlLcTlqMFJ2NXNUZVNqM1hMZnJfckNHMFlrY2ZJQlZCZ3hCd0NTVWMtS1NqVEVDSkNRelFlUWoycXRUdw?oc=5",
    "date": 1673362864000,
@@ -327,6 +321,12 @@
    "source": "ffe"
   },
   {
+   "title": "Qu'est-ce que le mountain trail ? | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBTelNWMXprTHNBTlJUZ19rMi1oZ0JKNUlSb2hVeUN6RUpGVnI1UEVnWG5rZVp6akREZ3lOZ3BRZFNndXhObENNWVE2MFlmWEVGbEdOeEtCNVNJdUdDMUdncGhEOHZEUjg?oc=5",
+   "date": 1638263679000,
+   "source": "ffe"
+  },
+  {
    "title": "équipédia : tout l'univers du cheval à portée de clic",
    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE40ck1uRGFtdDF1Wng2ZlYxTFJhMEFFN2xMYzlWNjAxcjc0aGVjMm5TeTNDTV9kakNoOUhvQ28zQmdZOVBtdVBIUGcxNnZORHR6S1VGYmNPQi1GelVsZjFQSG4tVGhYdXlLV2F0ZGFMWHJhZw?oc=5",
    "date": 1594303874000,
@@ -351,9 +351,9 @@
    "source": "grandprix"
   },
   {
-   "title": "Enregistrer un cheval à votre nom suite à un achat",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOWmUweU5hMU9RNkpoT0xrSTlVM0U5Y1ctcF9EUjZvRHVlRFlncTQ0ank5elVxdFRyb0NaVTgtWk1xbHFyd2hkeFZNRmhTYXBXZW5HRnowMTc4YW91WGdPNFk2Tk1ZaU5VaHFsR01CYTdHZGV2RnU5a0R6WWcxTHZmZ3JIaHR6d0xlY2xZcTdyWUZhR2ZmOFNZMkdManRqU1RZb1Z2TGw2em80VzVDb0NlampHaVI0VThLZ2hxSVFEbmlXWVp0WTkxVEFLRnNyeTg?oc=5",
-   "date": 1560881568000,
+   "title": "Rechercher un cheval",
+   "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9zNGlOeE03R1lxVlRKRHhWV3BYbEJ5X3NOcnNicVkwV21SSlExeW0wSkdub0ZLemV1akt6RTFScTFwZFdfemJaZ21NRHZJUUdzRTU4U1ltbHI0bjNEZlk0?oc=5",
+   "date": 1575146968000,
    "source": "ifce"
   },
   {
