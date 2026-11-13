@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12T16:50:35.964Z",
+ "updated": "2026-11-13T01:07:31.017Z",
  "failed": [],
  "items": [
   {
@@ -21,16 +21,10 @@
    "source": "ffe"
   },
   {
-   "title": "GN FFE-AC Print de CSO : Le Mans (72), théâtre du dernier round de la saison !",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOVk1oLWhpMDV3OGFlX3FoeHpVMV9jcGFOUHBlLUNGeGs0V3JPTzFJYllnZWhjdW8ySEtvdjF2ZG1IMGJpcm5IQVJmXy1WTjRkLXFjSnhqV29PcmZHM21NLXpXX3FocG5mQ3A1VHRPXzJFT0lHdHFoSUlfR3NPWndtbjZRM0t3V0FBV3hHVWVnUHNURU5LdG5FOS1JRFhFVkdfQkVwTA?oc=5",
-   "date": 1794432096000,
-   "source": "ffe"
-  },
-  {
-   "title": "Hommage à Michèle Blanchard",
-   "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE96NV9tSjNwSUlyZl9WZWd6NEFVWnY2RGdlVkxLV1FkU3o4anpIczlDZV9ET2hFYVlrZ0FfOGdVVXd5SnF4QkNZdjhOWWVfU2R2M1ZHMWEtWHBKeFBRVGV6Y3dQc09VUW15SFE?oc=5",
-   "date": 1794321488000,
-   "source": "ffe"
+   "title": "Michèle Blanchard, figure engagée du dressage français, s’est éteinte à 78 ans",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNSHMybzh6THFKcndZNVo4bk50UXpnV3VvS1dnN1VSQUpuLVJBdkM5YUhoNVoyODNUTHpmZjVFeUhqTXNpWjNzVGRMcHAxZWM3QjVQUWdCdG42dmhrVEtKZHpfcXphQ2xZS1NDVlZlTWhoeGh0QUxDTE9mV3pKeDk1N0FnSDNZTU8wcTZ4N1YxeVk4Y0NMa0FScVhXSUVoSnBLNnhKZzRUTmRuZG14TmRnb0NkVkg?oc=5",
+   "date": 1794391331000,
+   "source": "grandprix"
   },
   {
    "title": "Richard Vogel surclasse la concurrence et offre à Gangster Montdésir son cinquième Grand Prix 5* à Vérone",
@@ -42,6 +36,12 @@
    "title": "Qu'est-ce que le Concours de Saut d'Obstacles - CSO ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiPkFVX3lxTE0zc1lRRlR5S1hzTndGRndBaHBidWNnUHdyZkctV0JsQWhDNnhYeV9lbV9XTjI3NEhobXVVaDJB?oc=5",
    "date": 1793989568000,
+   "source": "ffe"
+  },
+  {
+   "title": "GN FFE-AC Print de DRE : Saint Lô (50) accueille la dernière étape de la saison 2026 !",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNZldYVUlSSUVKVWFVWjNiSGFlTWRDS1NxMlR6TkFpdWdSNEVpSHptbHhDQjlSMVN4YU5hZ2tJNnNMbHdFM21qZ0FJdGpmdGlTY3JubXhuMmdISGppWWhkNDd5Ykx6am03b09kek1IbENfRU81UDZqWXRLaEdQRHpUQTdmeXN3dEdTekNNQWc0dmtCZDFRZ3dJX1E3WDhBdXg5dUtnNjZQNDlvWnVGdVh1VQ?oc=5",
+   "date": 1793958249000,
    "source": "ffe"
   },
   {
@@ -177,12 +177,6 @@
    "source": "eperon"
   },
   {
-   "title": "JAMES : Charpentier-bâtisseur du Haras du Trèfle Blanc",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxONXd3R2tkWHExczhtR0NZdUF6WVJtS2o0NEpPNlRmQm9SRXVGNDNiSWdMVE9uc0lrZExMc3JibnNtcm43RHgwNXNwNF8weDhaTmNpclJEZWhtN0pJUXVIVDIyV2s5aHlud0RRdkc2aktDcmQtSzYyR3FXajhFZzQwYko5RHZwTEEyTGxZRWs5MFpqYTZqQldsRQ?oc=5",
-   "date": 1752044400000,
-   "source": "grandprix"
-  },
-  {
    "title": "Les démarches",
    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBBNGYtOExQbmtqeUVXNmx3SGxzZWNBUjk3Z0Rob294dWd2MWtmbmFFTW5NVUVaWXpmbDBXaklyN256MmF3NDBYZjV1c3V1dw?oc=5",
    "date": 1745487361000,
@@ -288,6 +282,12 @@
    "title": "Qu’est-ce que la CNIL ? | Fédération Française d'Équitation",
    "link": "https://news.google.com/rss/articles/CBMiPEFVX3lxTE5TRHE2ZjVVbC1CM2NreVQyR0x5QjFmSkY4cjJGdld6R0Z1TkoyZ29GTm1SVTlDQkUyeEtlQQ?oc=5",
    "date": 1638462081000,
+   "source": "ffe"
+  },
+  {
+   "title": "Découvrez comment et pourquoi adhérer à la FFE | Fédération Française d'Équitation",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1MSFA4djRwVlBncU1ON3J3UGRCWWwxdlhuZU9fdlZoVVNuME10QXlvX3VfS0psczRtVkw5YnBaUFgxcXFiNUUtZ2tjRVdVWWU4UTln?oc=5",
+   "date": 1638347410000,
    "source": "ffe"
   },
   {
